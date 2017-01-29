@@ -241,6 +241,9 @@ ul,li{
 .theme_color{
 	color:#fa6f1c;	
 }
+.theme_color_new{
+	color: red;
+}
 
 .light-font{
 	font-weight:300;	
