@@ -695,7 +695,7 @@ img{
 
 .main-menu .navigation > li > ul > li > ul{
 	position:absolute;
-	left:100%;
+	right:100%;
 	top:20px;
 	width:220px;
 	padding:0px;
