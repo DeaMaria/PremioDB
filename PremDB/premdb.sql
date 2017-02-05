@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-02-2017 a las 22:56:17
+-- Tiempo de generación: 05-02-2017 a las 16:54:24
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -45,7 +45,7 @@ CREATE TABLE `entidades` (
   `idProvincia` int(11) NOT NULL,
   `domicilio_entidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `correo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `web` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `web` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `numIndicativo` int(5) DEFAULT NULL,
   `estatutos` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `registros` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -96,13 +96,14 @@ CREATE TABLE `provincias` (
 CREATE TABLE `proyectos` (
   `idProyecto` int(11) NOT NULL,
   `nom_proyecto` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `fechaInicio` date NOT NULL,
-  `fechaFin` date NOT NULL,
-  `numeroVoluntarios` int(4) NOT NULL,
+  `fechaInicio` date DEFAULT NULL,
+  `fechaFin` date DEFAULT NULL,
+  `numeroVoluntarios` int(4) DEFAULT NULL,
   `edadMinima` int(1) NOT NULL,
   `edadMaxima` int(2) NOT NULL,
   `idProvincia` int(11) NOT NULL,
-  `dirección` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+  `dirección` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
