@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-02-2017 a las 05:27:19
+-- Tiempo de generación: 06-02-2017 a las 18:14:46
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -42,7 +42,7 @@ CREATE TABLE `entidades` (
   `nom_entidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `responsable` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `telefono` int(9) NOT NULL,
-  `idProvincia` int(11) NOT NULL,
+  `idLocalidad` int(11) NOT NULL,
   `domicilio_entidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `correo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `web` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -101,7 +101,7 @@ CREATE TABLE `proyectos` (
   `numeroVoluntarios` int(4) DEFAULT NULL,
   `edadMinima` int(1) NOT NULL,
   `edadMaxima` int(2) NOT NULL,
-  `idProvincia` int(11) NOT NULL,
+  `idLocalidad` int(11) NOT NULL,
   `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

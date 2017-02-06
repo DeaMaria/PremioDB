@@ -41,21 +41,21 @@
 		<div class='row'>
 			<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 				<div class="form-group">
-					    <label for="asunto">Nombre del proyecto:</label> <input type="text" placeholder="Nombre del proyecto" id="nomProyecto" name="nomProyecto" class="form-control">
+					    <label for="nomProyecto">Nombre del proyecto:</label> <input type="text" placeholder="Nombre del proyecto" id="nomProyecto" name="nomProyecto" class="form-control">
 				</div>
 			</div>
 		</div>
 		<div class='row'>
 			<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 				<div class="form-group">
-					    <label for="inicio">Fecha de inicio:</label> <input type="date" id="fecInicio" name="fecInicio" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+					    <label for="fecInicio">Fecha de inicio:</label> <input type="date" id="fecInicio" name="fecInicio" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
 				</div>
 			 </div>
 		</div>
 		<div class='row'>
 			<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 				<div class="form-group">
-					    <label for="fin">Fecha de fin:</label> <input type="date" id="fecFin" name="fecFin" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+					    <label for="fecFin">Fecha de fin:</label> <input type="date" id="fecFin" name="fecFin" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
 				</div>
 			 </div>
 		</div>
@@ -63,21 +63,21 @@
 		<div class='row'>
 			<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 				<div class="form-group">
-					    <label for="participantes">Número de Participantes:</label><input type="number" min="2" step="1" value="0" name="numParticipantes" id="numParticipantes" />
+					    <label for="numParticipantes">Número de Participantes:</label><input type="number" min="2" step="1" value="0" name="numParticipantes" id="numParticipantes" />
 				</div>
 			 </div>
 		</div>
 		<div class='row'>
 			<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 				<div class="form-group">
-					    <label for="edadMin">Edad Mínima:</label> <input type="number" min="2" max="30" step="1" value="0" name="edadMinima" id="edadMinima" />
+					    <label for="edadMinima">Edad Mínima:</label> <input type="number" min="2" max="30" step="1" value="0" name="edadMinima" id="edadMinima" />
 				</div>
 			 </div>
 		</div>
 		<div class='row'>
 			<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 				<div class="form-group">
-					    <label for="edadMax">Edad Máxima:</label> <input type="number" min="2" max="30" step="1" value="0" name="edadMaxima" id="edadMaxima" />
+					    <label for="edadMaxima">Edad Máxima:</label> <input type="number" min="2" max="30" step="1" value="0" name="edadMaxima" id="edadMaxima" />
 				</div>
 			 </div>
 		</div>
