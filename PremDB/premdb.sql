@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-02-2017 a las 16:54:24
+-- Tiempo de generación: 06-02-2017 a las 05:27:19
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -102,7 +102,7 @@ CREATE TABLE `proyectos` (
   `edadMinima` int(1) NOT NULL,
   `edadMaxima` int(2) NOT NULL,
   `idProvincia` int(11) NOT NULL,
-  `dirección` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
