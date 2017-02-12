@@ -19,6 +19,10 @@
 </head>
 
 <body>
+	<?php
+      include("conexion.php");
+  	?> 
+	
 
 <div class="page-wrapper">
  	
@@ -325,41 +329,62 @@
         	<div class="normal-title"><h3>BECOME A <strong>VOLUNTEER</strong></h3></div>
             
             <div class="default-form">
-                <form method="post" action="http://wp1.themexlab.com/html2/preview-human-welfare/contact.html">
+                <form method="post" action="insEnti.php">
                     <div class="row clearfix">
                     
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Colegio <span class="req">*</span></div>
-                            <input type="text" name="field-name" value="" placeholder="" required>
+                            <div class="field-label">Nombre entidad: <span class="req">*</span></div>
+                            <input type="text" name="nomEnti" placeholder="Nombre entidad" id="nomEnti" required>
                         </div>
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Profesor <span class="req">*</span></div>
-                            <input type="text" name="field-name" value="" placeholder="">
+                            <div class="field-label">CIF: <span class="req">*</span></div>
+                            <input type="text" name="cif" placeholder="CIF" id="cif" class="form-control" required>
                         </div>
 						
 						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Localidad <span class="req">*</span></div>
-                            <input type="text" name="field-name" value="" placeholder="" required>
+                            <div class="field-label">Responsable: <span class="req">*</span></div>
+                            <input type="text" name="respon" placeholder="Responsable" id="respon" class="form-control" required>
                         </div>
 						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Nº de alumnos <span class="req">*</span></div>
-                            <input type="text" name="field-name" value="" placeholder="" required>
+                            <div class="field-label">Telefono de contacto: <span class="req">*</span></div>
+                            <input type="text" maxlength="9" step="1" name="telf" id="telf" required>
                         </div>
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Email <span class="req">*</span></div>
-                            <input type="email" name="field-name" value="" placeholder="" required>
+                            <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>
+                            <input type="text" name="dom_enti" placeholder="Domicilio de la entidad" id="dom_enti" class="form-control" required>
                         </div>
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Teléfono <span class="req">*</span></div>
-                            <input type="text" name="field-name" value="" placeholder="" required>
+                            <div class="field-label">Correo electronico: <span class="req">*</span></div>
+                            <input type="text" name="correo" placeholder="Correo" id="correo" class="form-control" required>
                         </div>
+                        
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Web: <span class="req">*</span></div>
+                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
+                        </div> 
+                                               
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Estatutos: <span class="req">*</span></div>
+                            <input type="text" name="estatutos" placeholder="Estatutos" id="estatutos" class="form-control" required>
+                        </div>
+                        
                                                 
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                           <button type="submit" class="theme-btn btn-style-three">¡Inscríbete ahora!</button>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Registros: <span class="req">*</span></div>
+                            <input type="text" name="registros" placeholder="Registros" id="registros" class="form-control" required>
                         </div>
                         
+                                                
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Compromiso <span class="req">*</span></div>
+                            <input type="text" name="compromiso" placeholder="Compromiso" id="compromiso" class="form-control" required>
+                        </div>
+
+                                                
+                        <button type="submit" class="btn btn-md btn-primary">Enviar</button>
+            			<button type="button" class="btn btn-md btn-primary" onclick="window.open('index.php','_parent')">Volver</button>                        
                     </div>
                 </form>
                 
