@@ -89,7 +89,17 @@
 			</div>
 			<div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
 				<div class="form-group">
-					    <label for="localidad">Localidad:</label> <textarea rows="1" id="localidad" name="localidad" class="form-control">Cambiar a select-localidad</textarea>
+					    <label for="nomlocalidad">Localidad:</label>
+					    <select name="nomlocalidad" id="nomlocalidad">
+					    	<option>Elige localidad</option>
+					    		<?php
+					    			$sql="SELECT * FROM provincias";
+					    			$totalLoc=mysqli_query($conexion, $sql) or die("Error en la consulta $sql");
+					    			while ($linea=mysqli_fetch_array($totalLoc)){
+					    				echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+					    			}
+					    		?>
+					    </select>
 				</div>
 			 </div>
 		</div>

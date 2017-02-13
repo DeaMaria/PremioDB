@@ -16,6 +16,21 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<script src="./assets/js/jquery-1.7.2.js"></script>
+    <script language="javascript">
+    $(document).ready(function(){
+        $("#provincia").change(function () {
+               $("#provincia option:selected").each(function () {
+                valor=$(this).val();
+                tabla="localidades";
+                campo="idProvincia";    
+                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
+                $("#localidad").html(data);
+                });            
+            });
+       })
+    });
+    </script>
 </head>
 
 <body>
@@ -115,13 +130,9 @@
 									
                                     <li class="dropdown"><a href="#">Pages</a>
                                     	<ul>
-                                            <li><a href="create-project.html">Proponer proyecto</a></li>
-                                            <li><a href="volunteer.html">Inscribirse</a></li>
-											<li><a href="donate.html">Donaciones</a></li>
-                                            <!--<li><a href="faqs.html">FAQs</a></li>-->
-											<!--
-                                            <li><a href="error-page.html">404 Page</a></li>
-											-->
+                                            <li><a href="create-project.php">Proponer proyecto</a></li>
+                                            <li><a href="volunteer.php">Inscribirse</a></li>
+											
                                         </ul>
                                     </li>
                                    
@@ -192,43 +203,17 @@
 							</li>
 						</ul>
                     </li>
-					<!--
-                    <li class="dropdown"><a href="#">Events</a>
-                        <ul>
-                            <li><a href="events.html">Our Events</a></li>
-                            <li><a href="single-event.html">Event Details</a></li>
-                        </ul>
-                    </li>
-					-->
+					
                     <li class="dropdown"><a href="#">Pages</a>
                         <ul>
-							<li><a href="create-project.html">Proponer proyecto</a></li>
-							<li><a href="volunteer.html">Inscribirse</a></li>
+							<li><a href="create-project.php">Proponer proyecto</a></li>
+							<li><a href="volunteer.php">Inscribirse</a></li>
 							<li><a href="donate.html">Donaciones</a></li>
-							<!--<li><a href="faqs.html">FAQs</a></li>-->
-							<!--
-							<li><a href="error-page.html">404 Page</a></li>
-							-->
+							
 						</ul>
                     </li>
-					<!--
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li class="dropdown"><a href="#">Shop</a>
-                        <ul>
-                            <li><a href="shop.html">Our Shop</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                        </ul>
-                    </li>
-					-->
-					<!--
-                    <li class="dropdown"><a href="#">Blog</a>
-                        <ul>
-                            <li><a href="blog.html">Our Blog</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                        </ul>
-                    </li>
-					-->
+					
+					
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div><!-- /.Side-menu -->
@@ -349,6 +334,36 @@
                             <div class="field-label">Telefono de contacto: <span class="req">*</span></div>
                             <input type="text" maxlength="9" step="1" name="telf" id="telf" required>
                         </div>
+
+                        
+                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                            <div class="form-group">
+                                <label for="provincia">Provincia:</label>
+                                <select name="provincia" id="provincia">        
+                                    <option> Elige una provincia... </option>
+                                    <?php
+                                        $sql="SELECT * FROM provincias";
+                                        $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                                        while($linea=mysqli_fetch_array($totalProv))
+                                        {
+                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                                        }
+                                    ?>
+                                    
+                                </select>
+                                
+
+                            </div>
+                        </div>
+                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                            <div class="form-group">
+                                <label for="localidad">Localidad:</label>
+                                <select name="localidad" id="localidad">        
+                                    <option> Elige una localidad... </option>
+                                </select>
+                            </div>
+                        </div>
+                    
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>

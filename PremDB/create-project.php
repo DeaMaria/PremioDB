@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/shopping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:52 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
 <head>
 <meta charset="utf-8">
-<title>Human Welfare - Fundraising and Charity HTML Template | Shopping Cart</title>
+<title>Human Welfare - Fundraising and Charity HTML Template | Volunteer</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -16,9 +16,27 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<script src="./assets/js/jquery-1.7.2.js"></script>
+    <script language="javascript">
+    $(document).ready(function(){
+        $("#provincia").change(function () {
+               $("#provincia option:selected").each(function () {
+                valor=$(this).val();
+                tabla="localidades";
+                campo="idProvincia";    
+                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
+                $("#localidad").html(data);
+                });            
+            });
+       })
+    });
+    </script>
 </head>
 
 <body>
+<?php
+    include("conexion.php");
+?>
 
 <div class="page-wrapper">
  	
@@ -35,7 +53,7 @@
                     <!--Top Left-->
                     <div class="top-left">
                     	<ul class="clearfix">
-                        	<li><span class="icon flaticon-technology"></span>+12345 06 789</li>
+                        	<!-- <li><span class="icon flaticon-technology"></span>+12345 06 789</li> -->
                             <li><span class="icon flaticon-note"></span>mail@humanwelfare.com</li>
                         </ul>
                     </div>
@@ -46,7 +64,7 @@
                     	<!--social-icon-->
                         <div class="social-icon">
                         	<a href="#"><span class="fa fa-facebook"></span></a>
-                            <a href="#"><span class="fa fa-youtube-play"></span></a>
+                            <!-- <a href="#"><span class="fa fa-youtube-play"></span></a> -->
                             <a href="#"><span class="fa fa-linkedin"></span></a>
                             <a href="#"><span class="fa fa-instagram"></span></a>
                             <a href="#"><span class="fa fa-twitter"></span></a>
@@ -67,7 +85,7 @@
             	<div class="outer-container clearfix">
                     <!--Logo Box-->
                     <div class="logo-box">
-                        <div class="logo"><a href="index-2.html"><img src="images/logo.png" alt=""></a></div>
+                        <div class="logo"><!-- <a href="index-2.html"> --><img src="images/logo-proyecto.png" alt=""></a></div>
                     </div>
                     
                     <!--Nav Outer-->
@@ -85,53 +103,39 @@
                             
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="#">Home</a>
-                                    	<ul>
-                                            <li><a href="index-2.html">Homepage One</a></li>
-                                            <li><a href="index-3.html">Homepage Two</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="index.html">Home</a></li>
+									<!--
                                     <li class="dropdown"><a href="#">About Us</a>
                                     	<ul>
                                             <li><a href="about-us.html">About Us</a></li>
                                             <li><a href="our-team.html">Our Team</a></li>
                                         </ul>
                                     </li>
+									-->
+									<li><a href="about-us.html">About Us</a></li>
                                     <li class="dropdown"><a href="#">Causes</a>
                                     	<ul>
-                                            <li><a href="causes.html">Our Causes</a></li>
-                                            <li><a href="single-cause.html">Single Cause</a></li>
+                                            <li><a tabindex="-1" href="single-cause.html">Proyectos</a></li>
+                                            <li class="dropdown pull-right"><a tabindex="-1" href="#">Ámbito</a>
+                                            	<ul class="dropdown-menu">
+                                            		<li><a tabindex="-1" href="#">Ética y Ciudadanía</a></li>
+                                            		<li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
+                                            		<li><a tabindex="-1" href="#">Historia</a></li>
+                                            		<li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
+                                            	</ul>
+                                            </li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="#">Events</a>
-                                    	<ul>
-                                            <li><a href="events.html">Our Events</a></li>
-                                            <li><a href="single-event.html">Event Details</a></li>
-                                        </ul>
-                                    </li>
+									
                                     <li class="dropdown"><a href="#">Pages</a>
                                     	<ul>
-                                            <li><a href="donate.html">Donate Now</a></li>
-                                            <li><a href="volunteer.php">Volunteer</a></li>
-                                            <li><a href="faqs.html">FAQs</a></li>
-                                            <li><a href="error-page.html">404 Page</a></li>
+                                            <li><a href="create-project.php">Proponer proyecto</a></li>
+                                            <li><a href="volunteer.php">Inscribirse</a></li>
+											
                                         </ul>
                                     </li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li class="current dropdown"><a href="#">Shop</a>
-                                    	<ul>
-                                            <li><a href="shop.html">Our Shop</a></li>
-                                            <li><a href="shop-single.html">Shop Single</a></li>
-                                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Blog</a>
-                                    	<ul>
-                                            <li><a href="blog.html">Our Blog</a></li>
-                                            <li><a href="blog-single.html">Blog Single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                   
+                                    <!--<li><a href="contact.html">Contact</a></li>-->
                                     
                                  </ul>
                             </div>
@@ -164,59 +168,50 @@
         
             <!-- .logo -->
             <div class="logo text-center">
-                <a href="index-2.html"><img src="images/logo-2.png" alt=""></a>			
+                <!-- <a href="index-2.html"> --><img src="images/logo-proyecto.png" alt=""></a>			
             </div><!-- /.logo -->
             
             <!-- .Side-menu -->
             <div class="side-menu">
             <!-- .navigation -->
                 <ul class="navigation">
-                    <li class="dropdown"><a href="#">Home</a>
+                    <li class="current dropdown"><a href="index.html">Home</a>
+					<!--
                         <ul>
                             <li><a href="index-2.html">Homepage One</a></li>
                             <li><a href="index-3.html">Homepage Two</a></li>
                         </ul>
+						-->
                     </li>
                     <li class="dropdown"><a href="#">About Us</a>
                         <ul>
                             <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="our-team.html">Our Team</a></li>
+                            <!-- <li><a href="our-team.html">Our Team</a></li> -->
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#">Causes</a>
                         <ul>
-                            <li><a href="causes.html">Our Causes</a></li>
-                            <li><a href="single-cause.html">Single Cause</a></li>
-                        </ul>
+							<li><a tabindex="-1" href="single-cause.html">Proyectos</a></li>
+							<li class="dropdown pull-right"><a tabindex="-1" href="#">Ámbito</a>
+								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="#">Ética y Ciudadanía</a></li>
+									<li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
+									<li><a tabindex="-1" href="#">Historia</a></li>
+									<li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
+								</ul>
+							</li>
+						</ul>
                     </li>
-                    <li class="dropdown"><a href="#">Events</a>
-                        <ul>
-                            <li><a href="events.html">Our Events</a></li>
-                            <li><a href="single-event.html">Event Details</a></li>
-                        </ul>
-                    </li>
+					
                     <li class="dropdown"><a href="#">Pages</a>
                         <ul>
-                            <li><a href="donate.html">Donate Now</a></li>
-                            <li><a href="volunteer.php">Volunteer</a></li>
-                            <li><a href="faqs.html">FAQs</a></li>
-                            <li><a href="error-page.html">404 Page</a></li>
-                        </ul>
+							<li><a href="create-project.php">Proponer proyecto</a></li>
+							<li><a href="volunteer.php">Inscribirse</a></li>
+							
+							
+						</ul>
                     </li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li class="current dropdown"><a href="#">Shop</a>
-                        <ul>
-                            <li><a href="shop.html">Our Shop</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Blog</a>
-                        <ul>
-                            <li><a href="blog.html">Our Blog</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                        </ul>
-                    </li>
+					
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div><!-- /.Side-menu -->
@@ -237,88 +232,192 @@
     <!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/bg-page-title-1.jpg);">
         <div class="auto-container">
-            <h1>Shopping Cart</h1>
+            <h1>New Project</h1>
             <div class="bread-crumb-outer">
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index-2.html">Home</a></li>
-                    <li class="active">Shop</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li class="active">Proponer Proyecto</li>
                 </ul>
             </div>
         </div>
     </section>
     
     
-    <!--Cart Section-->
-    <section class="cart-section">
-        <div class="auto-container">
+    <!--Volunteer Section-->
+    <section class="volunteer-section">
+    	<div class="auto-container">
             
-            <!--Cart Outer-->
-            <div class="cart-outer">
-                <div class="table-outer">
-                    <table class="cart-table">
-                        <thead class="cart-header">
-                            <tr>
-                            	<th class="prod-image">Image</th>
-                                <th class="prod-title">Product Name</th>
-                                <th class="prod-ratings">Ratings</th>
-                                <th class="quantity">Quantity</th>
-                                <th class="unit-price">Unit Price</th>
-                                <th class="total-price">Total</th>
-                            </tr>
-                        </thead>
-                        
-                        <tbody>
-                            <tr>
-                                <td class="prod-thumb"><figure class="prod-image"><img src="images/resource/products/cart-thumb-1.jpg" alt=""><a href="#" class="remove-item"><span class="fa fa-remove"></span></a></figure></td>
-                                <td class="prod-title"><h4>PRODUCT TITLE</h4></td>
-                                <td class="prod-ratings"><div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-half-empty"></span><span class="fa fa-star-o"></span></div></td>
-                                <td class="quantity"><div class="quantity-spinner"><button type="button" class="minus"><span class="fa fa-minus"></span></button><input type="text" name="product" value="2" class="prod_qty" /><button type="button" class="plus"><span class="fa fa-plus"></span></button></div></td>
-                                <td class="unit-price">$ 36.00</td>
-                                <td class="total-price">$ 72.00</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-                <!--Coupon Outer-->
-                <div class="coupon-outer">
-                	<div class="coupon-panel toggle-panel clearfix">
-                    	<div class="pull-left">USE COUPON CODE</div>
-                        <div class="pull-right"><div class="icon"><span class="fa down fa-angle-down"></span><span class="fa up fa-angle-up"></span></div></div>
-                    </div>
-                    <div class="coupon-content toggle-content clearfix">
-                    	<div class="apply-coupon pull-left">
-                            <div class="form-group clearfix">
-                                <input type="text" name="coupon-code" value="" placeholder="Coupon Code">
-                                <button type="button" class="theme-btn btn-style-three">Apply Coupon</button>
-                            </div>
-                        </div>
-                        <div class="apply-coupon pull-right">
-                        	<button type="button" class="theme-btn btn-style-three">Update Cart</button>
-                        </div>
+            <div class="row clearfix">
+            	<!--Content Column-->
+            	<div class="content-column col-md-7 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                    	<div class="bold-text">Crea aquí tu nueva proposición de proyecto.</div>
+                        <div class="text">Rellena el siguiente formulario para exponer el proyecto que deseas realizar y así poder obtener algún tipo de colaboración y ayuda. Descríbelo lo más detalladamente posible para que así resulte más sencillo el entendimiento y facilitar las futuras colaboraciones.</div>
                     </div>
                 </div>
                 
-            </div>
-            
-            <div class="row clearfix">
-                <div class="column pull-right col-md-3 col-sm-6 col-xs-12">
-                    <div class="price-calculator">
-                        <!--Totals Table-->
-                        <ul class="totals-table">
-                            <li class="clearfix"><span class="col">Sub-Total:</span><span class="col bold-text">$60.00</span></li>
-                            <li class="clearfix"><span class="col">Eco Tax (-2.00):</span><span class="col bold-text">$2.00</span></li>
-                            <li class="clearfix"><span class="col">VAT (8%):</span><span class="col bold-text">$10.00</span></li>
-                            <li class="clearfix"><span class="col">Total:</span><span class="col bold-text">$72.00</span></li>
-                        </ul>
+                <!--How To Column-->
+            	<div class="how-to-column col-md-5 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <div class="default-title"><h3>COMO HACERLO</h3></div>
+                        <!--Info Block-->
+                        <div class="info-block">
+                            <div class="inner">
+                                <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms"><span class="flaticon-user-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
+                                <h4>REGISTRATE</h4>
+                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                            </div>
+                        </div>
+                        
+                        <!--Info Block-->
+                        <div class="info-block">
+                            <div class="inner">
+                                <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="300ms"><span class="flaticon-list-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
+                                <h4>ELIGE UN PROYECTO</h4>
+                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                            </div>
+                        </div>
+                        
+                        <!--Info Block-->
+                        <div class="info-block">
+                            <div class="inner">
+                                <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="600ms"><span class="flaticon-money-bag"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
+                                <h4>HAZ UNA DONACION</h4>
+                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                            </div>
+                        </div>
+                        
+                        <!--Info Block-->
+                        <div class="info-block">
+                            <div class="inner">
+                                <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="900ms"><span class="flaticon-sticker-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
+                                <h4>ERES UN VOLUNTARIO!</h4>
+                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
-            </div>
-            <div class="cart-options clearfix">
-                <div class="pull-left"><button type="submit" class="theme-btn btn-style-four proceed-btn">Continue Shopping</button></div>
-                <div class="pull-right"><button type="submit" class="theme-btn btn-style-three proceed-btn">PROCEED TO CHECKOUT</button></div>
-            </div>
+                
+            </div>       
+        </div>
+    </section>
+    
+    
+    <!--Become VOlunteer Section-->
+    <section class="become-volunteer">
+    	<div class="auto-container">
+        	<div class="normal-title"><h3>BECOME A <strong>NEW PROJECT</strong></h3></div>
             
+            <div class="default-form">
+                <form method="post" action="insproyecto.php">           
+        <div class='row'>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                        <label for="nomProyecto">Nombre del proyecto:</label> <input type="text" placeholder="Nombre del proyecto" id="nomProyecto" name="nomProyecto" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                <div class="form-group">
+                        <label for="fecInicio">Fecha de inicio:</label> <input type="date" id="fecInicio" name="fecInicio" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                </div>
+            </div>
+            <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                <div class="form-group">
+                        <label for="fecFin">Fecha de fin:</label> <input type="date" id="fecFin" name="fecFin" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                </div>
+             </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                        <label for="numParticipantes">Número de Participantes:</label><input type="number" min="2" step="1" value="0" name="numParticipantes" id="numParticipantes" />
+                </div>
+            </div>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                        <label for="edadMinima">Edad Mínima:</label> <input type="number" min="2" max="30" step="1" value="0" name="edadMinima" id="edadMinima" />
+                </div>
+            </div>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                        <label for="edadMaxima">Edad Máxima:</label> <input type="number" min="2" max="30" step="1" value="0" name="edadMaxima" id="edadMaxima" />
+                </div>
+             </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                    <label for="ambito">Ambito:</label>
+                    <select name="ambito" id="ambito">        
+                        <option> Elige un ambito... </option>
+                        <?php
+                            $sql="SELECT * FROM ambitos";
+                            $totalAmb=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                            while($linea=mysqli_fetch_array($totalAmb))
+                            {
+                                echo "<option value='$linea[idAmbito]'>$linea[nom_ambito]";
+                            }
+                            
+                        ?>
+                    </select>
+                    
+
+                </div>
+            </div>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                    <label for="provincia">Provincia:</label>
+                    <select name="provincia" id="provincia">        
+                        <option> Elige una provincia... </option>
+                        <?php
+                            $sql="SELECT * FROM provincias";
+                            $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                            while($linea=mysqli_fetch_array($totalProv))
+                            {
+                                echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                            }
+                        ?>
+                        
+                    </select>
+                    
+
+                </div>
+            </div>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                    <label for="localidad">Localidad:</label>
+                    <select name="localidad" id="localidad">        
+                        <option> Elige una localidad... </option>
+                    </select>
+                </div>
+             </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <div class="form-group">
+                        <label for="direccion">Dirección:</label> <input type="text" placeholder="Dirección" id="direccion" name="direccion" class="form-control">
+                </div>
+             </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <div class="form-group">
+                        <label for="descripcion">Descripción:</label> <textarea rows="10" placeholder="Descripción" id="descripcion" name="descripcion" class="form-control"></textarea>
+                </div>
+             </div>
+        </div>
+        
+
+            <button type="submit" class="btn btn-md btn-primary">Enviar</button>
+            <button type="button" class="btn btn-md btn-primary" onclick="window.open('index.php','_parent')">Volver</button>
+        </form>
+                
+            </div>
         </div>
     </section>
     
@@ -463,9 +562,10 @@
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/jquery.fancybox-media.js"></script>
+<script src="js/owl.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
 </body>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/shopping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:52 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:04 GMT -->
 </html>

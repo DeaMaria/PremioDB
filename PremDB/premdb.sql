@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-02-2017 a las 18:14:46
+-- Tiempo de generación: 13-02-2017 a las 03:18:28
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -30,6 +30,14 @@ CREATE TABLE `ambitos` (
   `idAmbito` int(2) NOT NULL,
   `nom_ambito` varchar(20) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `ambitos`
+--
+
+INSERT INTO `ambitos` (`idAmbito`, `nom_ambito`) VALUES
+(1, 'Ciencias'),
+(2, 'Etica');
 
 -- --------------------------------------------------------
 
@@ -65,6 +73,14 @@ CREATE TABLE `localidades` (
   `idProvincia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `localidades`
+--
+
+INSERT INTO `localidades` (`idLocalidad`, `nom_localidad`, `idProvincia`) VALUES
+(1, 'zaragoza', 1),
+(2, 'sevilla', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -73,7 +89,8 @@ CREATE TABLE `localidades` (
 
 CREATE TABLE `numerosidentificativos` (
   `idNumero` int(11) NOT NULL,
-  `numIdentificativo` int(5) NOT NULL
+  `numIdentificativo` int(5) NOT NULL,
+  `usado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -86,6 +103,14 @@ CREATE TABLE `provincias` (
   `idProvincia` int(11) NOT NULL,
   `nom_provincia` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `provincias`
+--
+
+INSERT INTO `provincias` (`idProvincia`, `nom_provincia`) VALUES
+(1, 'aragon'),
+(2, 'andalucia');
 
 -- --------------------------------------------------------
 
@@ -103,8 +128,16 @@ CREATE TABLE `proyectos` (
   `edadMaxima` int(2) NOT NULL,
   `idLocalidad` int(11) NOT NULL,
   `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `numIndicativo` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `proyectos`
+--
+
+INSERT INTO `proyectos` (`idProyecto`, `nom_proyecto`, `fechaInicio`, `fechaFin`, `numeroVoluntarios`, `edadMinima`, `edadMaxima`, `idLocalidad`, `direccion`, `descripcion`, `numIndicativo`) VALUES
+(1, 'Prueba', '0000-00-00', '0000-00-00', 5, 10, 15, 2, 'vsrtgsrtgs', 'safdsadfcdfre', 0);
 
 -- --------------------------------------------------------
 
@@ -125,7 +158,13 @@ CREATE TABLE `proyectos_ambito` (
 
 CREATE TABLE `proyectos_participantes` (
   `idProyecto` int(11) NOT NULL,
-  `cif` varchar(9) COLLATE utf8_unicode_ci NOT NULL
+  `cif` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
+  `dni` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `nombreAlumno` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `fechaNac` date NOT NULL,
+  `item1` tinyint(4) NOT NULL,
+  `item2` tinyint(4) NOT NULL,
+  `item3` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -178,7 +217,7 @@ ALTER TABLE `proyectos_ambito`
 -- Indices de la tabla `proyectos_participantes`
 --
 ALTER TABLE `proyectos_participantes`
-  ADD PRIMARY KEY (`idProyecto`,`cif`);
+  ADD PRIMARY KEY (`idProyecto`,`cif`,`dni`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -188,12 +227,12 @@ ALTER TABLE `proyectos_participantes`
 -- AUTO_INCREMENT de la tabla `ambitos`
 --
 ALTER TABLE `ambitos`
-  MODIFY `idAmbito` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `idAmbito` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `localidades`
 --
 ALTER TABLE `localidades`
-  MODIFY `idLocalidad` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idLocalidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `numerosidentificativos`
 --
@@ -203,12 +242,12 @@ ALTER TABLE `numerosidentificativos`
 -- AUTO_INCREMENT de la tabla `provincias`
 --
 ALTER TABLE `provincias`
-  MODIFY `idProvincia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProvincia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

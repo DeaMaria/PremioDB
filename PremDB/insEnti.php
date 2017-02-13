@@ -4,12 +4,12 @@
 include("conexion.php");
 
 // recuperamos valores
-$cif=$_POST['CIF'];
-$nom_enti=$_POST['nom_entidad'];
-$respon=$_POST['responsable'];
-$telf=$_POST['telefono'];
-$idLoc=$_POST['idLocalidad'];
-$dom_enti=$_POST['domicilio_entidad'];
+$cif=$_POST['cif'];
+$nom_enti=$_POST['nomEnti'];
+$respon=$_POST['respon'];
+$telf=$_POST['telf'];
+$idLoc=$_POST['localidad'];
+$dom_enti=$_POST['dom_enti'];
 $correo=$_POST['correo'];
 $web=$_POST['web'];
 $estatutos=$_POST['estatutos'];
