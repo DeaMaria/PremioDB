@@ -16,28 +16,11 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-<script src="./assets/js/jquery-1.7.2.js"></script>
-    <script language="javascript">
-    $(document).ready(function(){
-        $("#provincia").change(function () {
-               $("#provincia option:selected").each(function () {
-                valor=$(this).val();
-                tabla="localidades";
-                campo="idProvincia";    
-                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
-                $("#localidad").html(data);
-                });            
-            });
-       })
-    });
-    </script>
+
 </head>
 
 <body>
-	<?php
-      include("conexion.php");
-  	?> 
-	
+
 
 <div class="page-wrapper">
  	
@@ -115,19 +98,19 @@
 									-->
 									<li><a href="#">Nosotros</a></li>
                                     <li class="dropdown"><a href="#">Listar</a>
-                                        <ul>
+                                    	<ul>
                                             <li><a tabindex="-1" href="single-cause.html">Proyectos</a></li>
                                             <li class="dropdown pull-right"><a tabindex="-1" href="#">Ámbito</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a tabindex="-1" href="#">Ética y Ciudadanía</a></li>
-                                                    <li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
-                                                    <li><a tabindex="-1" href="#">Historia</a></li>
-                                                    <li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
-                                                </ul>
+                                            	<ul class="dropdown-menu">
+                                            		<li><a tabindex="-1" href="#">Ética y Ciudadanía</a></li>
+                                            		<li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
+                                            		<li><a tabindex="-1" href="#">Historia</a></li>
+                                            		<li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
+                                            	</ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    
+									
                                     <li class="dropdown"><a href="#">Opciones</a>
                                     	<ul>
                                             <li><a href="create-project.php">Proponer proyecto</a></li>
@@ -162,168 +145,36 @@
     <!-- / Hidden Bar -->
     
     <!--Page Title-->
-    <section class="page-title" style="background-color: black;">
-        <div class="auto-container">
-            <h1>DATE DE ALTA</h1>
-            <div class="bread-crumb-outer">
-                <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Opciones</a></li>
-                    <li class="active">Date de alta</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    
     
     
     <!--Volunteer Section-->
-    <section class="volunteer-section">
-    	<div class="auto-container">
-            
-            <div class="row clearfix">
-            	<!--Content Column-->
-            	<div class="content-column col-md-7 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                    	<div class="bold-text">Si deseas que tu institución sea voluntaria en futuros proyectos, ¡Este es tu sitio!</div>
-                        <figure class="image-box"><img src="images/resource/featured-image-16.jpg" alt=""></figure>
-                        <div class="text">Proporciona los datos de tu institución para así hacer más sencilla la inscripción.</div>
-                    </div>
-                </div>
-                
-                <!--How To Column-->
-            	<div class="how-to-column col-md-5 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                    	<div class="default-title"><h3>COMO HACERLO</h3></div>
-                        <!--Info Block-->
-                        <div class="info-block">
-                        	<div class="inner">
-                            	<div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms"><span class="flaticon-user-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
-                                <h4>REGISTRATE</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
-                            </div>
-                        </div>
-                        
-                        <!--Info Block-->
-                        <div class="info-block">
-                        	<div class="inner">
-                            	<div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="300ms"><span class="flaticon-list-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
-                                <h4>ELIGE UN PROYECTO</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
-                            </div>
-                        </div>
-                        
-                        <!--Info Block-->
-                        
-                        
-                        <!--Info Block-->
-                        <div class="info-block">
-                        	<div class="inner">
-                            	<div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="900ms"><span class="flaticon-sticker-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
-                                <h4>ERES UN VOLUNTARIO!</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-            </div>       
-        </div>
-    </section>
     
     
     <!--Become VOlunteer Section-->
     <section class="become-volunteer">
     	<div class="auto-container">
-        	<div class="normal-title"><h3>Date de alta como entidad</h3></div>
+        	<div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
             
             <div class="default-form">
                 <form method="post" action="insEnti.php">
                     <div class="row clearfix">
                     
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Nombre entidad: <span class="req">*</span></div>
-                            <input type="text" name="nomEnti" placeholder="Nombre entidad" id="nomEnti" required>
+                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
+                            <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
                         </div>
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">CIF: <span class="req">*</span></div>
-                            <input type="text" name="cif" placeholder="CIF" id="cif" class="form-control" required>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
+                            <input type="text" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
                         </div>
 						
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Responsable: <span class="req">*</span></div>
-                            <input type="text" name="respon" placeholder="Responsable" id="respon" class="form-control" required>
-                        </div>
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Telefono de contacto: <span class="req">*</span></div>
-                            <input type="text" maxlength="9" step="1" name="telf" id="telf" required>
-                        </div>
-
-                        
-                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
-                            <div class="form-group">
-                                <label for="provincia">Provincia:</label>
-                                <select name="provincia" id="provincia">        
-                                    <option> Elige una provincia... </option>
-                                    <?php
-                                        $sql="SELECT * FROM provincias";
-                                        $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
-                                        while($linea=mysqli_fetch_array($totalProv))
-                                        {
-                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
-                                        }
-                                    ?>
-                                    
-                                </select>
-                                
-
-                            </div>
-                        </div>
-                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
-                            <div class="form-group">
-                                <label for="localidad">Localidad:</label>
-                                <select name="localidad" id="localidad">        
-                                    <option> Elige una localidad... </option>
-                                </select>
-                            </div>
-                        </div>
-                    
-                        
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>
-                            <input type="text" name="dom_enti" placeholder="Domicilio de la entidad" id="dom_enti" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Correo electronico: <span class="req">*</span></div>
-                            <input type="text" name="correo" placeholder="Correo" id="correo" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Web: <span class="req">*</span></div>
-                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
-                        </div> 
-                                               
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Estatutos: <span class="req">*</span></div>
-                            <input type="text" name="estatutos" placeholder="Estatutos" id="estatutos" class="form-control" required>
-                        </div>
-                        
-                                                
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Registros: <span class="req">*</span></div>
-                            <input type="text" name="registros" placeholder="Registros" id="registros" class="form-control" required>
-                        </div>
-                        
-                                                
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span></div>
-                            <input type="text" name="compromiso" placeholder="Compromiso" id="compromiso" class="form-control" required>
-                        </div>
-
-                                                
-                        <button type="submit" class="btn btn-md btn-primary">Enviar</button>
-            			<button type="button" class="btn btn-md btn-primary" onclick="window.open('index.php','_parent')">Volver</button>                        
+					</div>
+                    <div class="row clearfix">
+                        <div class="form-group col-md-4 col-md-offset-5 col-sm-4 col-xs-4">                     
+                            <button type="submit" class="btn btn-md btn-primary">Enviar</button>
+            			    <button type="button" class="btn btn-md btn-primary">Volver</button>
+                        </div>                      
                     </div>
                 </form>
                 

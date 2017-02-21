@@ -4,7 +4,7 @@
 <!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
 <head>
 <meta charset="utf-8">
-<title>Human Welfare - Fundraising and Charity HTML Template | Volunteer</title>
+<title>Conecta-T a la Humanidad</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -54,7 +54,7 @@
                     <div class="top-left">
                     	<ul class="clearfix">
                         	<!-- <li><span class="icon flaticon-technology"></span>+12345 06 789</li> -->
-                            <li><span class="icon flaticon-note"></span>mail@humanwelfare.com</li>
+                            <li><span class="icon flaticon-note"></span>conectaT@gmail.com</li>
                         </ul>
                     </div>
                     
@@ -85,7 +85,7 @@
             	<div class="outer-container clearfix">
                     <!--Logo Box-->
                     <div class="logo-box">
-                        <div class="logo"><!-- <a href="index-2.html"> --><img src="images/logo-proyecto.png" alt=""></a></div>
+                        <div class="logo"><!-- <a href="index-2.html"> --><img src="images/logo-proyecto.jpg" alt=""></a></div>
                     </div>
                     
                     <!--Nav Outer-->
@@ -112,25 +112,25 @@
                                         </ul>
                                     </li>
 									-->
-									<li><a href="about-us.html">About Us</a></li>
-                                    <li class="dropdown"><a href="#">Causes</a>
-                                    	<ul>
+									<li><a href="#">Nosotros</a></li>
+                                    <li class="dropdown"><a href="#">Listar</a>
+                                        <ul>
                                             <li><a tabindex="-1" href="single-cause.html">Proyectos</a></li>
                                             <li class="dropdown pull-right"><a tabindex="-1" href="#">Ámbito</a>
-                                            	<ul class="dropdown-menu">
-                                            		<li><a tabindex="-1" href="#">Ética y Ciudadanía</a></li>
-                                            		<li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
-                                            		<li><a tabindex="-1" href="#">Historia</a></li>
-                                            		<li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
-                                            	</ul>
+                                                <ul class="dropdown-menu">
+                                                    <li><a tabindex="-1" href="#">Ética y Ciudadanía</a></li>
+                                                    <li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
+                                                    <li><a tabindex="-1" href="#">Historia</a></li>
+                                                    <li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
-									
-                                    <li class="dropdown"><a href="#">Pages</a>
+                                    
+                                    <li class="dropdown"><a href="#">Opciones</a>
                                     	<ul>
                                             <li><a href="create-project.php">Proponer proyecto</a></li>
-                                            <li><a href="volunteer.php">Inscribirse</a></li>
+                                            <li><a href="volunteer.php">Date de alta</a></li>
 											
                                         </ul>
                                     </li>
@@ -157,86 +157,16 @@
     
     
     <!-- Hidden Navigation Bar -->
-    <section class="hidden-bar right-align">
-        
-        <div class="hidden-bar-closer">
-            <button class="btn"><i class="fa fa-close"></i></button>
-        </div>
-        
-        <!-- Hidden Bar Wrapper -->
-        <div class="hidden-bar-wrapper">
-        
-            <!-- .logo -->
-            <div class="logo text-center">
-                <!-- <a href="index-2.html"> --><img src="images/logo-proyecto.png" alt=""></a>			
-            </div><!-- /.logo -->
-            
-            <!-- .Side-menu -->
-            <div class="side-menu">
-            <!-- .navigation -->
-                <ul class="navigation">
-                    <li class="current dropdown"><a href="index.html">Home</a>
-					<!--
-                        <ul>
-                            <li><a href="index-2.html">Homepage One</a></li>
-                            <li><a href="index-3.html">Homepage Two</a></li>
-                        </ul>
-						-->
-                    </li>
-                    <li class="dropdown"><a href="#">About Us</a>
-                        <ul>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <!-- <li><a href="our-team.html">Our Team</a></li> -->
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Causes</a>
-                        <ul>
-							<li><a tabindex="-1" href="single-cause.html">Proyectos</a></li>
-							<li class="dropdown pull-right"><a tabindex="-1" href="#">Ámbito</a>
-								<ul class="dropdown-menu">
-									<li><a tabindex="-1" href="#">Ética y Ciudadanía</a></li>
-									<li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
-									<li><a tabindex="-1" href="#">Historia</a></li>
-									<li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
-								</ul>
-							</li>
-						</ul>
-                    </li>
-					
-                    <li class="dropdown"><a href="#">Pages</a>
-                        <ul>
-							<li><a href="create-project.php">Proponer proyecto</a></li>
-							<li><a href="volunteer.php">Inscribirse</a></li>
-							
-							
-						</ul>
-                    </li>
-					
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div><!-- /.Side-menu -->
-        
-            <div class="social-icons">
-                <ul>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-        
-        </div><!-- / Hidden Bar Wrapper -->
-    </section>
     <!-- / Hidden Bar -->
     
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/bg-page-title-1.jpg);">
+    <section class="page-title" style="background-color: black;">
         <div class="auto-container">
-            <h1>New Project</h1>
+            <h1>Nuevo Proyecto</h1>
             <div class="bread-crumb-outer">
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Opciones</a></li>
                     <li class="active">Proponer Proyecto</li>
                 </ul>
             </div>
@@ -280,13 +210,6 @@
                         </div>
                         
                         <!--Info Block-->
-                        <div class="info-block">
-                            <div class="inner">
-                                <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="600ms"><span class="flaticon-money-bag"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
-                                <h4>HAZ UNA DONACION</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
-                            </div>
-                        </div>
                         
                         <!--Info Block-->
                         <div class="info-block">
@@ -308,7 +231,7 @@
     <!--Become VOlunteer Section-->
     <section class="become-volunteer">
     	<div class="auto-container">
-        	<div class="normal-title"><h3>BECOME A <strong>NEW PROJECT</strong></h3></div>
+        	<div class="normal-title"><h3>Propón un nuevo proyecto</h3></div>
             
             <div class="default-form">
                 <form method="post" action="insproyecto.php">           
@@ -424,27 +347,24 @@
     
     <!--Main Footer-->
     <footer class="main-footer">
-    	<div class="auto-container">
+    	<footer class="main-footer">
+        <div class="auto-container">
         
             <!--Widgets Section-->
             <div class="widgets-section">
-            	<div class="row clearfix">
-                	<!--Big Column-->
-                	<div class="big-column col-md-6 col-sm-12 col-xs-12">
-                    	<div class="row clearfix">
+                <div class="row clearfix">
+                    <!--Big Column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
                             
                             <!--Footer Column-->
-                        	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
-                            	<div class="footer-widget about-widget">
-                                	<div class="footer-logo"><figure><a href="index-2.html"><img src="images/logo-3.png" alt=""></a></figure></div>
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget about-widget">
+                                    <div class="footer-logo"><figure><a href="index-2.html"><img src="images/logo-3.png" alt=""></a></figure></div>
                                     <div class="widget-content">
-                                    	<div class="text">
-                                        	<p>Capitalise on low hanging fruit to identify a ballpark value added activity to beta test. Override lickthroughs from DevOps.</p>
-                                            <a href="#" class="more-link">Read More <span class="fa fa-angle-double-right"></span></a>
-                                        </div>
                                         
                                         <div class="social-links">
-                                        	<a href="#"><span class="fa fa-facebook-f"></span></a>
+                                            <a href="#"><span class="fa fa-facebook-f"></span></a>
                                             <a href="#"><span class="fa fa-twitter"></span></a>
                                             <a href="#"><span class="fa fa-linkedin"></span></a>
                                             <a href="#"><span class="fa fa-google-plus"></span></a>
@@ -456,19 +376,11 @@
                             </div>
                             
                             <!--Footer Column-->
-                        	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
-                            	<div class="footer-widget links-widget">
-                                	<h2>Our Projects</h2>
+                            <div class="footer-column col-md-offset-2 col-md-4 col-sm-4 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                    <h2>Inscríbete</h2>
                                     <div class="widget-content">
-                                        <ul class="list">
-                                            <li><a href="#">Water Surve</a></li>
-                                            <li><a href="#">Education for all</a></li>
-                                            <li><a href="#">Treatment</a></li>
-                                            <li><a href="#">Food Serving</a></li>
-                                            <li><a href="#">Cloth</a></li>
-                                            <li><a href="#">Selter Project</a></li>
-                                            <li><a href="#">Help Orphan</a></li>
-                                        </ul>
+                                        
                                     </div>
                                 </div>
                                 
@@ -478,56 +390,32 @@
                     </div>
                     
                     <!--Big Column-->
-                	<div class="big-column col-md-6 col-sm-12 col-xs-12">
-                    	<div class="row clearfix">
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
                             
                             <!--Footer Column-->
-                        	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
-                            	<div class="footer-widget posts-widget">
-                                	<h2>Latest News</h2>
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget posts-widget">
+                                    <h2>Propón proyectos</h2>
                                     <div class="widget-content">
-                                    	<div class="posts">
-                                            <div class="post">
-                                                <figure class="post-thumb"><img src="images/resource/post-thumb-1.jpg" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure>
-                                                <div class="desc-text"><a href="#">Education for all childrens</a></div>
-                                                <div class="time">May 25, 2016</div>
-                                            </div>
-                                            <div class="post">
-                                                <figure class="post-thumb"><img src="images/resource/post-thumb-2.jpg" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure>
-                                                <div class="desc-text"><a href="#">Homes for homeless peoples</a></div>
-                                                <div class="time">May 25, 2016</div>
-                                            </div>
-                                            <div class="post">
-                                                <figure class="post-thumb"><img src="images/resource/post-thumb-3.jpg" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure>
-                                                <div class="desc-text"><a href="#">Foods for childrens</a></div>
-                                                <div class="time">May 25, 2016</div>
-                                            </div>
+                                        <div class="posts">
+                                           
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
                             <!--Footer Column-->
-                        	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
-                            	<div class="footer-widget contact-widget">
-                                	<h2>Contact Us</h2>
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget contact-widget">
+                                    <h2>Contáctanos</h2>
                                     <div class="widget-content">
-                                    	<ul class="contact-info">
-                                            <li>P6 12th Street, Olive Building <br>Newyork, USA</li>
-                                            <li>+1 123 456 7890</li>
-                                        	<li>mail@humanwelfare.com </li>
+                                        <ul class="contact-info">
+                                            <li>conectaT@gmail.com </li>
                                         </ul>
                                         
-                                    	<!--Newsletter One-->
-                                        <div class="newsletter-one">
-                                        	<h4>Subscribe to our newsletter</h4>
-                                            <form method="post" action="http://wp1.themexlab.com/html2/preview-human-welfare/contact.html">
-                                                <div class="form-group">
-                                                    <input type="email" name="email" value="" required placeholder="Your Email">
-                                                    <button type="submit" class="theme-btn"><span class="fa fa-paper-plane"></span></button>
-                                                </div>
-                                            </form>
-                                        </div>
+                                        <!--Newsletter One-->
+                                       
                                     
                                     </div>
                                 </div>
@@ -544,8 +432,8 @@
         
         <!--Footer Bottom-->
          <div class="footer-bottom">
-         	<div class="auto-container">
-            	<div class="copyright-text">Copyright &copy; 2016. All Rights Reserved Human Welfare</div>
+            <div class="auto-container">
+                <div class="copyright-text">Copyright &copy; 2017. All Rights Reserved CONECTA-T A LA HUMANIDAD</div>
             </div>
         </div>
     </footer>
