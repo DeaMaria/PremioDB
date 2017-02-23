@@ -199,7 +199,7 @@
                         	<div class="inner">
                             	<div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms"><span class="flaticon-user-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
                                 <h4>REGISTRATE</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                                <div class="text">Introduce los datos de tu entidad</div>
                             </div>
                         </div>
                         
@@ -207,8 +207,8 @@
                         <div class="info-block">
                         	<div class="inner">
                             	<div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="300ms"><span class="flaticon-list-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
-                                <h4>ELIGE UN PROYECTO</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                                <h4>DESCARGA LA CARTA DE COMPROMISO</h4>
+                                <div class="text">Descarga la carta, rellenala, sella firma y escaneala para subirla.</div>
                             </div>
                         </div>
                         
@@ -219,8 +219,8 @@
                         <div class="info-block">
                         	<div class="inner">
                             	<div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="900ms"><span class="flaticon-sticker-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
-                                <h4>ERES UN VOLUNTARIO!</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                                <h4>SUBE INFORMACION</h4>
+                                <div class="text">Sube los estatutos, registro, carta de compromiso</div>
                             </div>
                         </div>
                         
