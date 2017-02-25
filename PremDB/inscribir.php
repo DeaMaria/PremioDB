@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
@@ -16,11 +16,28 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-
+<script src="./assets/js/jquery-1.7.2.js"></script>
+    <script language="javascript">
+    $(document).ready(function(){
+        $("#provincia").change(function () {
+               $("#provincia option:selected").each(function () {
+                valor=$(this).val();
+                tabla="localidades";
+                campo="idProvincia";    
+                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
+                $("#localidad").html(data);
+                });            
+            });
+       })
+    });
+    </script>
 </head>
 
 <body>
-
+	<?php
+      include("conexion.php");
+  	?> 
+	
 
 <div class="page-wrapper">
  	
@@ -87,11 +104,40 @@
                             
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Inicio</a></li>
-                                    <li><a href="single-cause.html">Proyectos</a></li>
-                                    <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="create-project.php">Proponer</a></li>
-                                    <li><a href="#">Evaluación</a></li>
+                                    <li><a href="index.html">Home</a></li>
+									<!--
+                                    <li class="dropdown"><a href="#">About Us</a>
+                                    	<ul>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="our-team.html">Our Team</a></li>
+                                        </ul>
+                                    </li>
+									-->
+									<li><a href="#">Nosotros</a></li>
+                                    <li class="dropdown"><a href="#">Listar</a>
+                                        <ul>
+                                            <li><a tabindex="-1" href="single-cause.html">Proyectos</a></li>
+                                            <li class="dropdown pull-right"><a tabindex="-1" href="#">Ãmbito</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a tabindex="-1" href="#">Ã‰tica y CiudadanÃ­a</a></li>
+                                                    <li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
+                                                    <li><a tabindex="-1" href="#">Historia</a></li>
+                                                    <li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown"><a href="#">Opciones</a>
+                                    	<ul>
+                                            <li><a href="create-project.php">Proponer proyecto</a></li>
+                                            <li><a href="volunteer.php">Date de alta</a></li>
+											
+                                        </ul>
+                                    </li>
+                                   
+                                    <!--<li><a href="contact.html">Contact</a></li>-->
+                                    
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -116,37 +162,106 @@
     <!-- / Hidden Bar -->
     
     <!--Page Title-->
+    <section class="page-title" style="background-color: black;">
+        <div class="auto-container">
+            <h1>INSCRIBIR ALUMNOS</h1>
+        </div>
+    </section>
     
-    
-    
-    <!--Volunteer Section-->
     
     
     <!--Become VOlunteer Section-->
     <section class="become-volunteer">
     	<div class="auto-container">
-        	<div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
+        	<div class="normal-title"><h3>Date de alta como entidad</h3></div>
             
             <div class="default-form">
                 <form method="post" action="insEnti.php">
                     <div class="row clearfix">
                     
-                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Nombre entidad: <span class="req">*</span></div>
+                            <input type="text" name="nomEnti" placeholder="Nombre entidad" id="nomEnti" required>
                         </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="text" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">CIF: <span class="req">*</span></div>
+                            <input type="text" name="cif" placeholder="CIF" id="cif" class="form-control" required>
                         </div>
 						
-					</div>
-                    <div class="row clearfix">
-                        <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
-	                        <a href="insEnti.php" class="theme-btn btn-style-three">Enviar</a>
-	                    	<a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
-	                    	<a href="volunteer.php" class="theme-btn btn-style-three">Inscribirse</a>
-            			</div>                      
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Responsable: <span class="req">*</span></div>
+                            <input type="text" name="respon" placeholder="Responsable" id="respon" class="form-control" required>
+                        </div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Telefono de contacto: <span class="req">*</span></div>
+                            <input type="text" maxlength="9" step="1" name="telf" id="telf" required>
+                        </div>
+
+                        
+                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                            <div class="form-group">
+                                <label for="provincia">Provincia:</label>
+                                <select name="provincia" id="provincia">        
+                                    <option> Elige una provincia... </option>
+                                    <?php
+                                        $sql="SELECT * FROM provincias";
+                                        $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                                        while($linea=mysqli_fetch_array($totalProv))
+                                        {
+                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                                        }
+                                    ?>
+                                    
+                                </select>
+                                
+
+                            </div>
+                        </div>
+                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                            <div class="form-group">
+                                <label for="localidad">Localidad:</label>
+                                <select name="localidad" id="localidad">        
+                                    <option> Elige una localidad... </option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>
+                            <input type="text" name="dom_enti" placeholder="Domicilio de la entidad" id="dom_enti" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Correo electronico: <span class="req">*</span></div>
+                            <input type="text" name="correo" placeholder="Correo" id="correo" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Web: <span class="req">*</span></div>
+                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
+                        </div> 
+                                               
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Estatutos: <span class="req">*</span></div>
+                            <input type="text" name="estatutos" placeholder="Estatutos" id="estatutos" class="form-control" required>
+                        </div>
+                        
+                                                
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Registros: <span class="req">*</span></div>
+                            <input type="text" name="registros" placeholder="Registros" id="registros" class="form-control" required>
+                        </div>
+                        
+                                                
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Compromiso <span class="req">*</span></div>
+                            <input type="text" name="compromiso" placeholder="Compromiso" id="compromiso" class="form-control" required>
+                        </div>
+
+                                                
+                        <button type="submit" class="btn btn-md btn-primary">Enviar</button>
+            			<button type="button" class="btn btn-md btn-primary" onclick="window.open('index.php','_parent')">Volver</button>                        
                     </div>
                 </form>
                 
