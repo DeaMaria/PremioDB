@@ -103,40 +103,11 @@
                             
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Home</a></li>
-									<!--
-                                    <li class="dropdown"><a href="#">About Us</a>
-                                    	<ul>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="our-team.html">Our Team</a></li>
-                                        </ul>
-                                    </li>
-									-->
-									<li><a href="#">Nosotros</a></li>
-                                    <li class="dropdown"><a href="#">Listar</a>
-                                        <ul>
-                                            <li><a tabindex="-1" href="single-cause.html">Proyectos</a></li>
-                                            <li class="dropdown pull-right"><a tabindex="-1" href="#">Ámbito</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a tabindex="-1" href="#">Ética y Ciudadanía</a></li>
-                                                    <li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
-                                                    <li><a tabindex="-1" href="#">Historia</a></li>
-                                                    <li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="dropdown"><a href="#">Opciones</a>
-                                    	<ul>
-                                            <li><a href="create-project.php">Proponer proyecto</a></li>
-                                            <li><a href="volunteer.php">Date de alta</a></li>
-											
-                                        </ul>
-                                    </li>
-                                   
-                                    <!--<li><a href="contact.html">Contact</a></li>-->
-                                    
+                                    <li><a href="index.html">Inicio</a></li>
+                                    <li><a href="single-cause.html">Proyectos</a></li>
+                                    <li><a href="volunteer.php">Registrar</a></li>
+                                    <li><a href="create-project.php">Proponer</a></li>
+                                    <li><a href="#">Evaluación</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -347,20 +318,19 @@
     
     <!--Main Footer-->
     <footer class="main-footer">
-    	<footer class="main-footer">
         <div class="auto-container">
         
             <!--Widgets Section-->
             <div class="widgets-section">
                 <div class="row clearfix">
                     <!--Big Column-->
-                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="big-column col-md-4 col-sm-12 col-xs-12">
                         <div class="row clearfix">
                             
                             <!--Footer Column-->
-                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                            <div class="footer-column col-md-12 col-sm-12 col-xs-12">
                                 <div class="footer-widget about-widget">
-                                    <div class="footer-logo"><figure><a href="index-2.html"><img src="images/logo-3.png" alt=""></a></figure></div>
+                                    <div class="footer-logo"><figure><a href="index.html"><img src="images/logo-3.png" alt=""></a></figure></div>
                                     <div class="widget-content">
                                         
                                         <div class="social-links">
@@ -375,12 +345,33 @@
                                 </div>
                             </div>
                             
+                        </div>
+                    </div>
+                    
+                    <!--Big Column-->
+                    <div class="big-column col-md-4 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                            
                             <!--Footer Column-->
-                            <div class="footer-column col-md-offset-2 col-md-4 col-sm-4 col-xs-12">
-                                <div class="footer-widget links-widget">
+                            <div class="footer-column col-md-5 col-sm-5 col-xs-12">
+                                <div class="footer-widget posts-widget">
                                     <h2>Inscríbete</h2>
                                     <div class="widget-content">
-                                        
+                                        <div class="posts">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-7 col-sm-5 col-xs-12">
+                                <div class="footer-widget contact-widget">
+                                    <h2>Propón proyectos</h2>
+                                    <div class="widget-content">
+                                        <div class="posts">
+                                           
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -390,13 +381,13 @@
                     </div>
                     
                     <!--Big Column-->
-                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="big-column col-md-4 col-sm-12 col-xs-12">
                         <div class="row clearfix">
                             
                             <!--Footer Column-->
                             <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                                 <div class="footer-widget posts-widget">
-                                    <h2>Propón proyectos</h2>
+                                    <h2>Regístrate</h2>
                                     <div class="widget-content">
                                         <div class="posts">
                                            

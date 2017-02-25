@@ -193,7 +193,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-12 col-sm-12 col-xs-12">
                                 <div class="footer-widget about-widget">
-                                    <div class="footer-logo"><figure><a href="index-2.html"><img src="images/logo-3.png" alt=""></a></figure></div>
+                                    <div class="footer-logo"><figure><a href="index.html"><img src="images/logo-3.png" alt=""></a></figure></div>
                                     <div class="widget-content">
                                         
                                         <div class="social-links">
@@ -232,18 +232,18 @@
                                 <div class="footer-widget contact-widget">
                                     <h2>Propón proyectos</h2>
                                     <div class="widget-content">
-										<div class="posts">
+                                        <div class="posts">
                                            
                                         </div>
-									</div>
+                                    </div>
                                 </div>
                                 
                             </div>
                             
                         </div>
                     </div>
-					
-					<!--Big Column-->
+                    
+                    <!--Big Column-->
                     <div class="big-column col-md-4 col-sm-12 col-xs-12">
                         <div class="row clearfix">
                             
