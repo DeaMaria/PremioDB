@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:50:33 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/single-cause.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:51:43 GMT -->
 <head>
 <meta charset="utf-8">
 <title>Conecta-T a la Humanidad</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/revolution-slider.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -17,15 +16,11 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-<script language="JavaScript" type="text/javascript">
-   // alert();
-</script>
 </head>
 
 <body>
+
 <div class="page-wrapper">
-
-
  	
     <!-- Preloader -->
     <div class="preloader"></div>
@@ -114,161 +109,71 @@
     <!--End Main Header -->
     
     
+    <!-- Hidden Navigation Bar -->
     
+    <!-- / Hidden Bar -->
     
-
-    <!--Recent Causes Section-->
-    <section class="recent-causes-section no-bg">
-    	<div class="auto-container">
-        	<!--Section Title-->
-            <div class="sec-title centered">
-            	<h2>PROYECTOS</h2>
+    <!--Page Title-->
+    <section class="page-title" style="background-color: black;">
+        <div class="auto-container">
+            <h1>LISTAR</h1>
+            <div class="bread-crumb-outer">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Listar</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+                    
+    <!--Cause Details-->
+    <section class="cause-details">
+       <div class="auto-container">
+            <!--Cause Box Two-->
+            <div class="cause-box-two">
+                <div class="inner-box">
+                    <div class="image-box">
+                        <figure class="image"><img src="images/resource/ninos-leyendo.jpg" alt=""></figure>
+                        <div class="progress-box">
+                            <div class="bar">
+                                <div class="bar-inner animated-bar" data-percent="50%"><div class="count-text">50%</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower-content">
+                        <div class="post-header clearfix">
+                            <h3>Apadrinaiento lector</h3>
+                            <div class="cause-info">Publicado el <a href="#">2 de Diciembre</a> del 2016</div>
+                        </div>
+                        
+                        <div class="more-info clearfix">
+                        	<div class="pull-left">
+                            	<div class="cause-donation-info"><span class="donated">Plazas: 29 /</span> <span class="total">58</span></div>
+                            </div>
+                            <div class="pull-right">
+                                <a href="#" class="theme-btn btn-style-three"><span class="fa fa-heart"></span> &ensp; Inscribirse</a>
+                            </div>
+                        </div>
+                        <div class="text">
+                        	<p><strong>Dominar una buena técnica de lectura, comprender lo que se lee, ser capaz de trabajar con el contenido leído, son aspectos fundamentales para trabajar en las clases constituyendo uno de los principales objetivos de la etapa.</strong></p>
+                            <p>Desde los centros educativos se han puesto en marcha muchas iniciativas. Así, se celbra el día del libro y se organizan vistas de autores a los centros, se confenccionan carteles de autores a los centros, se regalan libros entre los alumnos/as dde un determinado curso, y otras muchas actividades. </p>
+                            <p>También puede programarse un proyecto como el apadrinamiento lector. El servicio dva a consistir en que los alumnos mayores de sexto curso de Primaria, se van a convertir en padrinos y madrinas de los niños de primero y les van a ayudar en su aprendizaje de la lectura y su compresión.</p>
+                            <p><b>¿Cómo llevarlo a cabo?</b></p>
+                            <p> · Con una periodicidad fijada, cada semana o cada quincena, van a trabajar de manera individualizada con él.<br> · Escogen un libro, de acuerdo con el niño o niña y su profesora, el padrino/madrina se lo lee a su ahijado y le plantea preguntas sobre lo leído para fomentar su compresión, anotando sus progresos y sus dificultades.<br> · Luego se invierten los papeles y es el niño/a quien lee ante su padrino, valorando este su capacidad y su rapidez.<br> · Tanto los padrinos como los ahijados firman un contrato en el que quedan claros los compromisos por ambas partes, lo que da seguridad y estabilidad al proyecto.<br> · Finalizado este, tiene lugar una fiesta de celebración del éxito obtenido con el desarrollo del proyecto.</p>
+                            <p><b>¿Cuáles son sus bondades?</b></p>
+                            <p>Los mayores mejoran su capacidad lectora, aprenden a plantear preguntas sobre lo leído mejorando también su capacidad de comprensión, y aprenden a cuidar y atender a niños más pequeños, desarrollando su capacidad de escucha, de atención y de paciencia ante las dificultades.<br>Los alumnos apadrinados perciben que son atendidos de manera individual y que son importates para alguien; mejorando su técnica de lectura y aumenta su interés por esta. Desarrollando el interés y la afición por la lectura, algo fundamental para el futuro.<br> Ambos adquieren valores y actitudes: la responsabilidad y el compromiso, la valoración de la diversidad y de la convivencia, la autoestima, la motivación y el rigor en el uso de la lengua.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Post Controls-->
+            <div class="cause-post-controls">
+            	<a href="#" class="theme-btn"><span class="fa fa-angle-double-left"></span></a>
+                <a href="#" class="theme-btn"><span class="fa fa-angle-double-right"></span></a>
             </div>
             
-        	<div class="row clearfix">
-            	<!--Default Cause Box-->
-                <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
-                    	<div class="image-box">
-                        	<figure class="image"><a href="single-cause.html"><img src="images/resource/ninos-leyendo.jpg" alt=""></a></figure>
-                            <div class="progress-box">
-                            	<div class="bar">
-                                	<div class="bar-inner animated-bar" data-percent="50%"><div class="count-text">50%</div></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                        	<div class="cause-donation-info"><span class="donated">Plazas: 15/</span> <span class="total">30</span></div>
-                            <div class="separator"></div>
-                            <h3><a href="single-cause.html">Apadrinamiento lector</a></h3>
-                            <div class="text">Proyecto cuyo objetivo es mejorar la capacidad de lectura y su calidad, a la vez, despertar en los niños y niñas el gusto y la afición a la lectura.</div>
-
-                            <div class="links"><a href="volunteer.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Default Cause Box-->
-                <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image-box">
-                            <figure class="image"><a href="single-cause.html"><img src="images/resource/abuelos.jpg" alt=""></a></figure>
-                            <div class="progress-box">
-                                <div class="bar">
-                                    <div class="bar-inner animated-bar" data-percent="65%"><div class="count-text">65%</div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <div class="cause-donation-info"><span class="donated">Plazas: 39/</span> <span class="total">60</span></div>
-                            <div class="separator"></div>
-                            <h3><a href="single-cause.html">Cuidemos a nuestros abuelos</a></h3>
-                            <div class="text">Proyecto cuyo objetivo es impartir cursos para formar a los cuidadores de las personas mayores desde un punto de vista sanitario ante cualquier situación o necesidad.</div>
-
-                            <div class="links"><a href="volunteer.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="single-cause.html" class="theme-btn btn-style-four">Leer más</a></div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!--Default Cause Box-->
-                <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image-box">
-                            <figure class="image"><a href="single-cause.html"><img src="images/resource/donar-sangre-donar-vida.jpg" alt=""></a></figure>
-                            <div class="progress-box">
-                                <div class="bar">
-                                    <div class="bar-inner animated-bar" data-percent="70%"><div class="count-text">70%</div></div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="lower-content">
-                            <div class="cause-donation-info"><span class="donated">Plazas: 35/</span> <span class="total">55</span></div>
-                            <div class="separator"></div>
-                            <h3><a href="single-cause.html">Banco de sangre</a></h3>
-                            <div class="text">Proyecto cuyo objetivo es transmitir la importancia de la donación de sangre de los alumnos a sus circulos sociales, para así concienciar a la población.</div>
-
-                            <div class="links"><a href="volunteer.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="single-cause.html" class="theme-btn btn-style-four">Leer más</a></div>
-
-                        </div>
-                    </div>
-                </div>
-			</div>
-			
-			<div class="row clearfix">
-                <!--Default Cause Box-->
-                <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
-                    	<div class="image-box">
-                        	<figure class="image"><a href="single-cause.html"><img src="images/resource/voluntaries-construccion-sudafrica.jpg" alt=""></a></figure>
-                            <div class="progress-box">
-                            	<div class="bar">
-                                	<div class="bar-inner animated-bar" data-percent="25%"><div class="count-text">25%</div></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                        	<div class="cause-donation-info"><span class="donated">Plazas: 15/</span> <span class="total">58</span></div>
-                            <div class="separator"></div>
-                            <h3><a href="single-cause.html">Ocupados en construir</a></h3>
-                            <div class="text">Proyecto para el diseño y construcción de un refugio y albergue para la sociedad.</div>
-
-                            <div class="links"><a href="volunteer.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="single-cause.html" class="theme-btn btn-style-four">Leer más</a></div>
-
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Default Cause Box-->
-                <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image-box">
-                            <figure class="image"><a href="single-cause.html"><img src="images/resource/limpieza-rios.jpg" alt=""></a></figure>
-                            <div class="progress-box">
-                                <div class="bar">
-                                    <div class="bar-inner animated-bar" data-percent="50%"><div class="count-text">50%</div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <div class="cause-donation-info"><span class="donated">Plazas: 29/</span> <span class="total">58</span></div>
-                            <div class="separator"></div>
-                            <h3><a href="single-cause.html">Proyecto ríos</a></h3>
-                            <div class="text">Proyecto para realizar tareas de limpieza, conservación o señalización sobre un tramo de río, canal o balsa amenazada por la degradación.</div>
-
-                            <div class="links"><a href="volunteer.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="single-cause.html" class="theme-btn btn-style-four">Leer más</a></div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!--Default Cause Box-->
-                <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image-box">
-                            <figure class="image"><a href="single-cause.html"><img src="images/resource/P1130428.JPG" alt=""></a></figure>
-                            <div class="progress-box">
-                                <div class="bar">
-                                    <div class="bar-inner animated-bar" data-percent="50%"><div class="count-text">50%</div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <div class="cause-donation-info"><span class="donated">Plazas: 29/</span> <span class="total">58</span></div>
-                            <div class="separator"></div>
-                            <h3><a href="single-cause.html">Ecoauditoría</a></h3>
-                            <div class="text">Proyecto paragitk emprender medidas correctoras para el centro educativo y la ciudad, contribuyendo a crear un entorno urbano más sostenible.</div>
-
-                            <div class="links"><a href="volunteer.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="single-cause.html" class="theme-btn btn-style-four">Leer más</a></div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     
@@ -312,9 +217,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-5 col-sm-5 col-xs-12">
                                 <div class="footer-widget posts-widget">
-
                                     <a href="single-cause.html"><h2>Inscríbete</h2></a>
-
                                     <div class="widget-content">
                                         <div class="posts">
                                            
@@ -326,9 +229,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-7 col-sm-5 col-xs-12">
                                 <div class="footer-widget contact-widget">
-
                                     <a href="create-project.php"><h2>Propón proyectos</h2></a>
-
                                     <div class="widget-content">
                                         <div class="posts">
                                            
@@ -348,9 +249,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                                 <div class="footer-widget posts-widget">
-
                                     <a href="volunteer.php"><h2>Regístrate</h2></a>
-
                                     <div class="widget-content">
                                         <div class="posts">
                                            
@@ -402,15 +301,12 @@
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/revolution.min.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/jquery.fancybox-media.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/owl.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/appear.js"></script>
 <script src="js/script.js"></script>
 </body>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:50:43 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/single-cause.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:51:44 GMT -->
 </html>
