@@ -355,7 +355,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-5 col-sm-5 col-xs-12">
                                 <div class="footer-widget posts-widget">
-                                    <h2>Inscríbete</h2>
+                                    <a href="single-cause.html"><h2>Inscríbete</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            
@@ -367,7 +367,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-7 col-sm-5 col-xs-12">
                                 <div class="footer-widget contact-widget">
-                                    <h2>Propón proyectos</h2>
+                                    <a href="create-project.php"><h2>Propón proyectos</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            
@@ -387,7 +387,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                                 <div class="footer-widget posts-widget">
-                                    <h2>Regístrate</h2>
+                                    <a href="volunteer.php"><h2>Regístrate</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            
