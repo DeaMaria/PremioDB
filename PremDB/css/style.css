@@ -1337,8 +1337,9 @@ img{
 }
 
 .default-cause-box .image-box img{
-	display:block;
-	width:100%;	
+	display: block;
+	width:500px;
+	height: 250px;
 }
 
 .default-cause-box .inner-box .progress-box{
