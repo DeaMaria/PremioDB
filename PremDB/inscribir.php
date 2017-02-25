@@ -104,40 +104,11 @@
                             
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Home</a></li>
-									<!--
-                                    <li class="dropdown"><a href="#">About Us</a>
-                                    	<ul>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="our-team.html">Our Team</a></li>
-                                        </ul>
-                                    </li>
-									-->
-									<li><a href="#">Nosotros</a></li>
-                                    <li class="dropdown"><a href="#">Listar</a>
-                                        <ul>
-                                            <li><a tabindex="-1" href="single-cause.html">Proyectos</a></li>
-                                            <li class="dropdown pull-right"><a tabindex="-1" href="#">Ãmbito</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a tabindex="-1" href="#">Ã‰tica y CiudadanÃ­a</a></li>
-                                                    <li><a tabindex="-1" href="#">Lengua y Literatura</a></li>
-                                                    <li><a tabindex="-1" href="#">Historia</a></li>
-                                                    <li><a tabindex="-1" href="#">Ciencias de la Naturaleza</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="dropdown"><a href="#">Opciones</a>
-                                    	<ul>
-                                            <li><a href="create-project.php">Proponer proyecto</a></li>
-                                            <li><a href="volunteer.php">Date de alta</a></li>
-											
-                                        </ul>
-                                    </li>
-                                   
-                                    <!--<li><a href="contact.html">Contact</a></li>-->
-                                    
+                                    <li><a href="index.html">Inicio</a></li>
+                                    <li><a href="single-cause.html">Proyectos</a></li>
+                                    <li><a href="volunteer.php">Registrar</a></li>
+                                    <li><a href="create-project.php">Proponer</a></li>
+                                    <li><a href="#">Evaluación</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -173,95 +144,33 @@
     <!--Become VOlunteer Section-->
     <section class="become-volunteer">
     	<div class="auto-container">
-        	<div class="normal-title"><h3>Date de alta como entidad</h3></div>
+        	<div class="normal-title"><h3>Dar de alta a los alumnos</h3></div>
             
             <div class="default-form">
                 <form method="post" action="insEnti.php">
                     <div class="row clearfix">
                     
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Nombre entidad: <span class="req">*</span></div>
-                            <input type="text" name="nomEnti" placeholder="Nombre entidad" id="nomEnti" required>
+                        <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                            <div class="field-label">Dni: <span class="req">*</span></div>
+                            <input type="text" name="dni" placeholder="DNI" id="dni" class="form-control" required>
                         </div>
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">CIF: <span class="req">*</span></div>
-                            <input type="text" name="cif" placeholder="CIF" id="cif" class="form-control" required>
+                        <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                            <div class="field-label">Nombre Alumno: <span class="req">*</span></div>
+                            <input type="text" name="nomAlum" placeholder="Nombre alumno" id="nomAlum" required>
                         </div>
 						
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Responsable: <span class="req">*</span></div>
-                            <input type="text" name="respon" placeholder="Responsable" id="respon" class="form-control" required>
-                        </div>
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Telefono de contacto: <span class="req">*</span></div>
-                            <input type="text" maxlength="9" step="1" name="telf" id="telf" required>
+						<div class="form-group col-md-4 col-sm-4 col-xs-12">
+                            <div class="field-label">Fecha Nacimiento: <span class="req">*</span></div>
+                            <input type="date" name="fNac" id="fNac" class="form-control" required>
                         </div>
 
-                        
-                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
-                            <div class="form-group">
-                                <label for="provincia">Provincia:</label>
-                                <select name="provincia" id="provincia">        
-                                    <option> Elige una provincia... </option>
-                                    <?php
-                                        $sql="SELECT * FROM provincias";
-                                        $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
-                                        while($linea=mysqli_fetch_array($totalProv))
-                                        {
-                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
-                                        }
-                                    ?>
-                                    
-                                </select>
-                                
-
-                            </div>
-                        </div>
-                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
-                            <div class="form-group">
-                                <label for="localidad">Localidad:</label>
-                                <select name="localidad" id="localidad">        
-                                    <option> Elige una localidad... </option>
-                                </select>
-                            </div>
-                        </div>
-                    
-                        
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>
-                            <input type="text" name="dom_enti" placeholder="Domicilio de la entidad" id="dom_enti" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Correo electronico: <span class="req">*</span></div>
-                            <input type="text" name="correo" placeholder="Correo" id="correo" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Web: <span class="req">*</span></div>
-                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
-                        </div> 
-                                               
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Estatutos: <span class="req">*</span></div>
-                            <input type="text" name="estatutos" placeholder="Estatutos" id="estatutos" class="form-control" required>
-                        </div>
-                        
-                                                
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Registros: <span class="req">*</span></div>
-                            <input type="text" name="registros" placeholder="Registros" id="registros" class="form-control" required>
-                        </div>
-                        
-                                                
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span></div>
-                            <input type="text" name="compromiso" placeholder="Compromiso" id="compromiso" class="form-control" required>
-                        </div>
-
-                                                
-                        <button type="submit" class="btn btn-md btn-primary">Enviar</button>
-            			<button type="button" class="btn btn-md btn-primary" onclick="window.open('index.php','_parent')">Volver</button>                        
+                    </div>
+					
+					<div class="row clearfix">
+                        <div class="links col-md-6  col-sm-6 col-xs-6"> 
+	                        <a href="insEnti.php" class="theme-btn btn-style-three">Enviar</a>
+	                    	<a href="#" class="theme-btn btn-style-three">+</a>
+            			</div>                      
                     </div>
                 </form>
                 
@@ -284,7 +193,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-12 col-sm-12 col-xs-12">
                                 <div class="footer-widget about-widget">
-                                    <div class="footer-logo"><figure><a href="index-2.html"><img src="images/logo-3.png" alt=""></a></figure></div>
+                                    <div class="footer-logo"><figure><a href="index.html"><img src="images/logo-3.png" alt=""></a></figure></div>
                                     <div class="widget-content">
                                         
                                         <div class="social-links">
@@ -309,7 +218,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-5 col-sm-5 col-xs-12">
                                 <div class="footer-widget posts-widget">
-                                    <h2>Inscríbete</h2>
+                                    <a href="single-cause.html"><h2>Inscríbete</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            
@@ -321,27 +230,27 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-7 col-sm-5 col-xs-12">
                                 <div class="footer-widget contact-widget">
-                                    <h2>Propón proyectos</h2>
+                                    <a href="create-project.php"><h2>Propón proyectos</h2></a>
                                     <div class="widget-content">
-										<div class="posts">
+                                        <div class="posts">
                                            
                                         </div>
-									</div>
+                                    </div>
                                 </div>
                                 
                             </div>
                             
                         </div>
                     </div>
-					
-					<!--Big Column-->
+                    
+                    <!--Big Column-->
                     <div class="big-column col-md-4 col-sm-12 col-xs-12">
                         <div class="row clearfix">
                             
                             <!--Footer Column-->
                             <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                                 <div class="footer-widget posts-widget">
-                                    <h2>Regístrate</h2>
+                                    <a href="volunteer.php"><h2>Regístrate</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            
