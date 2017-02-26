@@ -107,8 +107,8 @@
                                     <li><a href="index.html">Inicio</a></li>
                                     <li><a href="single-cause.html">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="create-project.php">Proponer</a></li>
-                                    <li><a href="#">Evaluación</a></li>
+                                    <li><a href="loginProp.html">Proponer</a></li>
+                                    <li><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -168,7 +168,7 @@
 					
 					<div class="row clearfix">
                         <div class="links col-md-6  col-sm-6 col-xs-6"> 
-	                        <a href="insEnti.php" class="theme-btn btn-style-three">Enviar</a>
+	                        <a href="#" class="theme-btn btn-style-three">Enviar</a>
 	                    	<a href="#" class="theme-btn btn-style-three">+</a>
             			</div>                      
                     </div>

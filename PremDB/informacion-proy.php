@@ -88,8 +88,8 @@
                                     <li><a href="index.html">Inicio</a></li>
                                     <li><a href="single-cause.html">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="create-project.php">Proponer</a></li>
-                                    <li><a href="#">Evaluación</a></li>
+                                    <li><a href="loginProp.html">Proponer</a></li>
+                                    <li><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -115,14 +115,9 @@
     
     <!--Page Title-->
     <section class="page-title" style="background-color: black;">
-        <div class="auto-container">
-            <h1>LISTAR</h1>
-            <div class="bread-crumb-outer">
-                <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Listar</li>
-                </ul>
-            </div>
+        <div class="sec-title centered">
+            <h1>LEER MÁS</h1>
+            <div class="separator"></div>
         </div>
     </section>
                     
@@ -151,7 +146,7 @@
                             	<div class="cause-donation-info"><span class="donated">Plazas: 29 /</span> <span class="total">58</span></div>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="theme-btn btn-style-three"><span class="fa fa-heart"></span> &ensp; Inscribirse</a>
+                                <a href="login.html" class="theme-btn btn-style-three"></span> &ensp; Inscribirse</a>
                             </div>
                         </div>
                         <div class="text">
@@ -167,15 +162,61 @@
                     </div>
                 </div>
             </div>
-            
-            <!--Post Controls-->
-            <div class="cause-post-controls">
-            	<a href="#" class="theme-btn"><span class="fa fa-angle-double-left"></span></a>
-                <a href="#" class="theme-btn"><span class="fa fa-angle-double-right"></span></a>
+           
+        </div>
+    </section>
+    <div class="container">
+      <div class="header clearfix">
+        <img src="" height="65">
+<!--       <form class="navbar-form navbar-right" action="vernoticiaspublicas.php" method="post">
+ -->                   
+        
+        <div class='row'>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                        <label for="fecInicio">Fecha de inicio:</label><label>03/27/2017</label>
+                </div>
+            </div>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                        <label for="fecFin">Fecha de fin:</label><label>04/14/2017</label>
+                </div>
+             </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                        <label for="edadMinima">Edad Mínima:</label><label>13</label>
+                </div>
+             </div>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                        <label for="edadMaxima">Edad Máxima:</label><label>15</label>
+                </div>
+             </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                    <label for="provincia">Provincia:</label><label>Aragón</label>
+                </div>
+            </div>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                    <label for="provincia">Localidad:</label><label>Zaragoza</label>
+                </div>
             </div>
             
         </div>
-    </section>
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <div class="form-group">
+                        <label for="direccion">Dirección:</label><label>C/María Auxiliadora, 57, CP 50009</label>
+                </div>
+             </div>
+        </div>
+    </div>
+    </div>
     
     
     <!--Main Footer-->

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
@@ -16,28 +16,11 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-<script src="./assets/js/jquery-1.7.2.js"></script>
-    <script language="javascript">
-    $(document).ready(function(){
-        $("#provincia").change(function () {
-               $("#provincia option:selected").each(function () {
-                valor=$(this).val();
-                tabla="localidades";
-                campo="idProvincia";    
-                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
-                $("#localidad").html(data);
-                });            
-            });
-       })
-    });
-    </script>
+
 </head>
 
 <body>
-    <?php
-      include("conexion.php");
-    ?> 
-    
+
 
 <div class="page-wrapper">
     
@@ -86,7 +69,7 @@
                 <div class="outer-container clearfix">
                     <!--Logo Box-->
                     <div class="logo-box">
-                        <div class="logo"><img src="images/logo-proyecto.jpg" alt=""></div>
+                        <div class="logo"><!-- <a href="index-2.html"> --><img src="images/logo-proyecto.jpg" alt=""></a></div>
                     </div>
                     
                     <!--Nav Outer-->
@@ -133,6 +116,13 @@
     <!-- / Hidden Bar -->
     
     <!--Page Title-->
+    
+    
+    
+    <!--Volunteer Section-->
+    
+    
+    <!--Become VOlunteer Section-->
     <section class="become-volunteer">
         <div class="auto-container">
             <div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
@@ -153,7 +143,7 @@
                     </div>
                     <div class="row clearfix">
                         <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
-                            <a href="create-project.php" class="theme-btn btn-style-three">Enviar</a>
+                            <a href="formevaluar.php" class="theme-btn btn-style-three">Enviar</a>
                             <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
                             <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
                         </div>                      
@@ -277,6 +267,7 @@
             </div>
         </div>
     </footer>
+    
 </div>
 <!--End pagewrapper-->
 

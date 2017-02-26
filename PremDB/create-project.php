@@ -106,8 +106,8 @@
                                     <li><a href="index.html">Inicio</a></li>
                                     <li><a href="single-cause.html">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="create-project.php">Proponer</a></li>
-                                    <li><a href="#">Evaluación</a></li>
+                                    <li><a href="loginProp.html">Proponer</a></li>
+                                    <li><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -132,15 +132,9 @@
     
     <!--Page Title-->
     <section class="page-title" style="background-color: black;">
-        <div class="auto-container">
+        <div class="sec-title centered">
             <h1>Nuevo Proyecto</h1>
-            <div class="bread-crumb-outer">
-                <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Opciones</a></li>
-                    <li class="active">Proponer Proyecto</li>
-                </ul>
-            </div>
+            <div class="separator"></div>            
         </div>
     </section>
     
@@ -167,7 +161,7 @@
                             <div class="inner">
                                 <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms"><span class="flaticon-user-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
                                 <h4>REGISTRATE</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                                <div class="text">Date de alta en nuestra web introduciendo los datos de tu entidad.</div>
                             </div>
                         </div>
                         
@@ -175,21 +169,14 @@
                         <div class="info-block">
                             <div class="inner">
                                 <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="300ms"><span class="flaticon-list-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
-                                <h4>ELIGE UN PROYECTO</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
+                                <h4>PROPÓN UN PROYECTO</h4>
+                                <div class="text">Completa el formulario para proponer tu proyecto.</div>
                             </div>
                         </div>
                         
                         <!--Info Block-->
                         
                         <!--Info Block-->
-                        <div class="info-block">
-                            <div class="inner">
-                                <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="900ms"><span class="flaticon-sticker-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
-                                <h4>ERES UN VOLUNTARIO!</h4>
-                                <div class="text">Please stop looking at your phone and pet me rub face on owner for have secret</div>
-                            </div>
-                        </div>
                         
                     </div>
                 </div>
@@ -307,8 +294,8 @@
         </div>
         
 
-            <button type="submit" class="btn btn-md btn-primary">Enviar</button>
-            <button type="button" class="btn btn-md btn-primary" onclick="window.open('index.php','_parent')">Volver</button>
+            <a href="index.php" class="theme-btn btn-style-three">Enviar</a>
+            <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
         </form>
                 
             </div>
@@ -367,7 +354,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-7 col-sm-5 col-xs-12">
                                 <div class="footer-widget contact-widget">
-                                    <a href="create-project.php"><h2>Propón proyectos</h2></a>
+                                    <a href="loginProp.html"><h2>Propón proyectos</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            

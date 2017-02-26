@@ -86,7 +86,7 @@
             	<div class="outer-container clearfix">
                     <!--Logo Box-->
                     <div class="logo-box">
-                        <div class="logo"><!-- <a href="index-2.html"> --><img src="images/logo-proyecto.jpg" alt=""></a></div>
+                        <div class="logo"><img src="images/logo-proyecto.jpg" alt=""></div>
                     </div>
                     
                     <!--Nav Outer-->
@@ -107,8 +107,8 @@
                                     <li><a href="index.html">Inicio</a></li>
                                     <li><a href="single-cause.html">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="create-project.php">Proponer</a></li>
-                                    <li><a href="#">Evaluación</a></li>
+                                    <li><a href="loginProp.html">Proponer</a></li>
+                                    <li><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -135,13 +135,9 @@
     <!--Page Title-->
     <section class="page-title" style="background-color: black;">
         <div class="auto-container">
-            <h1>DATE DE ALTA</h1>
-            <div class="bread-crumb-outer">
-                <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Opciones</a></li>
-                    <li class="active">Date de alta</li>
-                </ul>
+            <div class="sec-title centered">
+                <h1>REGÍSTRATE</h1>
+                <div class="separator"></div>
             </div>
         </div>
     </section>
@@ -211,6 +207,7 @@
             <div class="default-form">
                 <form method="post" action="insEnti.php">
                     <div class="row clearfix">
+                    <div class="row">
                     
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Nombre entidad: <span class="req">*</span></div>
@@ -220,6 +217,8 @@
                             <div class="field-label">CIF: <span class="req">*</span></div>
                             <input type="text" name="cif" placeholder="CIF" id="cif" class="form-control" required>
                         </div>
+                    </div>
+                    <div class="row">
 						
 						<div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Responsable: <span class="req">*</span></div>
@@ -229,7 +228,8 @@
                             <div class="field-label">Telefono de contacto: <span class="req">*</span></div>
                             <input type="text" maxlength="9" step="1" name="telf" id="telf" required>
                         </div>
-
+                    </div>
+                    <div class="row">
                         
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
@@ -258,7 +258,8 @@
                                 </select>
                             </div>
                         </div>
-                    
+                    </div>
+                    <div class="row">                    
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>
@@ -269,6 +270,8 @@
                             <div class="field-label">Correo electronico: <span class="req">*</span></div>
                             <input type="text" name="correo" placeholder="Correo" id="correo" class="form-control" required>
                         </div>
+                    </div>
+                    <div class="row">
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Web: <span class="req">*</span></div>
@@ -277,24 +280,26 @@
                                                
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Estatutos: <span class="req">*</span></div>
-                            <input type="text" name="estatutos" placeholder="Estatutos" id="estatutos" class="form-control" required>
+                            <button type="button">Subir documento</button>
                         </div>
-                        
+                    </div>
+                    <div class="row">                        
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Registros: <span class="req">*</span></div>
-                            <input type="text" name="registros" placeholder="Registros" id="registros" class="form-control" required>
+                            <button type="button">Subir documento</button>
                         </div>
                         
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span></div>
-                            <input type="text" name="compromiso" placeholder="Compromiso" id="compromiso" class="form-control" required>
+                            <div class="field-label">Compromiso <span class="req">*</span> <a href="#">Descargar carta de compromiso</a></div>
+                            <button type="button">Subir documento</button>
                         </div>
+                    </div>
 
                                                 
-                        <button type="submit" class="btn btn-md btn-primary">Enviar</button>
-            			<button type="button" class="btn btn-md btn-primary" onclick="window.open('index.php','_parent')">Volver</button>                        
+                        <a href="index.php" class="theme-btn btn-style-three">Enviar</a>
+                        <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
                     </div>
                 </form>
                 
@@ -354,7 +359,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-7 col-sm-5 col-xs-12">
                                 <div class="footer-widget contact-widget">
-                                    <a href="create-project.php"><h2>Propón proyectos</h2></a>
+                                    <a href="loginProp.html"><h2>Propón proyectos</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            

@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
 <head>
 <meta charset="utf-8">
 <title>Conecta-T a la Humanidad</title>
@@ -34,27 +34,26 @@
 </head>
 
 <body>
-    <?php
-      include("conexion.php");
-    ?> 
-    
+<?php
+    include("conexion.php");
+?>
 
 <div class="page-wrapper">
-    
+ 	
     <!-- Preloader -->
     <div class="preloader"></div>
-    
+ 	
     <!-- Main Header-->
     <header class="main-header">
-        <!-- Header Top -->
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="clearfix">
+    	<!-- Header Top -->
+    	<div class="header-top">
+        	<div class="auto-container">
+            	<div class="clearfix">
                     
                     <!--Top Left-->
                     <div class="top-left">
-                        <ul class="clearfix">
-                            <!-- <li><span class="icon flaticon-technology"></span>+12345 06 789</li> -->
+                    	<ul class="clearfix">
+                        	<!-- <li><span class="icon flaticon-technology"></span>+12345 06 789</li> -->
                             <li><span class="icon flaticon-note"></span>conectaT@gmail.com</li>
                         </ul>
                     </div>
@@ -62,9 +61,9 @@
                     <!--Top Right-->
                     <div class="top-right">
                     
-                        <!--social-icon-->
+                    	<!--social-icon-->
                         <div class="social-icon">
-                            <a href="#"><span class="fa fa-facebook"></span></a>
+                        	<a href="#"><span class="fa fa-facebook"></span></a>
                             <!-- <a href="#"><span class="fa fa-youtube-play"></span></a> -->
                             <a href="#"><span class="fa fa-linkedin"></span></a>
                             <a href="#"><span class="fa fa-instagram"></span></a>
@@ -81,12 +80,12 @@
         
         
         <!-- Main Box -->
-        <div class="main-box">
-            <div class="auto-container">
-                <div class="outer-container clearfix">
+    	<div class="main-box">
+        	<div class="auto-container">
+            	<div class="outer-container clearfix">
                     <!--Logo Box-->
                     <div class="logo-box">
-                        <div class="logo"><img src="images/logo-proyecto.jpg" alt=""></div>
+                        <div class="logo"><!-- <a href="index-2.html"> --><img src="images/logo-proyecto.jpg" alt=""></a></div>
                     </div>
                     
                     <!--Nav Outer-->
@@ -94,7 +93,7 @@
                         <!-- Main Menu -->
                         <nav class="main-menu">
                             <div class="navbar-header">
-                                <!-- Toggle Button -->      
+                                <!-- Toggle Button -->    	
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -120,7 +119,7 @@
                     <button class="hidden-bar-opener"><span class="icon fa fa-bars"></span></button>
                     </div><!-- / Hidden Nav Toggler -->
                     
-                </div>    
+            	</div>    
             </div>
         </div>
     
@@ -129,41 +128,147 @@
     
     
     <!-- Hidden Navigation Bar -->
-    
     <!-- / Hidden Bar -->
     
     <!--Page Title-->
-    <section class="become-volunteer">
+    <section class="page-title" style="background-color: black;">
         <div class="auto-container">
-            <div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
+            <h1>Evaluar alumno</h1>
+            
+        </div>
+    </section>
+    
+    
+    
+    
+    <!--Become VOlunteer Section-->
+    <section class="become-volunteer">
+    	<div class="auto-container">
+        	<div class="normal-title"><h3>Evalúa a tus aumnos</h3></div>
             
             <div class="default-form">
-                <form method="post" action="insEnti.php">
-                    <div class="row clearfix">
-                    
-                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
+                <div class='row'>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                        <label for="fecInicio">Nombre del proyecto:</label><label>Apadrina un río</label>
+                </div>
+            </div>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                        <label for="fecFin">Nombre del alumno:</label><label>María Pérez</label>
+                </div>
+             </div>
+            </div>
+                <form method="post" action="#">           
+                    <div class='row'>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                    <label for="actitud">Actitud:</label>
+                                    
+                                    <input type="radio" name="actitud" value="1"> 1
+                                    <input type="radio" name="actitud" value="2"> 2
+                                    <input type="radio" name="actitud" value="3"> 3
+                                    <input type="radio" name="actitud" value="4"> 4
+                                    <input type="radio" name="actitud" value="5"> 5
+                                    
+                            </div>
+                        </div>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                    <label for="interes">Interés:</label>
+                                    
+                                    <input type="radio" name="interes" value="1"> 1
+                                    <input type="radio" name="interes" value="2"> 2
+                                    <input type="radio" name="interes" value="3"> 3
+                                    <input type="radio" name="interes" value="4"> 4
+                                    <input type="radio" name="interes" value="5"> 5
+                                    
+                            </div>
+                        </div>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                    <label for="competencias">Competencias:</label>
+                                    
+                                    <input type="radio" name="competencias" value="1"> 1
+                                    <input type="radio" name="competencias" value="2"> 2
+                                    <input type="radio" name="competencias" value="3"> 3
+                                    <input type="radio" name="competencias" value="4"> 4
+                                    <input type="radio" name="competencias" value="5"> 5
+                                    
+                            </div>
+                        </div>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                <a href="#" class="theme-btn btn-style-three">Guardar</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="row clearfix">
-                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="text" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
+                </form>
+                
+            </div>
+            <br><br>
+            <div class="default-form">
+                <div class='row'>
+                    <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                        <div class="form-group">
+                                <label for="fecInicio">Nombre del proyecto:</label><label>Apadrina un río</label>
                         </div>
-                        
                     </div>
-                    <div class="row clearfix">
-                        <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
-                            <a href="create-project.php" class="theme-btn btn-style-three">Enviar</a>
-                            <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
-                            <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
-                        </div>                      
+                    <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                        <div class="form-group">
+                                <label for="fecFin">Nombre del alumno:</label><label>Andreea Birsan</label>
+                        </div>
+                     </div>
+                </div>
+                <form method="post" action="#">           
+                    <div class='row'>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                    <label for="actitud">Actitud:</label>
+                                    
+                                    <input type="radio" name="actitud" value="1"> 1
+                                    <input type="radio" name="actitud" value="2"> 2
+                                    <input type="radio" name="actitud" value="3"> 3
+                                    <input type="radio" name="actitud" value="4"> 4
+                                    <input type="radio" name="actitud" value="5"> 5
+                                    
+                            </div>
+                        </div>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                    <label for="interes">Interés:</label>
+                                    
+                                    <input type="radio" name="interes" value="1"> 1
+                                    <input type="radio" name="interes" value="2"> 2
+                                    <input type="radio" name="interes" value="3"> 3
+                                    <input type="radio" name="interes" value="4"> 4
+                                    <input type="radio" name="interes" value="5"> 5
+                                    
+                            </div>
+                        </div>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                    <label for="competencias">Competencias:</label>
+                                    
+                                    <input type="radio" name="competencias" value="1"> 1
+                                    <input type="radio" name="competencias" value="2"> 2
+                                    <input type="radio" name="competencias" value="3"> 3
+                                    <input type="radio" name="competencias" value="4"> 4
+                                    <input type="radio" name="competencias" value="5"> 5
+                                    
+                            </div>
+                        </div>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                <a href="#" class="theme-btn btn-style-three">Guardar</a>
+                            </div>
+                        </div>
                     </div>
                 </form>
                 
             </div>
         </div>
     </section>
-    
     
     <!--Main Footer-->
     <footer class="main-footer">
@@ -277,6 +382,7 @@
             </div>
         </div>
     </footer>
+    
 </div>
 <!--End pagewrapper-->
 
@@ -294,5 +400,5 @@
 <script src="js/script.js"></script>
 </body>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:04 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:04 GMT -->
 </html>
