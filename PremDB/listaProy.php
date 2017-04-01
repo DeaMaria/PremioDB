@@ -90,10 +90,10 @@
                             
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Inicio</a></li>
-                                    <li><a href="single-cause.html">Proyectos</a></li>
+                                    <li><a href="index.php">Inicio</a></li>
+                                    <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="loginProp.html">Proponer</a></li>
+                                    <li><a href="loginProp.php">Proponer</a></li>
                                     <li><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
@@ -134,7 +134,7 @@
                 <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
-                            <figure class="image"><a href="login.html"><img src="images/resource/ninos-leyendo.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="login.php"><img src="images/resource/ninos-leyendo.jpg" alt=""></a></figure>
                             <div class="progress-box">
                                 <div class="bar">
                                     <div class="bar-inner animated-bar" data-percent="50%"><div class="count-text">50%</div></div>
@@ -144,11 +144,11 @@
                         <div class="lower-content">
                             <div class="cause-donation-info"><span class="donated">Plazas: 29/</span> <span class="total">58</span></div>
                             <div class="separator"></div>
-                            <h3><a href="login.html">Apadrinamiento lector</a></h3>
+                            <h3><a href="login.php">Apadrinamiento lector</a></h3>
                             <div class="text">Proyecto cuyo objetivo es mejorar la capacidad de lectura y su calidad, a la vez, despertar en los niños y niñas el gusto y la afición a la lectura.</div>
 
 
-                            <div class="links"><a href="login.html" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                 <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
-                            <figure class="image"><a href="loginEnt.html"><img src="images/resource/blog.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="loginEnt.php"><img src="images/resource/blog.jpg" alt=""></a></figure>
                             <div class="progress-box">
                                 <div class="bar">
                                     <div class="bar-inner animated-bar" data-percent="71%"><div class="count-text">71%</div></div>
@@ -168,10 +168,10 @@
                         <div class="lower-content">
                             <div class="cause-donation-info"><span class="donated">Plazas: 10/</span> <span class="total">14</span></div>
                             <div class="separator"></div>
-                            <h3><a href="loginEnt.html">Diseño de blogs</a></h3>
+                            <h3><a href="loginEnt.php">Diseño de blogs</a></h3>
                             <div class="text">Se ofrece diseño de blogs para una institución sin ánimo de lucro que no cuenten con recursos propios para hacerlo y enseñar a gestionarlos.</div>
 
-                            <div class="links"><a href="loginEnt.html" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="loginEnt.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -181,7 +181,7 @@
                 <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
-                            <figure class="image"><a href="login.html"><img src="images/resource/edel.png" alt=""></a></figure>
+                            <figure class="image"><a href="login.php"><img src="images/resource/edel.png" alt=""></a></figure>
                             <div class="progress-box">
                                 <div class="bar">
                                     <div class="bar-inner animated-bar" data-percent="25%"><div class="count-text">25%</div></div>
@@ -191,10 +191,10 @@
                         <div class="lower-content">
                             <div class="cause-donation-info"><span class="donated">Plazas: 2/</span> <span class="total">8</span></div>
                             <div class="separator"></div>
-                            <h3><a href="login.html">Marcha cicloturista</a></h3>
+                            <h3><a href="login.php">Marcha cicloturista</a></h3>
                             <div class="text">La Peña Ciclista Edelweiss necesita informáticos voluntarios para cubrir con la parte técnica en una marcha cicloturista.</div>
 
-                            <div class="links"><a href="login.html" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -205,7 +205,7 @@
                 <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
                 	<div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
                     	<div class="image-box">
-                        	<figure class="image"><a href="login.html"><img src="images/resource/voluntaries-construccion-sudafrica.jpg" alt=""></a></figure>
+                        	<figure class="image"><a href="login.php"><img src="images/resource/voluntaries-construccion-sudafrica.jpg" alt=""></a></figure>
                             <div class="progress-box">
                             	<div class="bar">
                                 	<div class="bar-inner animated-bar" data-percent="25%"><div class="count-text">25%</div></div>
@@ -216,10 +216,10 @@
                         <div class="lower-content">
                         	<div class="cause-donation-info"><span class="donated">Plazas: 15/</span> <span class="total">58</span></div>
                             <div class="separator"></div>
-                            <h3><a href="login.html">Ocupados en construir</a></h3>
+                            <h3><a href="login.php">Ocupados en construir</a></h3>
                             <div class="text">Proyecto cuyo objetivo es el diseño y construcción de un refugio y albergue juvenil dirigidos al conjunto de la sociedad.</div>
 
-                            <div class="links"><a href="login.html" class="theme-btn btn-style-three">Inscribirse</a> <a href="single-cause.html" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="listaProy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -229,7 +229,7 @@
                 <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
-                            <figure class="image"><a href="login.html"><img src="images/resource/limpieza-rios.jpg" alt=""></a></figure>
+                            <figure class="image"><a href="login.php"><img src="images/resource/limpieza-rios.jpg" alt=""></a></figure>
                             <div class="progress-box">
                                 <div class="bar">
                                     <div class="bar-inner animated-bar" data-percent="50%"><div class="count-text">50%</div></div>
@@ -239,10 +239,10 @@
                         <div class="lower-content">
                             <div class="cause-donation-info"><span class="donated">Plazas: 29/</span> <span class="total">58</span></div>
                             <div class="separator"></div>
-                            <h3><a href="login.html">Proyecto ríos</a></h3>
+                            <h3><a href="login.php">Proyecto ríos</a></h3>
                             <div class="text">Proyecto para realizar tareas de limpieza, conservación o señalización sobre un tramo de río, canal o balsa amenazada por la degradación.</div>
 
-                            <div class="links"><a href="login.html" class="theme-btn btn-style-three">Inscribirse</a> <a href="single-cause.html" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="listaProy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                 <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
-                            <figure class="image"><a href="login.html"><img src="images/resource/P1130428.JPG" alt=""></a></figure>
+                            <figure class="image"><a href="login.php"><img src="images/resource/P1130428.JPG" alt=""></a></figure>
                             <div class="progress-box">
                                 <div class="bar">
                                     <div class="bar-inner animated-bar" data-percent="88%"><div class="count-text">88%</div></div>
@@ -262,10 +262,10 @@
                         <div class="lower-content">
                             <div class="cause-donation-info"><span class="donated">Plazas: 22/</span> <span class="total">26</span></div>
                             <div class="separator"></div>
-                            <h3><a href="login.html">Ecoauditoría</a></h3>
+                            <h3><a href="login.php">Ecoauditoría</a></h3>
                             <div class="text">Proyecto para emprender medidas correctoras para el centro educativo y la ciudad, contribuyendo a crear un entorno urbano más sostenible.</div>
 
-                            <div class="links"><a href="login.html" class="theme-btn btn-style-three">Inscribirse</a> <a href="single-cause.html" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="listaProy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -289,7 +289,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-12 col-sm-12 col-xs-12">
                                 <div class="footer-widget about-widget">
-                                    <div class="footer-logo"><figure><a href="index.html"><img src="images/logo-3.png" alt=""></a></figure></div>
+                                    <div class="footer-logo"><figure><a href="index.php"><img src="images/logo-3.png" alt=""></a></figure></div>
                                     <div class="widget-content">
                                         
                                         <div class="social-links">
@@ -315,7 +315,7 @@
                             <div class="footer-column col-md-5 col-sm-5 col-xs-12">
                                 <div class="footer-widget posts-widget">
 
-                                    <a href="single-cause.html"><h2>Inscríbete</h2></a>
+                                    <a href="listaProy.php"><h2>Inscríbete</h2></a>
 
                                     <div class="widget-content">
                                         <div class="posts">
@@ -329,7 +329,7 @@
                             <div class="footer-column col-md-7 col-sm-5 col-xs-12">
                                 <div class="footer-widget contact-widget">
 
-                                    <a href="loginProp.html"><h2>Propón proyectos</h2></a>
+                                    <a href="loginProp.php"><h2>Propón proyectos</h2></a>
 
                                     <div class="widget-content">
                                         <div class="posts">
