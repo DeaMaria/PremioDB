@@ -298,7 +298,7 @@
                     </div>
 
                                                 
-                        <a href="index.php" class="theme-btn btn-style-three">Enviar</a>
+                        <a href="single-cause.html" class="theme-btn btn-style-three">Enviar</a>
                         <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
                     </div>
                 </form>

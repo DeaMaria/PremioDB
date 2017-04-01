@@ -201,6 +201,9 @@
                             <div class="form-group">
                                 <a href="#" class="theme-btn btn-style-three">Guardar</a>
                             </div>
+                            <div class="form-group">
+                                <a href="#" class="theme-btn btn-style-three">Imprimir Certificado</a>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -261,6 +264,9 @@
                         <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
                             <div class="form-group">
                                 <a href="#" class="theme-btn btn-style-three">Guardar</a>
+                            </div>
+                            <div class="form-group">
+                                <a href="#" class="theme-btn btn-style-three">Imprimir Certificado</a>
                             </div>
                         </div>
                     </div>

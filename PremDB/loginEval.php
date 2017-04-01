@@ -137,7 +137,7 @@
                     </div>
                     <div class="row clearfix">
                         <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="text" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
+                            <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
                         </div>
                         
                     </div>
