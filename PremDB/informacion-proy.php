@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/single-cause.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:51:43 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/listaProy.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:51:43 GMT -->
 <head>
 <meta charset="utf-8">
 <title>Conecta-T a la Humanidad</title>
@@ -85,10 +85,10 @@
                             
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Inicio</a></li>
-                                    <li><a href="single-cause.html">Proyectos</a></li>
+                                    <li><a href="index.php">Inicio</a></li>
+                                    <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="loginProp.html">Proponer</a></li>
+                                    <li><a href="loginProp.php">Proponer</a></li>
                                     <li><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
@@ -146,7 +146,7 @@
                             	<div class="cause-donation-info"><span class="donated">Plazas: 29 /</span> <span class="total">58</span></div>
                             </div>
                             <div class="pull-right">
-                                <a href="login.html" class="theme-btn btn-style-three"></span> &ensp; Inscribirse</a>
+                                <a href="login.php" class="theme-btn btn-style-three"></span> &ensp; Inscribirse</a>
                             </div>
                         </div>
                         <div class="text">
@@ -233,7 +233,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-12 col-sm-12 col-xs-12">
                                 <div class="footer-widget about-widget">
-                                    <div class="footer-logo"><figure><a href="index.html"><img src="images/logo-3.png" alt=""></a></figure></div>
+                                    <div class="footer-logo"><figure><a href="index.php"><img src="images/logo-3.png" alt=""></a></figure></div>
                                     <div class="widget-content">
                                         
                                         <div class="social-links">
@@ -258,7 +258,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-5 col-sm-5 col-xs-12">
                                 <div class="footer-widget posts-widget">
-                                    <a href="single-cause.html"><h2>Inscríbete</h2></a>
+                                    <a href="listaProy.php"><h2>Inscríbete</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            
@@ -349,5 +349,5 @@
 <script src="js/script.js"></script>
 </body>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/single-cause.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:51:44 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/listaProy.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:51:44 GMT -->
 </html>

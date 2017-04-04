@@ -103,10 +103,10 @@
                             
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Inicio</a></li>
-                                    <li><a href="single-cause.html">Proyectos</a></li>
+                                    <li><a href="index.php">Inicio</a></li>
+                                    <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="loginProp.html">Proponer</a></li>
+                                    <li><a href="loginProp.php">Proponer</a></li>
                                     <li><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
@@ -294,7 +294,7 @@
         </div>
         
 
-            <a href="single-cause.html" class="theme-btn btn-style-three">Enviar</a>
+            <a href="listaProy.php" class="theme-btn btn-style-three">Enviar</a>
             <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
         </form>
                 
@@ -317,7 +317,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-12 col-sm-12 col-xs-12">
                                 <div class="footer-widget about-widget">
-                                    <div class="footer-logo"><figure><a href="index.html"><img src="images/logo-3.png" alt=""></a></figure></div>
+                                    <div class="footer-logo"><figure><a href="index.php"><img src="images/logo-3.png" alt=""></a></figure></div>
                                     <div class="widget-content">
                                         
                                         <div class="social-links">
@@ -342,7 +342,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-5 col-sm-5 col-xs-12">
                                 <div class="footer-widget posts-widget">
-                                    <a href="single-cause.html"><h2>Inscríbete</h2></a>
+                                    <a href="listaProy.php"><h2>Inscríbete</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            
@@ -354,7 +354,7 @@
                             <!--Footer Column-->
                             <div class="footer-column col-md-7 col-sm-5 col-xs-12">
                                 <div class="footer-widget contact-widget">
-                                    <a href="loginProp.html"><h2>Propón proyectos</h2></a>
+                                    <a href="loginProp.php"><h2>Propón proyectos</h2></a>
                                     <div class="widget-content">
                                         <div class="posts">
                                            
