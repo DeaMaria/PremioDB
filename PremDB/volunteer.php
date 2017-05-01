@@ -213,9 +213,12 @@
                             <div class="field-label">Nombre entidad: <span class="req">*</span></div>
                             <input type="text" name="nomEnti" placeholder="Nombre entidad" id="nomEnti" required>
                         </div>
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group col-md-3 col-sm-3 col-xs-6">
                             <div class="field-label">CIF: <span class="req">*</span></div>
                             <input type="text" name="cif" placeholder="CIF" id="cif" class="form-control" required>
+                        </div>
+						<div class="form-group col-md-3 col-sm-3 col-xs-6">
+                            <div class="field-label" style="margin-top:39px;"><label><input type="checkbox" value="">Somos una empresa</label></div>
                         </div>
                     </div>
                     <div class="row">
@@ -280,20 +283,23 @@
                                                
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Estatutos: <span class="req">*</span></div>
-                            <button type="button">Subir documento</button>
+                            <!-- <button type="button">Subir documento</button> -->
+								<input name="estatutos" id="estatutos" type="file" />
                         </div>
                     </div>
                     <div class="row">                        
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Registros: <span class="req">*</span></div>
-                            <button type="button">Subir documento</button>
+                            <!-- <button type="button">Subir documento</button> -->
+							<input name="resgistros" id="resgistros" type="file" />
                         </div>
                         
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span> <a href="#">Descargar carta de compromiso</a></div>
-                            <button type="button">Subir documento</button>
+                            <div class="field-label">Compromiso <span class="req">*</span> <a href="/cartaCompromiso/CartaCompromiso.pdf" download="CartaCompromiso">Descargar carta de compromiso</a></div>
+                            <!-- <button type="button">Subir documento</button> -->
+							<input name="compromiso" id="compromiso" type="file" />
                         </div>
                     </div>
 
@@ -302,7 +308,6 @@
                         <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
                     </div>
                 </form>
-                
             </div>
         </div>
     </section>

@@ -6,6 +6,7 @@
 <meta charset="utf-8">
 <title>Conecta-T a la Humanidad</title>
 <!-- Stylesheets -->
+<link href="bootstrap.css" rel="stylesheet">
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -133,6 +134,7 @@
     <!-- / Hidden Bar -->
     
     <!--Page Title-->
+    <!--
     <section class="become-volunteer">
         <div class="auto-container">
             <div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
@@ -159,6 +161,95 @@
                         </div>                      
                     </div>
                 </form>
+                
+            </div>
+        </div>
+    </section>
+    -->
+	
+	<section class="become-volunteer">
+        <div class="auto-container">
+            <div class="normal-title col-md-offset-5"><h3>¿QU&Eacute ERES?</h3></div>
+            
+            <div class="default-form">
+                    <div class="row clearfix">
+                        <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
+                            <a data-toggle="modal" href="#formEmpresa" class="theme-btn btn-style-three">Empresa</a>
+							<div class="modal fade" id="formEmpresa">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">INSERTA CREDENCIALES</h4>
+										</div>
+
+                                        <div class="modal-body">
+                                            <form method="post" action="insEnti.php">
+                                                <div class="row clearfix">
+                                                
+                                                    <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
+                                                        <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row clearfix">
+                                                    <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
+                                                        <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="row clearfix">
+                                                    <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6">
+                                                        <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
+                                                    </div>                      
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
+                                                    <a href="index.html" class="btn btn-success">Enviar</a>
+                                                </div>
+                                            </form>
+                                        </div>
+									</div>
+								</div>
+                            </div>
+                            <a data-toggle="modal" href="#formColegio" class="theme-btn btn-style-three">Colegio</a>
+							<div class="modal fade" id="formColegio">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">INSERTA CREDENCIALES</h4>
+										</div>
+
+                                        <div class="modal-body">
+                                            <form method="post" action="insEnti.php">
+                                                <div class="row clearfix">
+                                                
+                                                    <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
+                                                        <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row clearfix">
+                                                    <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
+                                                        <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="row clearfix">
+                                                    <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6">
+                                                        <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
+                                                    </div>                      
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
+                                                    <a href="index.html" class="btn btn-success">Enviar</a>
+                                                </div>
+                                            </form>
+                                        </div>
+									</div>
+								</div>
+							</div>
+                        </div>                      
+                    </div>
                 
             </div>
         </div>
@@ -292,6 +383,8 @@
 <script src="js/owl.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
+
+<script src="bootstrap-modal.js"></script>
 </body>
 
 <!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:04 GMT -->

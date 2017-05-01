@@ -15,10 +15,11 @@ $web=$_POST['web'];
 $estatutos=$_POST['estatutos'];
 $resgistros=$_POST['registros'];
 $compromiso=$_POST['compromiso'];
+$empresa=$_POST['empresa'];
 
 
 // Insertar el registro en la Tabla
-$sql="INSERT INTO entidades(CIF, nom_entidad, responsable, telefono, idLocalidad, domicilio_entidad, correo, web, estatutos, resgistros, compromiso) VALUES ('$cif', '$nom_entidad', '$respon', $telf, $idLoc, '$dom_enti', '$correo', '$web', '$estatutos', '$compromiso')";
+$sql="INSERT INTO entidades(CIF, nom_entidad, responsable, telefono, idLocalidad, domicilio_entidad, correo, web, estatutos, resgistros, compromiso, empresa) VALUES ('$cif', '$nom_entidad', '$respon', $telf, $idLoc, '$dom_enti', '$correo', '$web', '$estatutos', '$resgistros', '$compromiso', '$empresa')";
 
 mysqli_query($conexion, $sql) or die ("Error en la consulta $sql");
 mysqli_close($conexion);
