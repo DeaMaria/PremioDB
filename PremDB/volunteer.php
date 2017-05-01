@@ -17,7 +17,7 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 <script src="./assets/js/jquery-1.7.2.js"></script>
-    <script language="javascript">
+<script language="javascript">
     $(document).ready(function(){
         $("#provincia").change(function () {
                $("#provincia option:selected").each(function () {
@@ -30,7 +30,21 @@
             });
        })
     });
-    </script>
+</script>
+
+<script language="javascript">
+    function mostrarFormEnti(id)
+    {
+        var formEnti=document.getElementById(id);
+        formEnti.style.display="block";
+    }
+
+    function mostrarFormColegio(id)
+    {
+        var formColegio=document.getElementById(id);
+        formColegio.style.display="block";
+    }
+</script>
 </head>
 
 <body>
@@ -196,15 +210,17 @@
                 
             </div>       
         </div>
-    </section>
-    
+    </section>    
     
     <!--Become VOlunteer Section-->
     <section class="become-volunteer">
     	<div class="auto-container">
-        	<div class="normal-title"><h3>Date de alta como entidad</h3></div>
-            
-            <div class="default-form">
+        	<div class="normal-title"><h3>Date de alta como:</h3></div>
+
+            <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormEnti('formEnti');" value="Entidad">
+            <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormColegio('formColegio');" value="Colegio">
+
+            <div class="default-form" style="display: none;" id="formEnti">
                 <form method="post" action="insEnti.php">
                     <div class="row clearfix">
                     <div class="row">
@@ -213,7 +229,7 @@
                             <div class="field-label">Nombre entidad: <span class="req">*</span></div>
                             <input type="text" name="nomEnti" placeholder="Nombre entidad" id="nomEnti" required>
                         </div>
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-6">
                             <div class="field-label">CIF: <span class="req">*</span></div>
                             <input type="text" name="cif" placeholder="CIF" id="cif" class="form-control" required>
                         </div>
@@ -280,20 +296,23 @@
                                                
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Estatutos: <span class="req">*</span></div>
-                            <button type="button">Subir documento</button>
+                            <!-- <button type="button">Subir documento</button> -->
+								<input name="estatutos" id="estatutos" type="file" />
                         </div>
                     </div>
                     <div class="row">                        
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Registros: <span class="req">*</span></div>
-                            <button type="button">Subir documento</button>
+                            <!-- <button type="button">Subir documento</button> -->
+							<input name="resgistros" id="resgistros" type="file" />
                         </div>
                         
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span> <a href="#">Descargar carta de compromiso</a></div>
-                            <button type="button">Subir documento</button>
+                            <div class="field-label">Compromiso <span class="req">*</span> <a href="/cartaCompromiso/CartaCompromiso.pdf" download="CartaCompromiso">Descargar carta de compromiso</a></div>
+                            <!-- <button type="button">Subir documento</button> -->
+							<input name="compromiso" id="compromiso" type="file" />
                         </div>
                     </div>
 
@@ -302,7 +321,109 @@
                         <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
                     </div>
                 </form>
-                
+            </div>
+
+            <div class="default-form" style="display: none;" id="formColegio">
+                <form method="post" action="insColegio.php">
+                    <div class="row clearfix">
+                    <div class="row">
+                    
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Nombre Colegio: <span class="req">*</span></div>
+                            <input type="text" name="nomEnti" placeholder="Nombre colegio" id="nomEnti" required>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                            <div class="field-label">CIF: <span class="req">*</span></div>
+                            <input type="text" name="cif" placeholder="CIF" id="cif" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+						
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Responsable: <span class="req">*</span></div>
+                            <input type="text" name="respon" placeholder="Responsable" id="respon" class="form-control" required>
+                        </div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Telefono de contacto: <span class="req">*</span></div>
+                            <input type="text" maxlength="9" step="1" name="telf" id="telf" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                            <div class="form-group">
+                                <label for="provincia">Provincia:</label>
+                                <select name="provincia" id="provincia">        
+                                    <option> Elige una provincia... </option>
+                                    <?php
+                                        $sql="SELECT * FROM provincias";
+                                        $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                                        while($linea=mysqli_fetch_array($totalProv))
+                                        {
+                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                                        }
+                                    ?>
+                                    
+                                </select>
+                                
+
+                            </div>
+                        </div>
+                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                            <div class="form-group">
+                                <label for="localidad">Localidad:</label>
+                                <select name="localidad" id="localidad">        
+                                    <option> Elige una localidad... </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">                    
+                        
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>
+                            <input type="text" name="dom_enti" placeholder="Domicilio de la entidad" id="dom_enti" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Correo electronico: <span class="req">*</span></div>
+                            <input type="text" name="correo" placeholder="Correo" id="correo" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Web: <span class="req">*</span></div>
+                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
+                        </div> 
+                                               
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Estatutos: <span class="req">*</span></div>
+                            <!-- <button type="button">Subir documento</button> -->
+								<input name="estatutos" id="estatutos" type="file" />
+                        </div>
+                    </div>
+                    <div class="row">                        
+                                                
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Registros: <span class="req">*</span></div>
+                            <!-- <button type="button">Subir documento</button> -->
+							<input name="resgistros" id="resgistros" type="file" />
+                        </div>
+                        
+                                                
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <div class="field-label">Compromiso <span class="req">*</span> <a href="/cartaCompromiso/CartaCompromiso.pdf" download="CartaCompromiso">Descargar carta de compromiso</a></div>
+                            <!-- <button type="button">Subir documento</button> -->
+							<input name="compromiso" id="compromiso" type="file" />
+                        </div>
+                    </div>
+
+                                                
+                        <a href="listaProy.php" class="theme-btn btn-style-three">Enviar</a>
+                        <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
+                    </div>
+                </form>
             </div>
         </div>
     </section>
