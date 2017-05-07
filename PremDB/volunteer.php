@@ -37,12 +37,14 @@
     {
         var formEnti=document.getElementById(id);
         formEnti.style.display="block";
+		$("#formColegio").fadeOut(1);
     }
 
     function mostrarFormColegio(id)
     {
         var formColegio=document.getElementById(id);
         formColegio.style.display="block";
+		$("#formEnti").fadeOut(1);
     }
 </script>
 </head>
