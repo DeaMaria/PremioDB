@@ -184,7 +184,7 @@
 										</div>
 
                                         <div class="modal-body">
-                                            <form method="post" action="insEnti.php">
+                                            <form method="post" action="registrarEnti.php">
                                                 <div class="row clearfix">
                                                 
                                                     <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
@@ -199,12 +199,15 @@
                                                 </div>
                                                 <div class="row clearfix">
                                                     <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6">
-                                                        <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
+                                                        <!--<a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>-->
+                                                        <input type="button" onclick="window.open('volunteer.php')" value="Registrar"> 
+                                                        <input type="submit" value="Entrar">
+
                                                     </div>                      
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
-                                                    <a href="index.html" class="btn btn-success">Enviar</a>
+                                                    <!--<a type="submit" href="index.html" class="btn btn-success">Enviar</a>-->
                                                 </div>
                                             </form>
                                         </div>
@@ -221,7 +224,7 @@
 										</div>
 
                                         <div class="modal-body">
-                                            <form method="post" action="insEnti.php">
+                                            <form method="post" action="registrarColegio.php">
                                                 <div class="row clearfix">
                                                 
                                                     <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
