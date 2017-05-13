@@ -24,7 +24,7 @@ else
 		$sql="UPDATE colegios SET ultimoacceso=now() WHERE numIndicativo = '$usu'";
 		mysqli_query($conexion,$sql);
 		$_SESSION['user']=$usu;
-		header("location:create-project.php");
+		header("location:create-project-col.php");
 		}
 	}
 }
