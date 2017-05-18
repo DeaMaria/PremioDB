@@ -312,7 +312,7 @@
                         
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span> <a href="/cartaCompromiso/CartaCompromiso.pdf" download="CartaCompromiso">Descargar carta de compromiso</a></div>
+                            <div class="field-label">Compromiso <span class="req">*</span> <a href="descarga.php" download="CartaCompromiso">Descargar carta de compromiso</a></div>
                             <!-- <button type="button">Subir documento</button> -->
 							<input name="compromiso" id="compromiso" type="file" />
                         </div>
@@ -415,7 +415,7 @@
                         
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span> <a href="/cartaCompromiso/CartaCompromiso.pdf" download="CartaCompromiso">Descargar carta de compromiso</a></div>
+                            <div class="field-label">Compromiso <span class="req">*</span> <a href="descarga.php" download="CartaCompromiso">Descargar carta de compromiso</a></div>
                             <!-- <button type="button">Subir documento</button> -->
 							<input name="compromiso" id="compromiso" type="file" />
                         </div>
