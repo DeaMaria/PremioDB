@@ -1,12 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
 <head>
 <meta charset="utf-8">
 <title>Conecta-T a la Humanidad</title>
 <!-- Stylesheets -->
-<link href="bootstrap.css" rel="stylesheet">
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -35,27 +34,26 @@
 </head>
 
 <body>
-    <?php
-      include("conexion.php");
-    ?> 
-    
+<?php
+    include("conexion.php");
+?>
 
 <div class="page-wrapper">
-    
+ 	
     <!-- Preloader -->
     <div class="preloader"></div>
-    
+ 	
     <!-- Main Header-->
     <header class="main-header">
-        <!-- Header Top -->
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="clearfix">
+    	<!-- Header Top -->
+    	<div class="header-top">
+        	<div class="auto-container">
+            	<div class="clearfix">
                     
                     <!--Top Left-->
                     <div class="top-left">
-                        <ul class="clearfix">
-                            <!-- <li><span class="icon flaticon-technology"></span>+12345 06 789</li> -->
+                    	<ul class="clearfix">
+                        	<!-- <li><span class="icon flaticon-technology"></span>+12345 06 789</li> -->
                             <li><span class="icon flaticon-note"></span>conectaT@gmail.com</li>
                         </ul>
                     </div>
@@ -63,9 +61,9 @@
                     <!--Top Right-->
                     <div class="top-right">
                     
-                        <!--social-icon-->
+                    	<!--social-icon-->
                         <div class="social-icon">
-                            <a href="#"><span class="fa fa-facebook"></span></a>
+                        	<a href="#"><span class="fa fa-facebook"></span></a>
                             <!-- <a href="#"><span class="fa fa-youtube-play"></span></a> -->
                             <a href="#"><span class="fa fa-linkedin"></span></a>
                             <a href="#"><span class="fa fa-instagram"></span></a>
@@ -82,12 +80,12 @@
         
         
         <!-- Main Box -->
-        <div class="main-box">
-            <div class="auto-container">
-                <div class="outer-container clearfix">
+    	<div class="main-box">
+        	<div class="auto-container">
+            	<div class="outer-container clearfix">
                     <!--Logo Box-->
                     <div class="logo-box">
-                        <div class="logo"><img src="images/logo-proyecto.jpg" alt=""></div>
+                        <div class="logo"><!-- <a href="index-2.html"> --><img src="images/logo-proyecto.jpg" alt=""></a></div>
                     </div>
                     
                     <!--Nav Outer-->
@@ -95,7 +93,7 @@
                         <!-- Main Menu -->
                         <nav class="main-menu">
                             <div class="navbar-header">
-                                <!-- Toggle Button -->      
+                                <!-- Toggle Button -->    	
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -121,7 +119,7 @@
                     <button class="hidden-bar-opener"><span class="icon fa fa-bars"></span></button>
                     </div><!-- / Hidden Nav Toggler -->
                     
-                </div>    
+            	</div>    
             </div>
         </div>
     
@@ -130,129 +128,158 @@
     
     
     <!-- Hidden Navigation Bar -->
-    
     <!-- / Hidden Bar -->
     
     <!--Page Title-->
-    <!--
-    <section class="become-volunteer">
-        <div class="auto-container">
-            <div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
-            
-            <div class="default-form">
-                <form method="post" action="insEnti.php">
-                    <div class="row clearfix">
-                    
-                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
-                        </div>
-                        
-                    </div>
-                    <div class="row clearfix">
-                        <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
-                            <a href="create-project.php" class="theme-btn btn-style-three">Enviar</a>
-                            <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
-                            <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
-                        </div>                      
-                    </div>
-                </form>
-                
-            </div>
+    <section class="page-title" style="background-color: black;">
+        <div class="sec-title centered">
+            <h1>Nuevo Proyecto</h1>
+            <div class="separator"></div>            
         </div>
     </section>
-    -->
-	
-	<section class="become-volunteer">
-        <div class="auto-container">
-            <div class="normal-title col-md-offset-5"><h3>¿QU&Eacute ERES?</h3></div>
+    
+    
+    <!--Volunteer Section-->
+    <section class="volunteer-section">
+    	<div class="auto-container">
+            
+            <div class="row clearfix">
+            	<!--Content Column-->
+            	<div class="content-column col-md-7 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                    	<div class="bold-text">Crea aquí tu nueva proposición de proyecto.</div>
+                        <div class="text">Rellena el siguiente formulario para exponer el proyecto que deseas realizar y así poder obtener algún tipo de colaboración y ayuda. Descríbelo lo más detalladamente posible para que así resulte más sencillo el entendimiento y facilitar las futuras colaboraciones.</div>
+                    </div>
+                </div>
+                
+                <!--How To Column-->
+            	<div class="how-to-column col-md-5 col-sm-6 col-xs-12">
+                    <div class="inner-box">
+                        <div class="default-title"><h3>COMO HACERLO</h3></div>
+                        <!--Info Block-->
+                        <div class="info-block">
+                            <div class="inner">
+                                <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms"><span class="flaticon-user-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
+                                <h4>REGISTRATE</h4>
+                                <div class="text">Date de alta en nuestra web introduciendo los datos de tu entidad.</div>
+                            </div>
+                        </div>
+                        
+                        <!--Info Block-->
+                        <div class="info-block">
+                            <div class="inner">
+                                <div class="icon-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="300ms"><span class="flaticon-list-1"></span><span class="left-top-span"></span><span class="right-top-span"></span><span class="left-bottom-span"></span><span class="right-bottom-span"></span></div>
+                                <h4>PROPÓN UN PROYECTO</h4>
+                                <div class="text">Completa el formulario para proponer tu proyecto.</div>
+                            </div>
+                        </div>
+                        
+                        <!--Info Block-->
+                        
+                        <!--Info Block-->
+                        
+                    </div>
+                </div>
+                
+            </div>       
+        </div>
+    </section>
+    
+    
+    <!--Become VOlunteer Section-->
+    <section class="become-volunteer">
+    	<div class="auto-container">
+        	<div class="normal-title"><h3>Propón un nuevo proyecto</h3></div>
             
             <div class="default-form">
-                    <div class="row clearfix">
-                        <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
-                            <a data-toggle="modal" href="#formEmpresa" class="theme-btn btn-style-three">Empresa</a>
-							<div class="modal fade" id="formEmpresa">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title">INSERTA CREDENCIALES</h4>
-										</div>
+                <form method="post" action="insproyecto.php">           
+        <div class='row'>
+            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                <div class="form-group">
+                        <label for="nomProyecto">Nombre del proyecto:</label> <input type="text" placeholder="Nombre del proyecto" id="nomProyecto" name="nomProyecto" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                <div class="form-group">
+                        <label for="fecInicio">Fecha de inicio:</label> <input type="date" id="fecInicio" name="fecInicio" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                </div>
+            </div>
+            <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                <div class="form-group">
+                        <label for="fecFin">Fecha de fin:</label> <input type="date" id="fecFin" name="fecFin" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                </div>
+             </div>
+        </div>
 
-                                        <div class="modal-body">
-                                            <form method="post" action="registrarEnti.php">
-                                                <div class="row clearfix">
-                                                
-                                                    <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                                                        <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
-                                                    </div>
-                                                </div>
-                                                <div class="row clearfix">
-                                                    <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                                                        <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="row clearfix">
-                                                    <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6">
-                                                        <!--<a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>-->
-                                                        <input type="button" onclick="window.open('volunteer.php')" value="Registrar"> 
-                                                        <input type="submit" value="Entrar">
+        <div class='row'>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                    <label for="ambito">Ambito:</label>
+                    <select name="ambito" id="ambito">        
+                        <option> Elige un ambito... </option>
+                        <?php
+                            $sql="SELECT * FROM ambitos";
+                            $totalAmb=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                            while($linea=mysqli_fetch_array($totalAmb))
+                            {
+                                echo "<option value='$linea[idAmbito]'>$linea[nom_ambito]";
+                            }
+                            
+                        ?>
+                    </select>
+                    
 
-                                                    </div>                      
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
-                                                    <!--<a type="submit" href="index.html" class="btn btn-success">Enviar</a>-->
-                                                </div>
-                                            </form>
-                                        </div>
-									</div>
-								</div>
-                            </div>
-                            <a data-toggle="modal" href="#formColegio" class="theme-btn btn-style-three">Colegio</a>
-							<div class="modal fade" id="formColegio">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title">INSERTA CREDENCIALES</h4>
-										</div>
+                </div>
+            </div>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                    <label for="provincia">Provincia:</label>
+                    <select name="provincia" id="provincia">        
+                        <option> Elige una provincia... </option>
+                        <?php
+                            $sql="SELECT * FROM provincias";
+                            $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                            while($linea=mysqli_fetch_array($totalProv))
+                            {
+                                echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                            }
+                        ?>
+                        
+                    </select>
+                    
 
-                                        <div class="modal-body">
-                                            <form method="post" action="registrarColegio.php">
-                                                <div class="row clearfix">
-                                                
-                                                    <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                                                        <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
-                                                    </div>
-                                                </div>
-                                                <div class="row clearfix">
-                                                    <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                                                        <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="row clearfix">
-                                                    <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6">
-                                                        <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
-                                                    </div>                      
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
-                                                    <a href="index.html" class="btn btn-success">Enviar</a>
-                                                </div>
-                                            </form>
-                                        </div>
-									</div>
-								</div>
-							</div>
-                        </div>                      
-                    </div>
+                </div>
+            </div>
+            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                <div class="form-group">
+                    <label for="localidad">Localidad:</label>
+                    <select name="localidad" id="localidad">        
+                        <option> Elige una localidad... </option>
+                    </select>
+                </div>
+             </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <div class="form-group">
+                        <label for="direccion">Dirección:</label> <input type="text" placeholder="Dirección" id="direccion" name="direccion" class="form-control">
+                </div>
+             </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <div class="form-group">
+                        <label for="descripcion">Descripción:</label> <textarea rows="10" placeholder="Descripción" id="descripcion" name="descripcion" class="form-control"></textarea>
+                </div>
+             </div>
+        </div>
+        
+
+            <a href="listaProy.php" class="theme-btn btn-style-three">Enviar</a>
+            <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
+        </form>
                 
             </div>
         </div>
@@ -371,6 +398,7 @@
             </div>
         </div>
     </footer>
+    
 </div>
 <!--End pagewrapper-->
 
@@ -386,9 +414,7 @@
 <script src="js/owl.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
-
-<script src="bootstrap-modal.js"></script>
 </body>
 
-<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:04 GMT -->
+<!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:04 GMT -->
 </html>
