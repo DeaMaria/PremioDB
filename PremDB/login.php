@@ -128,22 +128,22 @@
         	<div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
             
             <div class="default-form">
-                <form method="post" action="insEnti.php">
+                <form method="post" action="loginInsAl.php">
                     <div class="row clearfix">
                     
                         <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
+                            <input type="text" name="cif" placeholder="CIF" id="cif" required>
                         </div>
                     </div>
                     <div class="row clearfix">
                         <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
+                            <input type="password" name="numIdent" placeholder="Numero Identificativo" id="numIdent" class="form-control" required>
                         </div>
 						
 					</div>
                     <div class="row clearfix">
                         <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
-	                        <a href="inscribir.php" class="theme-btn btn-style-three">Enviar</a>
+	                        <input type="submit" value="Enviar" class="theme-btn btn-style-three">
 	                    	<a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
 	                    	<a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
             			</div>                      

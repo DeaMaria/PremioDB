@@ -4,6 +4,7 @@
 <!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Conecta-T a la Humanidad</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -19,13 +20,23 @@
 <script src="./assets/js/jquery-1.7.2.js"></script>
 <script language="javascript">
     $(document).ready(function(){
-        $("#provincia").change(function () {
-               $("#provincia option:selected").each(function () {
+        $("#comunidadEnti").change(function () {
+               $("#comunidadEnti option:selected").each(function () {
                 valor=$(this).val();
-                tabla="localidades";
-                campo="idProvincia";    
+                tabla="provincias";
+                campo="idComunidad";    
                 $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
-                $("#localidad").html(data);
+                $("#provinciaEnti").html(data);
+                });            
+            });
+       })
+        $("#comunidadCol").change(function () {
+               $("#comunidadCol option:selected").each(function () {
+                valor=$(this).val();
+                tabla="provincias";
+                campo="idComunidad";    
+                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
+                $("#provinciaCol").html(data);
                 });            
             });
        })
@@ -251,15 +262,15 @@
                         
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="provincia">Provincia:</label>
-                                <select name="provincia" id="provincia">        
-                                    <option> Elige una provincia... </option>
+                                <label for="comunidad">Comunidad:</label>
+                                <select name="comunidad" id="comunidad">        
+                                    <option> Elige una comunidad... </option>
                                     <?php
-                                        $sql="SELECT * FROM provincias";
+                                        $sql="SELECT * FROM comunidades";
                                         $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
                                         while($linea=mysqli_fetch_array($totalProv))
                                         {
-                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                                            echo "<option value='$linea[idComunidad]'>$linea[nom_comunidad]";
                                         }
                                     ?>
                                     
@@ -270,9 +281,9 @@
                         </div>
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="localidad">Localidad:</label>
-                                <select name="localidad" id="localidad">        
-                                    <option> Elige una localidad... </option>
+                                <label for="provincia">Provincia:</label>
+                                <select name="provincia" id="provincia">        
+                                    <option> Elige una provincia... </option>
                                 </select>
                             </div>
                         </div>
@@ -354,15 +365,15 @@
                         
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="provincia">Provincia:</label>
-                                <select name="provincia" id="provincia">        
-                                    <option> Elige una provincia... </option>
+                                <label for="comunidad">Comunidad:</label>
+                                <select name="comunidad" id="comunidad">        
+                                    <option> Elige una comunidad... </option>
                                     <?php
-                                        $sql="SELECT * FROM provincias";
+                                        $sql="SELECT * FROM comunidades";
                                         $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
                                         while($linea=mysqli_fetch_array($totalProv))
                                         {
-                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                                            echo "<option value='$linea[idComunidad]'>$linea[nom_comunidad]";
                                         }
                                     ?>
                                     
@@ -373,9 +384,9 @@
                         </div>
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="localidad">Localidad:</label>
-                                <select name="localidad" id="localidad">        
-                                    <option> Elige una localidad... </option>
+                                <label for="provincia">Provincia:</label>
+                                <select name="provincia" id="provincia">        
+                                    <option> Elige una provincia... </option>
                                 </select>
                             </div>
                         </div>

@@ -9,7 +9,7 @@ include 'conexion.php';
 $sql = "SELECT * FROM $tabla WHERE $campo = $valor";
 
 $registros=mysqli_query($conexion, $sql) or die(mysql_error());
-$op=$op."<option value=''>Elige una localidad...</option>";
+$op=$op."<option value=''>Elige una provincia...</option>";
 
 // Comienzo a imprimir el select
 while($linea=mysqli_fetch_array($registros))
