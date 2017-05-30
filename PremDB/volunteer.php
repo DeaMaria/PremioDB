@@ -262,8 +262,8 @@
                         
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="comunidad">Comunidad:</label>
-                                <select name="comunidad" id="comunidad">        
+                                <label for="comunidadEnti">Comunidad:</label>
+                                <select name="comunidadEnti" id="comunidadEnti">        
                                     <option> Elige una comunidad... </option>
                                     <?php
                                         $sql="SELECT * FROM comunidades";
@@ -281,8 +281,8 @@
                         </div>
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="provincia">Provincia:</label>
-                                <select name="provincia" id="provincia">        
+                                <label for="provinciaEnti">Provincia:</label>
+                                <select name="provinciaEnti" id="provinciaEnti">        
                                     <option> Elige una provincia... </option>
                                 </select>
                             </div>
@@ -365,8 +365,8 @@
                         
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="comunidad">Comunidad:</label>
-                                <select name="comunidad" id="comunidad">        
+                                <label for="comunidadCol">Comunidad:</label>
+                                <select name="comunidadCol" id="comunidadCol">        
                                     <option> Elige una comunidad... </option>
                                     <?php
                                         $sql="SELECT * FROM comunidades";
@@ -384,8 +384,8 @@
                         </div>
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="provincia">Provincia:</label>
-                                <select name="provincia" id="provincia">        
+                                <label for="provinciaCol">Provincia:</label>
+                                <select name="provinciaCol" id="provinciaCol">        
                                     <option> Elige una provincia... </option>
                                 </select>
                             </div>
