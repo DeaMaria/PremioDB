@@ -128,7 +128,22 @@
         	<div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
             
             <div class="default-form">
-                <form method="post" action="loginInsAl.php">
+            <?php
+                // Conectar con la base de datos
+                include("conexion.php");
+                {
+
+                // consulta sql
+                $sql="SELECT proy.* FROM proyectos as proy ORDER BY idProyecto";
+                }
+                // ejecutamos la consulta sql
+                $registros=mysqli_query($conexion,$sql) or die("Error en la consulta $sql");
+                while ($linea=mysqli_fetch_array($registros))
+                {
+                    echo "<form method='post' action='loginInsAl.php?id=$linea[idProyecto]'>";
+                }
+                ?>
+                <form method="post" action="loginInsAl.php?id=$linea[idProyecto]">
                     <div class="row clearfix">
                     
                         <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">

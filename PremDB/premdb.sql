@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2017 a las 22:38:40
+-- Tiempo de generación: 02-06-2017 a las 00:22:53
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -47,7 +47,7 @@ INSERT INTO `ambitos` (`idAmbito`, `nom_ambito`) VALUES
 
 CREATE TABLE `colegios` (
   `CIF` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
-  `nom_entidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `nom_colegio` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `responsable` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `telefono` int(9) NOT NULL,
   `idProvincia` int(11) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE `colegios` (
 -- Volcado de datos para la tabla `colegios`
 --
 
-INSERT INTO `colegios` (`CIF`, `nom_entidad`, `responsable`, `telefono`, `idProvincia`, `domicilio_entidad`, `correo`, `web`, `numIndicativo`, `estatutos`, `registros`, `compromiso`, `validado`) VALUES
+INSERT INTO `colegios` (`CIF`, `nom_colegio`, `responsable`, `telefono`, `idProvincia`, `domicilio_entidad`, `correo`, `web`, `numIndicativo`, `estatutos`, `registros`, `compromiso`, `validado`) VALUES
 ('23456789Z', 'ColegioPrueba', 'ColegioPrueba', 623412532, 1, 'csa aefgjhuiv ', 'ColegioPrueba@email.com', 'www.ColegioPrueba.es', 3, 'CartaCompromiso.pdf', 'cartaCompromiso.pdf', 'cartaCompromiso.pdf', 1);
 
 -- --------------------------------------------------------
@@ -115,7 +115,7 @@ CREATE TABLE `entidades` (
   `nom_entidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `responsable` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `telefono` int(9) NOT NULL,
-  `idLocalidad` int(11) NOT NULL,
+  `idProvincia` int(11) NOT NULL,
   `domicilio_entidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `correo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `web` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE `entidades` (
 -- Volcado de datos para la tabla `entidades`
 --
 
-INSERT INTO `entidades` (`CIF`, `nom_entidad`, `responsable`, `telefono`, `idLocalidad`, `domicilio_entidad`, `correo`, `web`, `numIndicativo`, `estatutos`, `registros`, `compromiso`, `validado`, `empresa`) VALUES
+INSERT INTO `entidades` (`CIF`, `nom_entidad`, `responsable`, `telefono`, `idProvincia`, `domicilio_entidad`, `correo`, `web`, `numIndicativo`, `estatutos`, `registros`, `compromiso`, `validado`, `empresa`) VALUES
 ('15642', 'prueba1', 'yo', 159487623, 1, 'avd. prueba1', 'prueba1@prueba1.es', 'www.prueba1.es', 1, 'prueba1.pdf', 'prueba1.pdf', 'prueba1.pdf', 1, 0);
 
 -- --------------------------------------------------------
@@ -245,7 +245,7 @@ CREATE TABLE `proyectos` (
   `numeroVoluntarios` int(4) DEFAULT NULL,
   `edadMinima` int(1) NOT NULL,
   `edadMaxima` int(2) NOT NULL,
-  `idLocalidad` int(11) NOT NULL,
+  `idProvincia` int(11) NOT NULL,
   `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `numIndicativo` int(5) NOT NULL
@@ -255,7 +255,7 @@ CREATE TABLE `proyectos` (
 -- Volcado de datos para la tabla `proyectos`
 --
 
-INSERT INTO `proyectos` (`idProyecto`, `nom_proyecto`, `fechaInicio`, `fechaFin`, `numeroVoluntarios`, `edadMinima`, `edadMaxima`, `idLocalidad`, `direccion`, `descripcion`, `numIndicativo`) VALUES
+INSERT INTO `proyectos` (`idProyecto`, `nom_proyecto`, `fechaInicio`, `fechaFin`, `numeroVoluntarios`, `edadMinima`, `edadMaxima`, `idProvincia`, `direccion`, `descripcion`, `numIndicativo`) VALUES
 (1, 'Prueba', '0000-00-00', '0000-00-00', 5, 10, 15, 2, 'vsrtgsrtgs', 'safdsadfcdfre', 2);
 
 -- --------------------------------------------------------
@@ -288,10 +288,19 @@ CREATE TABLE `proyectos_participantes` (
   `dni` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `nombreAlumno` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `fechaNac` date NOT NULL,
-  `item1` tinyint(4) NOT NULL,
-  `item2` tinyint(4) NOT NULL,
-  `item3` tinyint(4) NOT NULL
+  `item1` tinyint(4) DEFAULT NULL,
+  `item2` tinyint(4) DEFAULT NULL,
+  `item3` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `proyectos_participantes`
+--
+
+INSERT INTO `proyectos_participantes` (`idProyecto`, `cif`, `dni`, `nombreAlumno`, `fechaNac`, `item1`, `item2`, `item3`) VALUES
+(0, '', '12345678C', 'Casian', '1999-02-28', NULL, NULL, NULL),
+(1, '23456789Z', '12345678A', 'AndrÃ©s', '1999-02-28', NULL, NULL, NULL),
+(1, '23456789Z', '12345678B', 'Marta', '2005-10-19', NULL, NULL, NULL);
 
 --
 -- Índices para tablas volcadas

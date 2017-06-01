@@ -130,6 +130,28 @@
     	<div class="auto-container">
         	<!--Section Title-->
         	<div class="row clearfix">
+            <table align="center" width="100%">
+                    <!-- <tr><td colspan="6"><img src='./imagenes/logo.jpg'><br><br><hr></td>
+                    </tr> -->
+                    <tr class ='cabecera'><td><a href='#'>Id</a></td><td><a href='#'>Nombre proy</a></td><td><a href='#'>fec in</a></td><td><a href='#'>fec fin</a></td><td><a href='#'>num voluntarios</a></td><td><a href='#'>edad min</a></td><td><a href='#'>edad max</a></td><td><a href='#'>provincia</a></td><td><a href='#'>direccion</a></td><td><a href='#'>descripcion</a></td></tr>
+                <?php
+                // Conectar con la base de datos
+                include("conexion.php");
+                {
+
+                // consulta sql
+                $sql="SELECT proy.*, provin.* FROM proyectos as proy, provincias as provin WHERE proy.idProvincia=provin.idProvincia ORDER BY idProyecto";
+                }
+                // ejecutamos la consulta sql
+                $registros=mysqli_query($conexion,$sql) or die("Error en la consulta $sql");
+                while ($linea=mysqli_fetch_array($registros))
+                {
+                    echo "<tr><td>$linea[idProyecto]</td><td>$linea[nom_proyecto]</td><td>$linea[fechaInicio]</td><td>$linea[fechaFin]</td><td>$linea[numeroVoluntarios]</td><td>$linea[edadMinima]</td><td>$linea[edadMaxima]</td><td>$linea[idProvincia]</td><td>$linea[direccion]</td><td>$linea[descripcion]</td><td><a href='login.php?id=$linea[idProyecto]'>Inscribir</a></td></tr>";
+                }
+
+
+                ?>
+</table>
             	<!--Default Cause Box-->
                 <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
