@@ -45,7 +45,8 @@ else
 	}
 	else
 	{
-		
-		header("location:index.php");
+		$_SESSION['user']=$usu;
+		$_SESSION['proy']=$idProy;
+		header("location:inscribirEnt.php");
 	}
 }
