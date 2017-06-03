@@ -94,7 +94,7 @@
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -104,7 +104,8 @@
                     <!-- Hidden Nav Toggler -->
                     <div class="nav-toggler">
                     <button class="hidden-bar-opener"><span class="icon fa fa-bars"></span></button>
-                    </div><!-- / Hidden Nav Toggler -->
+                    </div>
+                    <!-- / Hidden Nav Toggler -->
                     
             	</div>    
             </div>
@@ -154,7 +155,7 @@
                     data-endspeed="1200"
                     data-endeasing="Power4.easeIn"><div class="text">Alumnos de secundaria imparten sesiones de prevención <br> de riesgos a través de internet a alumnos de primaria.</div></div>
                     
-                    <div class="tp-caption sfl sfb tp-resizeme"
+                    <div style="display: none;" class="tp-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="15"
                     data-y="center" data-voffset="110"
                     data-speed="1500"
@@ -201,7 +202,7 @@
                     data-endspeed="1200"
                     data-endeasing="Power4.easeIn"><div class="text"><span class="theme_color">Alumnos de Secundaria apadrinan un tramo de rio,<br>canal o balsa amenazadopor la degradación, y realizan<br> tareas delimpieza, conservación, señalización odifusión<br> del valor ecológico de la zona</span></div></div>
                     
-                    <div class="tp-caption sfl sfb tp-resizeme"
+                    <div style="display: none;" class="tp-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="600"
                     data-y="center" data-voffset="130"
                     data-speed="1500"
@@ -247,7 +248,7 @@
                     data-endspeed="1200"
                     data-endeasing="Power4.easeIn"><div class="text text-center"><span class="theme_color_new">Alumnos rehabilitan viviendasen mal estado de personas mayoresque viven en situación precaria</span></div></div>
                     
-                    <div class="tp-caption sfb sfb tp-resizeme"
+                    <div style="display: none;" class="tp-caption sfb sfb tp-resizeme"
                     data-x="center" data-hoffset="0"
                     data-y="center" data-voffset="110"
                     data-speed="1500"
@@ -302,7 +303,7 @@
                             <div class="text">Proyecto cuyo objetivo es mejorar la capacidad de lectura y su calidad, a la vez, despertar en los niños y niñas el gusto y la afición a la lectura.</div>
 
 
-                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a style="display: none;" href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -325,7 +326,7 @@
                             <h3><a href="loginEnt.php">Diseño de blogs</a></h3>
                             <div class="text">Se ofrece diseño de blogs para una institución sin ánimo de lucro que no cuenten con recursos propios para hacerlo y enseñar a gestionarlos.</div>
 
-                            <div class="links"><a href="loginEnt.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a style="display: none;" href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -348,7 +349,7 @@
                             <h3><a href="login.php">Marcha cicloturista</a></h3>
                             <div class="text">La Peña Ciclista Edelweiss necesita informáticos voluntarios para cubrir con la parte técnica en una marcha cicloturista.</div>
 
-                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
+                            <div class="links"><a href="login.php" class="theme-btn btn-style-three">Inscribirse</a> <a style="display: none;" href="informacion-proy.php" class="theme-btn btn-style-four">Leer más</a></div>
 
                         </div>
                     </div>
@@ -375,7 +376,7 @@
                
                 <div class="contribute-block-two col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="400ms">
-                        <div class="icon-box"><span class="flaticon-money-bag"></span></div>
+                        <div class="icon-box"><span class="flaticon-user-1"></span></div>
                         <div class="content">
                             <h3>DARSE DE ALTA</h3>
                             <div class="text">En caso de que tu institución no esté dada de alta no dudes más en hacerlo y empieza a disfrutar de las posibilidades que te presentamos.</div>
@@ -399,7 +400,7 @@
                 
                 <div class="contribute-block-two col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="200ms">
-                        <div class="icon-box"><span class="flaticon-clothes"></span></div>
+                        <div class="icon-box"><span class="flaticon-volunteer"></span></div>
                         <div class="content">
                             <h3>INSCRIBIRSE EN UN PROYECTO</h3>
                             <div class="text">Si quieres ayudar a tus alumnos a entender mejor las explicaciones de clase no dudes en inscribirlos en proyectos.</div>

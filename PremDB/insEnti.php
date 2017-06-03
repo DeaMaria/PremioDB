@@ -8,7 +8,7 @@ $cif=$_POST['cif'];
 $nom_enti=$_POST['nomEnti'];
 $respon=$_POST['respon'];
 $telf=$_POST['telf'];
-$idLoc=$_POST['localidad'];
+$idProv=$_POST['provinciaEnt'];
 $dom_enti=$_POST['dom_enti'];
 $correo=$_POST['correo'];
 $web=$_POST['web'];
@@ -18,7 +18,7 @@ $compromiso=$_POST['compromiso'];
 
 
 // Insertar el registro en la Tabla
-$sql="INSERT INTO entidades(CIF, nom_entidad, responsable, telefono, idLocalidad, domicilio_entidad, correo, web, estatutos, resgistros, compromiso) VALUES ('$cif', '$nom_entidad', '$respon', $telf, $idLoc, '$dom_enti', '$correo', '$web', '$estatutos', '$resgistros', '$compromiso')";
+$sql="INSERT INTO entidades(CIF, nom_entidad, responsable, telefono, idProvincia, domicilio_entidad, correo, web, estatutos, resgistros, compromiso) VALUES ('$cif', '$nom_entidad', '$respon', $telf, $idProv, '$dom_enti', '$correo', '$web', '$estatutos', '$resgistros', '$compromiso')";
 
 mysqli_query($conexion, $sql) or die ("Error en la consulta $sql");
 mysqli_close($conexion);

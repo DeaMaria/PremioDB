@@ -91,7 +91,7 @@
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->

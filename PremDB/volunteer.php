@@ -135,7 +135,7 @@
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -275,8 +275,6 @@
                                     ?>
                                     
                                 </select>
-                                
-
                             </div>
                         </div>
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
@@ -303,8 +301,8 @@
                     <div class="row">
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Web: <span class="req">*</span></div>
-                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
+                            <div class="field-label">Web:</div>
+                            <input type="text" name="web" placeholder="Web" id="web" class="form-control">
                         </div> 
                                                
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
@@ -406,8 +404,8 @@
                     <div class="row">
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Web: <span class="req">*</span></div>
-                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
+                            <div class="field-label">Web:</div>
+                            <input type="text" name="web" placeholder="Web" id="web" class="form-control">
                         </div> 
                                                
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">

@@ -23,17 +23,7 @@ if(!isset($_SESSION['user']) || !isset($_SESSION['proy']))
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 <script src="./assets/js/jquery-1.7.2.js"></script>
     <script language="javascript">
-    $(document).ready(function(){
-        $("#provincia").change(function () {
-               $("#provincia option:selected").each(function () {
-                valor=$(this).val();
-                tabla="localidades";
-                campo="idProvincia";    
-                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
-                $("#localidad").html(data);
-                });            
-            });
-       })
+    $(document).ready(function() {
         $("#idPro").hide();
     });
     </script>
@@ -114,7 +104,7 @@ if(!isset($_SESSION['user']) || !isset($_SESSION['proy']))
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->

@@ -17,20 +17,30 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 <script src="./assets/js/jquery-1.7.2.js"></script>
-    <script language="javascript">
+<script language="javascript">
     $(document).ready(function(){
-        $("#provincia").change(function () {
-               $("#provincia option:selected").each(function () {
+        $("#comunidadEnti").change(function () {
+               $("#comunidadEnti option:selected").each(function () {
                 valor=$(this).val();
-                tabla="localidades";
-                campo="idProvincia";    
+                tabla="provincias";
+                campo="idComunidad";    
                 $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
-                $("#localidad").html(data);
+                $("#provinciaEnti").html(data);
+                });            
+            });
+       })
+        $("#comunidadCol").change(function () {
+               $("#comunidadCol option:selected").each(function () {
+                valor=$(this).val();
+                tabla="provincias";
+                campo="idComunidad";    
+                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
+                $("#provinciaCol").html(data);
                 });            
             });
        })
     });
-    </script>
+</script>
 </head>
 
 <body>
@@ -252,28 +262,26 @@
             </div>
             <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
                 <div class="form-group">
-                    <label for="provincia">Provincia:</label>
-                    <select name="provincia" id="provincia">        
-                        <option> Elige una provincia... </option>
+                    <label for="comunidadEnti">Comunidad:</label>
+                    <select name="comunidadEnti" id="comunidadEnti">        
+                        <option> Elige una comunidad... </option>
                         <?php
-                            $sql="SELECT * FROM provincias";
+                            $sql="SELECT * FROM comunidades";
                             $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
                             while($linea=mysqli_fetch_array($totalProv))
                             {
-                                echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                                echo "<option value='$linea[idComunidad]'>$linea[nom_comunidad]";
                             }
                         ?>
                         
                     </select>
-                    
-
                 </div>
             </div>
             <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
                 <div class="form-group">
-                    <label for="localidad">Localidad:</label>
-                    <select name="localidad" id="localidad">        
-                        <option> Elige una localidad... </option>
+                    <label for="provinciaEnti">Provincia:</label>
+                    <select name="provinciaEnti" id="provinciaEnti">        
+                        <option> Elige una provincia... </option>
                     </select>
                 </div>
              </div>

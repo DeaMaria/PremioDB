@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-06-2017 a las 00:22:53
+-- Tiempo de generación: 03-06-2017 a las 14:37:40
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -279,6 +279,24 @@ INSERT INTO `proyectos_ambito` (`idProyecto`, `idAmbito`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `proyectos_entidades`
+--
+
+CREATE TABLE `proyectos_entidades` (
+  `idProyecto` int(11) NOT NULL,
+  `cif` varchar(9) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `proyectos_entidades`
+--
+
+INSERT INTO `proyectos_entidades` (`idProyecto`, `cif`) VALUES
+(1, '15642');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `proyectos_participantes`
 --
 
@@ -299,8 +317,10 @@ CREATE TABLE `proyectos_participantes` (
 
 INSERT INTO `proyectos_participantes` (`idProyecto`, `cif`, `dni`, `nombreAlumno`, `fechaNac`, `item1`, `item2`, `item3`) VALUES
 (0, '', '12345678C', 'Casian', '1999-02-28', NULL, NULL, NULL),
+(1, '15642', '', '', '0000-00-00', NULL, NULL, NULL),
 (1, '23456789Z', '12345678A', 'AndrÃ©s', '1999-02-28', NULL, NULL, NULL),
-(1, '23456789Z', '12345678B', 'Marta', '2005-10-19', NULL, NULL, NULL);
+(1, '23456789Z', '12345678B', 'Marta', '2005-10-19', NULL, NULL, NULL),
+(1, '23456789Z', '87654321A', 'Alejandro', '2005-05-13', NULL, NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -347,6 +367,12 @@ ALTER TABLE `proyectos`
 --
 ALTER TABLE `proyectos_ambito`
   ADD PRIMARY KEY (`idProyecto`,`idAmbito`);
+
+--
+-- Indices de la tabla `proyectos_entidades`
+--
+ALTER TABLE `proyectos_entidades`
+  ADD PRIMARY KEY (`idProyecto`,`cif`);
 
 --
 -- Indices de la tabla `proyectos_participantes`

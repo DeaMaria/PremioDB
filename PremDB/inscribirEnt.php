@@ -82,40 +82,23 @@ if(!isset($_SESSION['user']) || !isset($_SESSION['proy']))
     <!-- / Hidden Bar -->
     <!--Page Title-->
     <!--Become VOlunteer Section-->
-    <section class="become-volunteer">
-    	<div class="auto-container">
-        	<div class="normal-title"><h3>Dar de alta a los alumnos</h3></div>
+    <section class="become-volunteer" style="height: 400px; padding-top: 120px;">
+    	<div class="auto-container" style="width: 60%; text-align: center;">
+        	<div class="normal-title"><h3>Inscripción en proyecto</h3></div>
             
             <div class="default-form">
-                <form method="post" action="insAlumno.php">
+                <form method="post" action="insEntiEnPro.php">
                     <div class="row clearfix">
-                        <div class="form-group col-md-3 col-sm-3 col-xs-12">
-                            <div class="field-label" name="cif" id="cif" style="margin-top: 44px;"><?php echo "CIF: $_SESSION[user]  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href='logout.php'>Logout</a>" ?>  </div>
-                             <div class="field-label" name="idPro" id="idPro" style="margin-top: 44px;"><?php echo "Id: $_SESSION[proy]  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;" ?>  </div>
-                        </div>
-                        <div class="form-group col-md-3 col-sm-3 col-xs-12">
-                        <?php
-                        // Conectar con la base de datos
-                            //$pro=$_SESSION[proy];
-                            include("conexion.php");
-                            {
-
-                            // consulta sql
-                            //$sql="SELECT * FROM proyectos WHERE idProyecto='$pro'";
-                            //$registros=mysqli_query($conexion,$sql) or die("Error en la consulta $sql");
-                            
-                            //while ($linea=mysqli_fetch_array($registros)){
-                            //    echo "<label>¿Está seguro de registrarse en el proyecto $linea[nom_proyecto]?</label>";
-                            }
-                        ?>
+                        <div class="form-group">
+                            <label>¿Está seguro de querer inscribirse en el proyecto?</label>
                         </div>
 
                     </div>
 					
 					<div class="row clearfix">
-                        <div class="links col-md-6  col-sm-6 col-xs-6">
+                        <div class="links">
                             <input type="submit" value="Sí" class="theme-btn btn-style-three">
-	                    	<a href="#" class="theme-btn btn-style-three">No</a>
+	                    	<a href="listaProy.php" class="theme-btn btn-style-three">No</a>
             			</div>                      
                     </div>
                 </form>
