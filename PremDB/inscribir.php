@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(!isset($_SESSION['user']) || !isset($_SESSION['proy']))
+   header('location:index.php');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -18,17 +23,8 @@
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 <script src="./assets/js/jquery-1.7.2.js"></script>
     <script language="javascript">
-    $(document).ready(function(){
-        $("#provincia").change(function () {
-               $("#provincia option:selected").each(function () {
-                valor=$(this).val();
-                tabla="localidades";
-                campo="idProvincia";    
-                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
-                $("#localidad").html(data);
-                });            
-            });
-       })
+    $(document).ready(function() {
+        $("#idPro").hide();
     });
     </script>
 </head>
@@ -108,7 +104,7 @@
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -147,19 +143,22 @@
         	<div class="normal-title"><h3>Dar de alta a los alumnos</h3></div>
             
             <div class="default-form">
-                <form method="post" action="insEnti.php">
+                <form method="post" action="insAlumno.php">
                     <div class="row clearfix">
-                    
-                        <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                        <div class="form-group col-md-3 col-sm-3 col-xs-12">
+                            <div class="field-label" name="cif" id="cif" style="margin-top: 44px;"><?php echo "CIF: $_SESSION[user]  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href='logout.php'>Logout</a>" ?>  </div>
+                             <div class="field-label" name="idPro" id="idPro" style="margin-top: 44px;"><?php echo "Id: $_SESSION[proy]  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;" ?>  </div>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-3 col-xs-12">
                             <div class="field-label">Dni: <span class="req">*</span></div>
                             <input type="text" name="dni" placeholder="DNI" id="dni" class="form-control" required>
                         </div>
-                        <div class="form-group col-md-4 col-sm-4 col-xs-12">
+                        <div class="form-group col-md-3 col-sm-3 col-xs-12">
                             <div class="field-label">Nombre Alumno: <span class="req">*</span></div>
                             <input type="text" name="nomAlum" placeholder="Nombre alumno" id="nomAlum" required>
                         </div>
 						
-						<div class="form-group col-md-4 col-sm-4 col-xs-12">
+						<div class="form-group col-md-3 col-sm-3 col-xs-12">
                             <div class="field-label">Fecha Nacimiento: <span class="req">*</span></div>
                             <input type="date" name="fNac" id="fNac" class="form-control" required>
                         </div>
@@ -167,8 +166,8 @@
                     </div>
 					
 					<div class="row clearfix">
-                        <div class="links col-md-6  col-sm-6 col-xs-6"> 
-	                        <a href="#" class="theme-btn btn-style-three">Enviar</a>
+                        <div class="links col-md-6  col-sm-6 col-xs-6">
+                            <input type="submit" value="Enviar" class="theme-btn btn-style-three">
 	                    	<a href="#" class="theme-btn btn-style-three">+</a>
             			</div>                      
                     </div>

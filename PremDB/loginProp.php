@@ -19,18 +19,6 @@
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 <script src="./assets/js/jquery-1.7.2.js"></script>
     <script language="javascript">
-    $(document).ready(function(){
-        $("#provincia").change(function () {
-               $("#provincia option:selected").each(function () {
-                valor=$(this).val();
-                tabla="localidades";
-                campo="idProvincia";    
-                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
-                $("#localidad").html(data);
-                });            
-            });
-       })
-    });
     </script>
 </head>
 
@@ -109,7 +97,7 @@
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -174,45 +162,43 @@
             <div class="default-form">
                     <div class="row clearfix">
                         <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
-                            <a data-toggle="modal" href="#formEmpresa" class="theme-btn btn-style-three">Empresa</a>
-							<div class="modal fade" id="formEmpresa">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
+                            <a data-toggle="modal" href="#formEntidad" class="theme-btn btn-style-three">Entidad</a>
+                            <div class="modal fade" id="formEntidad">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title">INSERTA CREDENCIALES</h4>
-										</div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="modal-title">INSERTA CREDENCIALES</h4></div>
+                                        </div>
 
                                         <div class="modal-body">
                                             <form method="post" action="registrarEnti.php">
                                                 <div class="row clearfix">
                                                 
                                                     <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                                                        <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
+                                                        <input type="text" name="cif" placeholder="CIF" id="cif" required>
                                                     </div>
                                                 </div>
                                                 <div class="row clearfix">
                                                     <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                                                        <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
+                                                        <input type="password" name="numIdent" placeholder="Numero Identificativo" id="numIdent" class="form-control" required>
                                                     </div>
                                                     
                                                 </div>
                                                 <div class="row clearfix">
-                                                    <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6">
-                                                        <!--<a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>-->
-                                                        <input type="button" onclick="window.open('volunteer.php')" value="Registrar"> 
-                                                        <input type="submit" value="Entrar">
-
+                                                    <div class="links" style="text-align: center;">
+                                                        <input type="submit" value="Enviar" class="btn btn-success">
+                                                        
                                                     </div>                      
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
-                                                    <!--<a type="submit" href="index.html" class="btn btn-success">Enviar</a>-->
+                                                    <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
                                                 </div>
                                             </form>
                                         </div>
-									</div>
-								</div>
+                                    </div>
+                                </div>
                             </div>
                             <a data-toggle="modal" href="#formColegio" class="theme-btn btn-style-three">Colegio</a>
 							<div class="modal fade" id="formColegio">
@@ -220,7 +206,7 @@
 									<div class="modal-content">
 										<div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title">INSERTA CREDENCIALES</h4>
+											<div class="col-md-8 col-sm-8 col-xs-8"><h4 class="modal-title">INSERTA CREDENCIALES</h4></div>
 										</div>
 
                                         <div class="modal-body">
@@ -228,23 +214,24 @@
                                                 <div class="row clearfix">
                                                 
                                                     <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                                                        <input type="text" name="nomEnti" placeholder="Usuario" id="nomEnti" required>
+                                                        <input type="text" name="cif" placeholder="CIF" id="cif" required>
                                                     </div>
                                                 </div>
                                                 <div class="row clearfix">
                                                     <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                                                        <input type="password" name="cif" placeholder="Contraseña" id="cif" class="form-control" required>
+                                                        <input type="password" name="numIdent" placeholder="Numero Identificativo" id="numIdent" class="form-control" required>
                                                     </div>
                                                     
                                                 </div>
                                                 <div class="row clearfix">
-                                                    <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6">
-                                                        <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
+                                                    <div class="links" style="text-align: center;">
+                                                        <input type="submit" value="Enviar" class="btn btn-success">
+                                                        
                                                     </div>                      
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
-                                                    <a href="index.html" class="btn btn-success">Enviar</a>
+                                                    <a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
                                                 </div>
                                             </form>
                                         </div>

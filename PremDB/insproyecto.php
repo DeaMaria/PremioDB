@@ -10,15 +10,12 @@ $fec_fin=$_POST['fecFin'];
 $num_vol=$_POST['numParticipantes'];
 $edad_min=$_POST['edadMinima'];
 $edad_max=$_POST['edadMaxima']; 
-$idLoc=$_POST['localidad']; 
+$idPro=$_POST['provinciaEnti']; 
 $dir=$_POST['direccion'];
 $desc=$_POST['descripcion'];
 
-$sql1="SELECT TOP 1 FROM numerosidentificativos WHERE usado = false";
-$registro=mysql_query($sql1);
-
 // Insertar el registro en la Tabla
-$sql="INSERT INTO proyectos(nom_proyecto, fechaInicio, fechaFin, numeroVoluntarios, edadMinima, edadMaxima, idLocalidad,direccion, descripcion) VALUES ('$nom_proy', $fec_ini, $fec_fin, $num_vol, $edad_min, $edad_max, $idLoc, '$dir', '$desc')";
+$sql="INSERT INTO proyectos(nom_proyecto, fechaInicio, fechaFin, numeroVoluntarios, edadMinima, edadMaxima, idProvincia, direccion, descripcion) VALUES ('$nom_proy', '$fec_ini', '$fec_fin', '$num_vol', '$edad_min', '$edad_max', '$idPro', '$dir', '$desc')";
 
 mysqli_query($conexion, $sql) or die ("Error en la consulta $sql");
 mysqli_close($conexion);

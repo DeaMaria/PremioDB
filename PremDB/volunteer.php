@@ -4,6 +4,7 @@
 <!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Conecta-T a la Humanidad</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -19,13 +20,23 @@
 <script src="./assets/js/jquery-1.7.2.js"></script>
 <script language="javascript">
     $(document).ready(function(){
-        $("#provincia").change(function () {
-               $("#provincia option:selected").each(function () {
+        $("#comunidadEnti").change(function () {
+               $("#comunidadEnti option:selected").each(function () {
                 valor=$(this).val();
-                tabla="localidades";
-                campo="idProvincia";    
+                tabla="provincias";
+                campo="idComunidad";    
                 $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
-                $("#localidad").html(data);
+                $("#provinciaEnti").html(data);
+                });            
+            });
+       })
+        $("#comunidadCol").change(function () {
+               $("#comunidadCol option:selected").each(function () {
+                valor=$(this).val();
+                tabla="provincias";
+                campo="idComunidad";    
+                $.post("combos.php", { valor: valor, tabla: tabla, campo: campo  }, function(data){
+                $("#provinciaCol").html(data);
                 });            
             });
        })
@@ -124,7 +135,7 @@
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -217,11 +228,11 @@
     <!--Become VOlunteer Section-->
     <section class="become-volunteer">
     	<div class="auto-container">
-        	<div class="normal-title"><h3>Date de alta como:</h3></div>
-
-            <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormEnti('formEnti');" value="Entidad">
-            <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormColegio('formColegio');" value="Colegio">
-
+            <div style="text-align: center; margin-bottom: 50px;">
+        	   <div class="normal-title"><h3>Date de alta como:</h3></div>
+                <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormEnti('formEnti');" value="Entidad">
+                <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormColegio('formColegio');" value="Colegio">
+            </div>
             <div class="default-form" style="display: none;" id="formEnti">
                 <form method="post" action="insEnti.php">
                     <div class="row clearfix">
@@ -251,28 +262,26 @@
                         
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="provincia">Provincia:</label>
-                                <select name="provincia" id="provincia">        
-                                    <option> Elige una provincia... </option>
+                                <label for="comunidadEnti">Comunidad:</label>
+                                <select name="comunidadEnti" id="comunidadEnti">        
+                                    <option> Elige una comunidad... </option>
                                     <?php
-                                        $sql="SELECT * FROM provincias";
+                                        $sql="SELECT * FROM comunidades";
                                         $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
                                         while($linea=mysqli_fetch_array($totalProv))
                                         {
-                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                                            echo "<option value='$linea[idComunidad]'>$linea[nom_comunidad]";
                                         }
                                     ?>
                                     
                                 </select>
-                                
-
                             </div>
                         </div>
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="localidad">Localidad:</label>
-                                <select name="localidad" id="localidad">        
-                                    <option> Elige una localidad... </option>
+                                <label for="provinciaEnti">Provincia:</label>
+                                <select name="provinciaEnti" id="provinciaEnti">        
+                                    <option> Elige una provincia... </option>
                                 </select>
                             </div>
                         </div>
@@ -292,8 +301,8 @@
                     <div class="row">
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Web: <span class="req">*</span></div>
-                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
+                            <div class="field-label">Web:</div>
+                            <input type="text" name="web" placeholder="Web" id="web" class="form-control">
                         </div> 
                                                
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
@@ -312,12 +321,11 @@
                         
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span> <a href="descarga.php" download="CartaCompromiso">Descargar carta de compromiso</a></div>
+                            <div class="field-label">Compromiso <span class="req">*</span> <a href="descarga.php?id=CartaCompromiso" download="CartaCompromiso">Descargar carta de compromiso</a></div>
                             <!-- <button type="button">Subir documento</button> -->
 							<input name="compromiso" id="compromiso" type="file" />
                         </div>
                     </div>
-
                                                 
                         <a href="listaProy.php" class="theme-btn btn-style-three">Enviar</a>
                         <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
@@ -354,15 +362,15 @@
                         
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="provincia">Provincia:</label>
-                                <select name="provincia" id="provincia">        
-                                    <option> Elige una provincia... </option>
+                                <label for="comunidadCol">Comunidad:</label>
+                                <select name="comunidadCol" id="comunidadCol">        
+                                    <option> Elige una comunidad... </option>
                                     <?php
-                                        $sql="SELECT * FROM provincias";
+                                        $sql="SELECT * FROM comunidades";
                                         $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
                                         while($linea=mysqli_fetch_array($totalProv))
                                         {
-                                            echo "<option value='$linea[idProvincia]'>$linea[nom_provincia]";
+                                            echo "<option value='$linea[idComunidad]'>$linea[nom_comunidad]";
                                         }
                                     ?>
                                     
@@ -373,9 +381,9 @@
                         </div>
                         <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                             <div class="form-group">
-                                <label for="localidad">Localidad:</label>
-                                <select name="localidad" id="localidad">        
-                                    <option> Elige una localidad... </option>
+                                <label for="provinciaCol">Provincia:</label>
+                                <select name="provinciaCol" id="provinciaCol">        
+                                    <option> Elige una provincia... </option>
                                 </select>
                             </div>
                         </div>
@@ -383,8 +391,8 @@
                     <div class="row">                    
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>
-                            <input type="text" name="dom_enti" placeholder="Domicilio de la entidad" id="dom_enti" class="form-control" required>
+                            <div class="field-label">Domicilio del colegio: <span class="req">*</span></div>
+                            <input type="text" name="dom_enti" placeholder="Domicilio del colegio" id="dom_enti" class="form-control" required>
                         </div>
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
@@ -395,8 +403,8 @@
                     <div class="row">
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Web: <span class="req">*</span></div>
-                            <input type="text" name="web" placeholder="Web" id="web" class="form-control" required>
+                            <div class="field-label">Web:</div>
+                            <input type="text" name="web" placeholder="Web" id="web" class="form-control">
                         </div> 
                                                
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
@@ -415,7 +423,7 @@
                         
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Compromiso <span class="req">*</span> <a href="descarga.php" download="CartaCompromiso">Descargar carta de compromiso</a></div>
+                            <div class="field-label">Compromiso <span class="req">*</span> <a href="descarga.php?id=CartaCompromiso" download="CartaCompromiso">Descargar carta de compromiso</a></div>
                             <!-- <button type="button">Subir documento</button> -->
 							<input name="compromiso" id="compromiso" type="file" />
                         </div>

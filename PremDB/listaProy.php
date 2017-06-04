@@ -18,7 +18,19 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 <script language="JavaScript" type="text/javascript">
-   // alert();
+   function mostrarProyEnti(id)
+    {
+        var proyEnti=document.getElementById(id);
+        proyEnti.style.display="block";
+		$("#proyectosParaColegios").fadeOut(1);
+    }
+
+    function mostrarProyColegio(id)
+    {
+        var proyColegio=document.getElementById(id);
+        proyColegio.style.display="block";
+		$("#proyectosParaEntidades").fadeOut(1);
+    }
 </script>
 </head>
 
@@ -94,7 +106,7 @@
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -127,10 +139,68 @@
         </div>
     </section>
     <section class="recent-causes-section no-bg">
-    	<div class="auto-container">
+
+
+
+    	<div class="auto-container" >
+    		<div style="text-align: center; margin-bottom: 50px;">
+    			<div class="normal-title"><h3>Ver proyectos para:</h3></div>
+	            <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarProyEnti('proyectosParaEntidades');" value="Entidad">
+            	<input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarProyColegio('proyectosParaColegios');" value="Colegio">
+            </div>
         	<!--Section Title-->
         	<div class="row clearfix">
+            	<table class="table table-striped" align="center" width="100%"  style="display: none;" id="proyectosParaColegios">
+                    <!-- <tr><td colspan="6"><img src='./imagenes/logo.jpg'><br><br><hr></td>
+                    </tr> -->
+                    <tr class ='cabecera' style="text-transform: uppercase; font-weight: bold; color: #fa6f1c;"><td style="width: 13%;">Nombre proyecto</td><td style="width: 9%;">fecha inicio</td><td  style="width: 9%;">fecha fin</td><td>número de voluntarios</td><td  style="width: 5%;">edad mínima</td><td  style="width: 5%;">edad máxima</td><td style="width: 10%;">provincia</td><td  style="width: 10%;">dirección</td><td style="width: 35%">descripción</td><td></td></tr>
+                <?php
+                // Conectar con la base de datos
+                include("conexion.php");
+                {
+
+                // consulta sql
+                $sql="SELECT proy.*, provin.* FROM proyectos as proy, provincias as provin WHERE proy.idProvincia=provin.idProvincia ORDER BY idProyecto";
+
+                }
+                // ejecutamos la consulta sql
+                $registros=mysqli_query($conexion,$sql) or die("Error en la consulta $sql");
+                while ($linea=mysqli_fetch_array($registros))
+                {
+                    echo "<tr><td>$linea[nom_proyecto]</td><td>$linea[fechaInicio]</td><td>$linea[fechaFin]</td><td>$linea[numeroVoluntarios]</td><td>$linea[edadMinima]</td><td>$linea[edadMaxima]</td><td>$linea[nom_provincia]</td><td>$linea[direccion]</td><td>$linea[descripcion]</td><td><a href='login.php?id=$linea[idProyecto]'>Inscribir</a></td></tr>";
+                }
+
+
+                ?>
+				</table>
+
+				<table class="table table-striped" align="center" width="100%"  style="display: none;" id="proyectosParaEntidades">
+                    <!-- <tr><td colspan="6"><img src='./imagenes/logo.jpg'><br><br><hr></td>
+                    </tr> -->
+                    <tr class ='cabecera' style="text-transform: uppercase; font-weight: bold; color: #fa6f1c;"><td style="width: 13%;">Nombre proyecto</td><td style="width: 9%;">fecha inicio</td><td  style="width: 9%;">fecha fin</td><td>número de Empresas</td><td style="width: 10%;">provincia</td><td  style="width: 10%;">dirección</td><td style="width: 29%">descripción</td><td></td></tr>
+                <?php
+                // Conectar con la base de datos
+                include("conexion.php");
+                {
+
+                // consulta sql
+                $sqlPE="SELECT proyE.*, provin.* FROM proyectosparaentidades as proyE, provincias as provin WHERE proyE.idProvincia=provin.idProvincia ORDER BY idProyectoEnt";
+
+                }
+                // ejecutamos la consulta sql
+                $registrosPE=mysqli_query($conexion,$sqlPE) or die("Error en la consulta $sqlPE");
+                while ($lineaPE=mysqli_fetch_array($registrosPE))
+                {
+                    echo "<tr><td>$lineaPE[nom_proyecto]</td><td>$lineaPE[fechaInicio]</td><td>$lineaPE[fechaFin]</td><td>$lineaPE[numeroEmpresas]</td><td>$lineaPE[nom_provincia]</td><td>$lineaPE[direccion]</td><td>$lineaPE[descripcion]</td><td><a href='loginEntidad.php?id=$lineaPE[idProyectoEnt]'>Inscribir</a></td></tr>";
+                }
+
+
+                ?>
+				</table>
+
+
             	<!--Default Cause Box-->
+               	<div style="display: none;">
                 <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image-box">
@@ -270,6 +340,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </section>

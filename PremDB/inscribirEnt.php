@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION['user']) || !isset($_SESSION['proy']))
+   header('location:index.php');
+?>
+<!DOCTYPE html>
 <html>
 
 <!-- Mirrored from wp1.themexlab.com/html2/preview-human-welfare/volunteer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jan 2017 07:52:01 GMT -->
@@ -16,11 +21,16 @@
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-
+<script src="./assets/js/jquery-1.7.2.js"></script>
+<script language="javascript">
+</script>
 </head>
 
 <body>
-
+	<?php
+      include("conexion.php");
+  	?> 
+	
 
 <div class="page-wrapper">
  	
@@ -64,103 +74,31 @@
         
         
         <!-- Main Box -->
-    	<div class="main-box">
-        	<div class="auto-container">
-            	<div class="outer-container clearfix">
-                    <!--Logo Box-->
-                    <div class="logo-box">
-                        <div class="logo"><!-- <a href="index-2.html"> --><img src="images/logo-proyecto.jpg" alt=""></a></div>
-                    </div>
-                    
-                    <!--Nav Outer-->
-                    <div class="nav-outer clearfix">
-                        <!-- Main Menu -->
-                        <nav class="main-menu">
-                            <div class="navbar-header">
-                                <!-- Toggle Button -->    	
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            
-                            <div class="navbar-collapse collapse clearfix">
-                                <ul class="navigation clearfix">
-                                    <li><a href="index.php">Inicio</a></li>
-                                    <li><a href="listaProy.php">Proyectos</a></li>
-                                    <li><a href="volunteer.php">Registrar</a></li>
-                                    <li><a href="loginProp.php">Proponer</a></li>
-                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
-                                 </ul>
-                            </div>
-                        </nav><!-- Main Menu End-->
-                        
-                    </div><!--Nav Outer End-->
-                    
-                    <!-- Hidden Nav Toggler -->
-                    <div class="nav-toggler">
-                    <button class="hidden-bar-opener"><span class="icon fa fa-bars"></span></button>
-                    </div><!-- / Hidden Nav Toggler -->
-                    
-            	</div>    
-            </div>
-        </div>
+
     
     </header>
     <!--End Main Header -->
-    
-    
     <!-- Hidden Navigation Bar -->
-    
     <!-- / Hidden Bar -->
-    
     <!--Page Title-->
-    
-    
-    
-    <!--Volunteer Section-->
-    
-    
     <!--Become VOlunteer Section-->
-    <section class="become-volunteer">
-    	<div class="auto-container">
-        	<div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
+    <section class="become-volunteer" style="height: 400px; padding-top: 120px;">
+    	<div class="auto-container" style="width: 60%; text-align: center;">
+        	<div class="normal-title"><h3>Inscripción en proyecto</h3></div>
             
             <div class="default-form">
-            <?php
-                // Conectar con la base de datos
-                include("conexion.php");
-                {
+                <form method="post" action="insEntiEnPro.php">
+                    <div class="row clearfix">
+                        <div class="form-group">
+                            <label>¿Está seguro de querer inscribirse en el proyecto?</label>
+                        </div>
 
-                // consulta sql
-                $sql="SELECT proy.* FROM proyectos as proy ORDER BY idProyecto";
-                }
-                // ejecutamos la consulta sql
-                $registros=mysqli_query($conexion,$sql) or die("Error en la consulta $sql");
-                while ($linea=mysqli_fetch_array($registros))
-                {
-                    echo "<form method='post' action='loginInsAl.php?id=$linea[idProyecto]'>";
-                }
-                ?>
-                <form method="post" action="loginInsAl.php?id=$linea[idProyecto]">
-                    <div class="row clearfix">
-                    
-                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="text" name="cif" placeholder="CIF" id="cif" required>
-                        </div>
                     </div>
-                    <div class="row clearfix">
-                        <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
-                            <input type="password" name="numIdent" placeholder="Numero Identificativo" id="numIdent" class="form-control" required>
-                        </div>
-						
-					</div>
-                    <div class="row clearfix">
-                        <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
-	                        <input type="submit" value="Enviar" class="theme-btn btn-style-three">
-	                    	<a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
-	                    	<a href="volunteer.php" class="theme-btn btn-style-three">Registrarse</a>
+					
+					<div class="row clearfix">
+                        <div class="links">
+                            <input type="submit" value="Sí" class="theme-btn btn-style-three">
+	                    	<a href="listaProy.php" class="theme-btn btn-style-three">No</a>
             			</div>                      
                     </div>
                 </form>
@@ -284,7 +222,6 @@
     </footer>
     
 </div>
-
 <!--End pagewrapper-->
 
 <!--Scroll to top-->
