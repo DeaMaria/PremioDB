@@ -156,19 +156,19 @@
     -->
 	
 	<section class="become-volunteer">
-        <div class="auto-container">
-            <div class="normal-title col-md-offset-5"><h3>¿QU&Eacute ERES?</h3></div>
+        <div class="auto-container" style="text-align: center;">
+            <div class="normal-title"><h3>¿QU&Eacute ERES?</h3></div>
             
             <div class="default-form">
                     <div class="row clearfix">
-                        <div class="links col-md-6 col-md-offset-4 col-sm-6 col-xs-6"> 
+                        <div class="links"> 
                             <a data-toggle="modal" href="#formEntidad" class="theme-btn btn-style-three">Entidad</a>
                             <div class="modal fade" id="formEntidad">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="modal-title">INSERTA CREDENCIALES</h4></div>
+                                            <div style="text-align: left;"><h4 class="modal-title">INSERTA CREDENCIALES</h4></div>
                                         </div>
 
                                         <div class="modal-body">
@@ -206,7 +206,7 @@
 									<div class="modal-content">
 										<div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<div class="col-md-8 col-sm-8 col-xs-8"><h4 class="modal-title">INSERTA CREDENCIALES</h4></div>
+											<div style="text-align: left;"><h4 class="modal-title">INSERTA CREDENCIALES</h4></div>
 										</div>
 
                                         <div class="modal-body">
