@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-06-2017 a las 18:17:45
--- Versión del servidor: 10.1.19-MariaDB
--- Versión de PHP: 5.6.28
+-- Tiempo de generación: 04-06-2017 a las 21:49:00
+-- Versión del servidor: 5.6.21
+-- Versión de PHP: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `premdb`
@@ -26,10 +26,10 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `ambitos`
 --
 
-CREATE TABLE `ambitos` (
-  `idAmbito` int(2) NOT NULL,
+CREATE TABLE IF NOT EXISTS `ambitos` (
+`idAmbito` int(2) NOT NULL,
   `nom_ambito` varchar(20) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `ambitos`
@@ -45,7 +45,7 @@ INSERT INTO `ambitos` (`idAmbito`, `nom_ambito`) VALUES
 -- Estructura de tabla para la tabla `colegios`
 --
 
-CREATE TABLE `colegios` (
+CREATE TABLE IF NOT EXISTS `colegios` (
   `CIF` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
   `nom_colegio` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `responsable` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -66,7 +66,10 @@ CREATE TABLE `colegios` (
 --
 
 INSERT INTO `colegios` (`CIF`, `nom_colegio`, `responsable`, `telefono`, `idProvincia`, `domicilio_entidad`, `correo`, `web`, `numIndicativo`, `estatutos`, `registros`, `compromiso`, `validado`) VALUES
-('23456789Z', 'ColegioPrueba', 'ColegioPrueba', 623412532, 1, 'csa aefgjhuiv ', 'ColegioPrueba@email.com', 'www.ColegioPrueba.es', 3, 'CartaCompromiso.pdf', 'cartaCompromiso.pdf', 'cartaCompromiso.pdf', 1);
+('23456789Z', 'ColegioPrueba', 'ColegioPrueba', 623412532, 1, 'csa aefgjhuiv ', 'ColegioPrueba@email.com', 'www.ColegioPrueba.es', 3, 'CartaCompromiso.pdf', 'cartaCompromiso.pdf', 'cartaCompromiso.pdf', 1),
+('165165165', '', 'mierda', 976515324, 0, 'no ', 'funciona', 'puto@proyecto', NULL, '', '', '', NULL),
+('165494156', '', 'creo que', 1564856, 31, 'medio', 'puede', 'funcionar', NULL, '', '', '', NULL),
+('165165416', 'mmmmm', 'creo que', 165416546, 0, 'medio', 'puede', 'funcionar', NULL, '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -74,10 +77,10 @@ INSERT INTO `colegios` (`CIF`, `nom_colegio`, `responsable`, `telefono`, `idProv
 -- Estructura de tabla para la tabla `comunidades`
 --
 
-CREATE TABLE `comunidades` (
-  `idComunidad` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `comunidades` (
+`idComunidad` int(11) NOT NULL,
   `nom_comunidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `comunidades`
@@ -110,7 +113,7 @@ INSERT INTO `comunidades` (`idComunidad`, `nom_comunidad`) VALUES
 -- Estructura de tabla para la tabla `entidades`
 --
 
-CREATE TABLE `entidades` (
+CREATE TABLE IF NOT EXISTS `entidades` (
   `CIF` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
   `nom_entidad` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `responsable` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -132,7 +135,11 @@ CREATE TABLE `entidades` (
 --
 
 INSERT INTO `entidades` (`CIF`, `nom_entidad`, `responsable`, `telefono`, `idProvincia`, `domicilio_entidad`, `correo`, `web`, `numIndicativo`, `estatutos`, `registros`, `compromiso`, `validado`, `empresa`) VALUES
-('15642', 'prueba1', 'yo', 159487623, 1, 'avd. prueba1', 'prueba1@prueba1.es', 'www.prueba1.es', 1, 'prueba1.pdf', 'prueba1.pdf', 'prueba1.pdf', 1, 0);
+('15642', 'prueba1', 'yo', 159487623, 1, 'avd. prueba1', 'prueba1@prueba1.es', 'www.prueba1.es', 1, 'prueba1.pdf', 'prueba1.pdf', 'prueba1.pdf', 1, 0),
+('16542365', 'mmmmm', 'creo que', 6512525, 31, 'medio', 'puede', 'funcionar', NULL, '', '', '', NULL, 0),
+('41565', 'asdfsdfas', 'sadfasdfas', 1516161, 31, 'adsfasdf', 'asdfasdfasd', 'sadfasdf', NULL, '', '', '', NULL, 0),
+('53875', '', 'NO', 976582541, 30, 'puÃ±etero', 'FUNCIONAAA', 'lloro', NULL, '', '', '', NULL, 0),
+('62145', '', 'que', 976321469, 7, 'ya', 'funciona', 'correctamente', NULL, '', '', '', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -140,11 +147,11 @@ INSERT INTO `entidades` (`CIF`, `nom_entidad`, `responsable`, `telefono`, `idPro
 -- Estructura de tabla para la tabla `numerosidentificativos`
 --
 
-CREATE TABLE `numerosidentificativos` (
-  `idNumero` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `numerosidentificativos` (
+`idNumero` int(11) NOT NULL,
   `numIdentificativo` int(5) NOT NULL,
   `usado` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `numerosidentificativos`
@@ -167,11 +174,11 @@ INSERT INTO `numerosidentificativos` (`idNumero`, `numIdentificativo`, `usado`) 
 -- Estructura de tabla para la tabla `provincias`
 --
 
-CREATE TABLE `provincias` (
-  `idProvincia` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `provincias` (
+`idProvincia` int(11) NOT NULL,
   `nom_provincia` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `idComunidad` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `provincias`
@@ -237,8 +244,8 @@ INSERT INTO `provincias` (`idProvincia`, `nom_provincia`, `idComunidad`) VALUES
 -- Estructura de tabla para la tabla `proyectos`
 --
 
-CREATE TABLE `proyectos` (
-  `idProyecto` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `proyectos` (
+`idProyecto` int(11) NOT NULL,
   `nom_proyecto` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `fechaInicio` date DEFAULT NULL,
   `fechaFin` date DEFAULT NULL,
@@ -249,7 +256,7 @@ CREATE TABLE `proyectos` (
   `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `numIndicativo` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `proyectos`
@@ -270,8 +277,8 @@ INSERT INTO `proyectos` (`idProyecto`, `nom_proyecto`, `fechaInicio`, `fechaFin`
 -- Estructura de tabla para la tabla `proyectosparaentidades`
 --
 
-CREATE TABLE `proyectosparaentidades` (
-  `idProyectoEnt` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `proyectosparaentidades` (
+`idProyectoEnt` int(11) NOT NULL,
   `nom_proyecto` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `fechaInicio` date DEFAULT NULL,
   `fechaFin` date DEFAULT NULL,
@@ -280,14 +287,14 @@ CREATE TABLE `proyectosparaentidades` (
   `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `numIndicativo` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `proyectosparaentidades`
 --
 
 INSERT INTO `proyectosparaentidades` (`idProyectoEnt`, `nom_proyecto`, `fechaInicio`, `fechaFin`, `numeroEmpresas`, `idProvincia`, `direccion`, `descripcion`, `numIndicativo`) VALUES
-(0, 'proy enti prueba', '0000-00-00', '0000-00-00', 6, 45, 'a<sxdzsc', 'werfgse ergsef fgrfs', NULL);
+(1, 'proy enti prueba', '0000-00-00', '0000-00-00', 6, 45, 'a<sxdzsc', 'werfgse ergsef fgrfs', NULL);
 
 -- --------------------------------------------------------
 
@@ -295,7 +302,7 @@ INSERT INTO `proyectosparaentidades` (`idProyectoEnt`, `nom_proyecto`, `fechaIni
 -- Estructura de tabla para la tabla `proyectos_ambito`
 --
 
-CREATE TABLE `proyectos_ambito` (
+CREATE TABLE IF NOT EXISTS `proyectos_ambito` (
   `idProyecto` int(11) NOT NULL,
   `idAmbito` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -313,7 +320,7 @@ INSERT INTO `proyectos_ambito` (`idProyecto`, `idAmbito`) VALUES
 -- Estructura de tabla para la tabla `proyectos_entidades`
 --
 
-CREATE TABLE `proyectos_entidades` (
+CREATE TABLE IF NOT EXISTS `proyectos_entidades` (
   `idProyectoEnt` int(11) NOT NULL,
   `cif` varchar(9) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -332,7 +339,7 @@ INSERT INTO `proyectos_entidades` (`idProyectoEnt`, `cif`) VALUES
 -- Estructura de tabla para la tabla `proyectos_participantes`
 --
 
-CREATE TABLE `proyectos_participantes` (
+CREATE TABLE IF NOT EXISTS `proyectos_participantes` (
   `idProyecto` int(11) NOT NULL,
   `cif` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
   `dni` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
@@ -363,61 +370,61 @@ INSERT INTO `proyectos_participantes` (`idProyecto`, `cif`, `dni`, `nombreAlumno
 -- Indices de la tabla `ambitos`
 --
 ALTER TABLE `ambitos`
-  ADD PRIMARY KEY (`idAmbito`);
+ ADD PRIMARY KEY (`idAmbito`);
 
 --
 -- Indices de la tabla `comunidades`
 --
 ALTER TABLE `comunidades`
-  ADD PRIMARY KEY (`idComunidad`);
+ ADD PRIMARY KEY (`idComunidad`);
 
 --
 -- Indices de la tabla `entidades`
 --
 ALTER TABLE `entidades`
-  ADD PRIMARY KEY (`CIF`);
+ ADD PRIMARY KEY (`CIF`);
 
 --
 -- Indices de la tabla `numerosidentificativos`
 --
 ALTER TABLE `numerosidentificativos`
-  ADD PRIMARY KEY (`idNumero`);
+ ADD PRIMARY KEY (`idNumero`);
 
 --
 -- Indices de la tabla `provincias`
 --
 ALTER TABLE `provincias`
-  ADD PRIMARY KEY (`idProvincia`);
+ ADD PRIMARY KEY (`idProvincia`);
 
 --
 -- Indices de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  ADD PRIMARY KEY (`idProyecto`);
+ ADD PRIMARY KEY (`idProyecto`);
 
 --
 -- Indices de la tabla `proyectosparaentidades`
 --
 ALTER TABLE `proyectosparaentidades`
-  ADD PRIMARY KEY (`idProyectoEnt`);
+ ADD PRIMARY KEY (`idProyectoEnt`);
 
 --
 -- Indices de la tabla `proyectos_ambito`
 --
 ALTER TABLE `proyectos_ambito`
-  ADD PRIMARY KEY (`idProyecto`,`idAmbito`);
+ ADD PRIMARY KEY (`idProyecto`,`idAmbito`);
 
 --
 -- Indices de la tabla `proyectos_entidades`
 --
 ALTER TABLE `proyectos_entidades`
-  ADD PRIMARY KEY (`idProyectoEnt`,`cif`);
+ ADD PRIMARY KEY (`idProyectoEnt`,`cif`);
 
 --
 -- Indices de la tabla `proyectos_participantes`
 --
 ALTER TABLE `proyectos_participantes`
-  ADD PRIMARY KEY (`idProyecto`,`cif`,`dni`);
+ ADD PRIMARY KEY (`idProyecto`,`cif`,`dni`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -427,27 +434,32 @@ ALTER TABLE `proyectos_participantes`
 -- AUTO_INCREMENT de la tabla `ambitos`
 --
 ALTER TABLE `ambitos`
-  MODIFY `idAmbito` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+MODIFY `idAmbito` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `comunidades`
 --
 ALTER TABLE `comunidades`
-  MODIFY `idComunidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+MODIFY `idComunidad` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT de la tabla `numerosidentificativos`
 --
 ALTER TABLE `numerosidentificativos`
-  MODIFY `idNumero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+MODIFY `idNumero` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `provincias`
 --
 ALTER TABLE `provincias`
-  MODIFY `idProvincia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+MODIFY `idProvincia` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `proyectosparaentidades`
+--
+ALTER TABLE `proyectosparaentidades`
+MODIFY `idProyectoEnt` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

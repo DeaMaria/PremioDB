@@ -128,7 +128,7 @@
             <div class="normal-title col-md-offset-5"><h3>INSERTA CREDENCIALES</h3></div>
             
             <div class="default-form">
-                <form method="post" action="insEnti.php">
+                <form method="post" action="evaluarColegio.php">
                     <div class="row clearfix">
                     
                         <div class="form-group col-md-4 col-md-offset-4 col-sm-4 col-xs-4">
