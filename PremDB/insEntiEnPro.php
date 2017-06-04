@@ -7,7 +7,7 @@ include("conexion.php");
 $pro=$_SESSION[proy];
 $cif=$_SESSION[user];
 // Insertar el registro en la Tabla
-$sql="INSERT INTO proyectos_entidades(idProyecto, cif) VALUES ('$pro', '$cif')";
+$sql="INSERT INTO proyectos_entidades(idProyectoEnt, cif) VALUES ('$pro', '$cif')";
 
 mysqli_query($conexion, $sql) or die ("Error en la consulta $sql");
 mysqli_close($conexion);

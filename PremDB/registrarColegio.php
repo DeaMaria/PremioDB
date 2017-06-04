@@ -1,32 +1,32 @@
 <?php
 session_start();
 // Recuperamos datos del index.php
-$usu = $_POST['nomEnti'];
-$cla = MD5($_POST['cif']);
+$usu = $_POST['cif'];
+$cla = $_POST['numIdent'];
 
 // Conectamos con mysql
 include("conexion.php");
 
 // Creamos la consulta
-$sql = "SELECT * FROM colegios WHERE numIndicativo = '$usu'";
-$registros=mysqli_query($conexion,$sql);
-$total=mysqli_num_rows($registros);
-if ($total == 0)
-   echo "Usuario no existe <a href='index.php'> Pulsa aquí para continuar </a>";
+
+$sqlCol="SELECT * FROM colegios WHERE CIF='$usu'";
+$registrosCol=mysqli_query($conexion,$sqlCol) or die("Error en la consulta $sql");
+$totalCol = mysqli_num_rows($registrosCol);
+if ($totalCol==0)
+{
+	echo "Usuario NO EXISTE<a href='loginProp.php'>Pulsa aqui para continuar</a>";
+}
 else
 {
-	while($linea=mysqli_fetch_array($registros))
+	$linea=mysqli_fetch_array($registrosCol);
+	if($linea['numIndicativo']!=$cla)
 	{
-	if ($cla!=$linea['cif'])
-		echo "Clave INCORRECTA <a href='index.php'> Pulsa aquí para continuar </a>";
+		echo "Clave INCORRECTA <a href='loginProp.php'>Pulsa aqui para continuar</a>";
+	}
 	else
-		{
-		$sql="UPDATE colegios SET ultimoacceso=now() WHERE numIndicativo = '$usu'";
-		mysqli_query($conexion,$sql);
+	{
 		$_SESSION['user']=$usu;
 		header("location:create-project-col.php");
-		}
 	}
 }
-
 ?>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-06-2017 a las 14:37:40
+-- Tiempo de generación: 04-06-2017 a las 18:17:45
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -248,7 +248,7 @@ CREATE TABLE `proyectos` (
   `idProvincia` int(11) NOT NULL,
   `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `numIndicativo` int(5) NOT NULL
+  `numIndicativo` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -256,7 +256,38 @@ CREATE TABLE `proyectos` (
 --
 
 INSERT INTO `proyectos` (`idProyecto`, `nom_proyecto`, `fechaInicio`, `fechaFin`, `numeroVoluntarios`, `edadMinima`, `edadMaxima`, `idProvincia`, `direccion`, `descripcion`, `numIndicativo`) VALUES
-(1, 'Prueba', '0000-00-00', '0000-00-00', 5, 10, 15, 2, 'vsrtgsrtgs', 'safdsadfcdfre', 2);
+(1, 'Prueba', '0000-00-00', '0000-00-00', 5, 10, 15, 2, 'vsrtgsrtgs', 'safdsadfcdfre', 2),
+(2, 'Prueba Andreea', '2017-06-08', '2017-06-29', 9, 12, 16, 4, 'zdgfxdfvg', 'fhjbd sdgvfdjhxvc gsrguhvcx', 4),
+(3, 'proy prueba', '0000-00-00', '0000-00-00', 3, 11, 15, 36, 'afdscdsvf fgd', 'sdfbdbg etgvfdsdv gntdhfgbvc trdhgf', NULL),
+(4, 'proy prueba col', '0000-00-00', '0000-00-00', 4, 12, 15, 6, 'asddcf sefdvf', 'aesrfv sfrgtfbb  gebttgg', NULL),
+(5, 'asjbczjsc', '2017-06-06', '2017-06-20', 5, 9, 13, 22, 'sdvxdcxz', 'sdfvd sfvs vfgdxfvdcfv ', NULL),
+(6, 'szdvfxddfv', '2017-06-05', '2017-06-15', 6, 7, 10, 52, 'adzscdfvgdft', 'rdbgthgb ruhtyh ryrujykiuyikto', NULL),
+(7, 'adsdczsacv', '2017-06-12', '2017-06-27', 16, 14, 17, 44, 'dsfgtdrdtr', 'srtgd  erbhtdr thyythtu456trgd', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proyectosparaentidades`
+--
+
+CREATE TABLE `proyectosparaentidades` (
+  `idProyectoEnt` int(11) NOT NULL,
+  `nom_proyecto` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `fechaInicio` date DEFAULT NULL,
+  `fechaFin` date DEFAULT NULL,
+  `numeroEmpresas` int(4) DEFAULT NULL,
+  `idProvincia` int(11) NOT NULL,
+  `direccion` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `numIndicativo` int(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `proyectosparaentidades`
+--
+
+INSERT INTO `proyectosparaentidades` (`idProyectoEnt`, `nom_proyecto`, `fechaInicio`, `fechaFin`, `numeroEmpresas`, `idProvincia`, `direccion`, `descripcion`, `numIndicativo`) VALUES
+(0, 'proy enti prueba', '0000-00-00', '0000-00-00', 6, 45, 'a<sxdzsc', 'werfgse ergsef fgrfs', NULL);
 
 -- --------------------------------------------------------
 
@@ -283,7 +314,7 @@ INSERT INTO `proyectos_ambito` (`idProyecto`, `idAmbito`) VALUES
 --
 
 CREATE TABLE `proyectos_entidades` (
-  `idProyecto` int(11) NOT NULL,
+  `idProyectoEnt` int(11) NOT NULL,
   `cif` varchar(9) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -291,7 +322,8 @@ CREATE TABLE `proyectos_entidades` (
 -- Volcado de datos para la tabla `proyectos_entidades`
 --
 
-INSERT INTO `proyectos_entidades` (`idProyecto`, `cif`) VALUES
+INSERT INTO `proyectos_entidades` (`idProyectoEnt`, `cif`) VALUES
+(0, '15642'),
 (1, '15642');
 
 -- --------------------------------------------------------
@@ -320,6 +352,7 @@ INSERT INTO `proyectos_participantes` (`idProyecto`, `cif`, `dni`, `nombreAlumno
 (1, '15642', '', '', '0000-00-00', NULL, NULL, NULL),
 (1, '23456789Z', '12345678A', 'AndrÃ©s', '1999-02-28', NULL, NULL, NULL),
 (1, '23456789Z', '12345678B', 'Marta', '2005-10-19', NULL, NULL, NULL),
+(1, '23456789Z', '12345678H', 'Adsshbfdjv', '2015-06-08', NULL, NULL, NULL),
 (1, '23456789Z', '87654321A', 'Alejandro', '2005-05-13', NULL, NULL, NULL);
 
 --
@@ -363,6 +396,12 @@ ALTER TABLE `proyectos`
   ADD PRIMARY KEY (`idProyecto`);
 
 --
+-- Indices de la tabla `proyectosparaentidades`
+--
+ALTER TABLE `proyectosparaentidades`
+  ADD PRIMARY KEY (`idProyectoEnt`);
+
+--
 -- Indices de la tabla `proyectos_ambito`
 --
 ALTER TABLE `proyectos_ambito`
@@ -372,7 +411,7 @@ ALTER TABLE `proyectos_ambito`
 -- Indices de la tabla `proyectos_entidades`
 --
 ALTER TABLE `proyectos_entidades`
-  ADD PRIMARY KEY (`idProyecto`,`cif`);
+  ADD PRIMARY KEY (`idProyectoEnt`,`cif`);
 
 --
 -- Indices de la tabla `proyectos_participantes`
@@ -408,7 +447,7 @@ ALTER TABLE `provincias`
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

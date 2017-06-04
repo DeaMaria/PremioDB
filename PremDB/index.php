@@ -275,7 +275,7 @@
     
     
     <!--Recent Causes Section-->
-    <section class="recent-causes-section no-bg">
+    <section class="recent-causes-section no-bg" style="display: none;">
     	<div class="auto-container">
         	<!--Section Title-->
             <div class="sec-title centered">

@@ -117,7 +117,7 @@
                                     <li><a href="listaProy.php">Proyectos</a></li>
                                     <li><a href="volunteer.php">Registrar</a></li>
                                     <li><a href="loginProp.php">Proponer</a></li>
-                                    <li><a href="loginEval.php">Evaluar</a></li>
+                                    <li style="display: none;"><a href="loginEval.php">Evaluar</a></li>
                                  </ul>
                             </div>
                         </nav><!-- Main Menu End-->
@@ -202,92 +202,95 @@
         	<div class="normal-title"><h3>Propón un nuevo proyecto</h3></div>
             
             <div class="default-form">
-                <form method="post" action="insproyecto.php">           
-        <div class='row'>
-            <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
-                <div class="form-group">
-                        <label for="nomProyecto">Nombre del proyecto:</label> <input type="text" placeholder="Nombre del proyecto" id="nomProyecto" name="nomProyecto" class="form-control">
-                </div>
-            </div>
-        </div>
-        <div class='row'>
-            <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
-                <div class="form-group">
-                        <label for="fecInicio">Fecha de inicio:</label> <input type="date" id="fecInicio" name="fecInicio" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
-                </div>
-            </div>
-            <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
-                <div class="form-group">
-                        <label for="fecFin">Fecha de fin:</label> <input type="date" id="fecFin" name="fecFin" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
-                </div>
-             </div>
-        </div>
+                <form method="post" action="insproyectoEnti.php">           
+                    <div class='row'>
+                        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                            <div class="form-group">
+                                    <label for="nomProyecto">Nombre del proyecto:</label> <input type="text" placeholder="Nombre del proyecto" id="nomProyecto" name="nomProyecto" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                    <label for="fecInicio">Fecha de inicio:</label> <input type="date" id="fecInicio" name="fecInicio" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                            </div>
+                        </div>
+                        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                            <div class="form-group">
+                                    <label for="fecFin">Fecha de fin:</label> <input type="date" id="fecFin" name="fecFin" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                            </div>
+                         </div>
+                         <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                            <div class="form-group">
+                                <label for="numEntidades">Número de Entidades:</label><input type="number" min="2" step="1" value="0" name="numEntidades" id="numEntidades" />
+                            </div>
+                        </div>
+                    </div>
 
-        <div class='row'>
-            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
-                <div class="form-group">
-                    <label for="ambito">Ambito:</label>
-                    <select name="ambito" id="ambito">        
-                        <option> Elige un ambito... </option>
-                        <?php
-                            $sql="SELECT * FROM ambitos";
-                            $totalAmb=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
-                            while($linea=mysqli_fetch_array($totalAmb))
-                            {
-                                echo "<option value='$linea[idAmbito]'>$linea[nom_ambito]";
-                            }
-                            
-                        ?>
-                    </select>
-                    
+                    <div class='row'>
+                        <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4' style="display: none;">
+                            <div class="form-group">
+                                <label for="ambito" required>Ambito:</label>
+                                <select name="ambito" id="ambito">        
+                                    <option> Elige un ambito... </option>
+                                    <?php
+                                        $sql="SELECT * FROM ambitos";
+                                        $totalAmb=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                                        while($linea=mysqli_fetch_array($totalAmb))
+                                        {
+                                            echo "<option value='$linea[idAmbito]'>$linea[nom_ambito]";
+                                        }
+                                        
+                                    ?>
+                                </select>
+                                
 
-                </div>
-            </div>
-            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
-                <div class="form-group">
-                    <label for="comunidadEnti">Comunidad:</label>
-                    <select name="comunidadEnti" id="comunidadEnti">        
-                        <option> Elige una comunidad... </option>
-                        <?php
-                            $sql="SELECT * FROM comunidades";
-                            $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
-                            while($linea=mysqli_fetch_array($totalProv))
-                            {
-                                echo "<option value='$linea[idComunidad]'>$linea[nom_comunidad]";
-                            }
-                        ?>
-                        
-                    </select>
-                </div>
-            </div>
-            <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
-                <div class="form-group">
-                    <label for="provinciaEnti">Provincia:</label>
-                    <select name="provinciaEnti" id="provinciaEnti">        
-                        <option> Elige una provincia... </option>
-                    </select>
-                </div>
-             </div>
-        </div>
-        <div class='row'>
-            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                <div class="form-group">
-                        <label for="direccion">Dirección:</label> <input type="text" placeholder="Dirección" id="direccion" name="direccion" class="form-control">
-                </div>
-             </div>
-        </div>
-        <div class='row'>
-            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                <div class="form-group">
-                        <label for="descripcion">Descripción:</label> <textarea rows="10" placeholder="Descripción" id="descripcion" name="descripcion" class="form-control"></textarea>
-                </div>
-             </div>
-        </div>
-        
-
-            <a href="listaProy.php" class="theme-btn btn-style-three">Enviar</a>
-            <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
-        </form>
+                            </div>
+                        </div>
+                        <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                            <div class="form-group">
+                                <label for="comunidadCol" required>Comunidad:</label>
+                                <select name="comunidadCol" id="comunidadCol">        
+                                    <option> Elige una comunidad... </option>
+                                    <?php
+                                        $sql="SELECT * FROM comunidades";
+                                        $totalProv=mysqli_query($conexion, $sql)or die("Error en la consulta $sql");
+                                        while($linea=mysqli_fetch_array($totalProv))
+                                        {
+                                            echo "<option value='$linea[idComunidad]'>$linea[nom_comunidad]";
+                                        }
+                                    ?>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
+                            <div class="form-group">
+                                <label for="provinciaCol" required>Provincia:</label>
+                                <select name="provinciaCol" id="provinciaCol">        
+                                    <option> Elige una provincia... </option>
+                                </select>
+                            </div>
+                         </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                            <div class="form-group">
+                                    <label for="direccion" required>Dirección:</label> <input type="text" placeholder="Dirección" id="direccion" name="direccion" class="form-control">
+                            </div>
+                         </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                            <div class="form-group">
+                                    <label for="descripcion" required>Descripción:</label> <textarea rows="10" placeholder="Descripción" id="descripcion" name="descripcion" class="form-control"></textarea>
+                            </div>
+                         </div>
+                    </div>
+                    <input type="submit" value="Enviar" class="theme-btn btn-style-three">
+                    <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>
+                </form>
                 
             </div>
         </div>

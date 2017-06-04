@@ -1,32 +1,31 @@
 <?php
 session_start();
 // Recuperamos datos del index.php
-$usu = $_POST['nomEnti'];
-$cla = MD5($_POST['cif']);
+$usu = $_POST['cif'];
+$cla = $_POST['numIdent'];
 
 // Conectamos con mysql
 include("conexion.php");
 
 // Creamos la consulta
-$sql = "SELECT * FROM entidades WHERE numIndicativo = '$usu'";
-$registros=mysqli_query($conexion,$sql);
-$total=mysqli_num_rows($registros);
-if ($total == 0)
-   echo "Usuario no existe <a href='index.php'> Pulsa aquí para continuar </a>";
+$sqlEnt="SELECT * FROM entidades WHERE CIF='$usu'";
+$registrosEnt=mysqli_query($conexion,$sqlEnt) or die("Error en la consulta $sql");
+$totalEnt = mysqli_num_rows($registrosEnt);
+if ($totalEnt==0)
+{
+	echo "Usuario NO EXISTE<a href='loginProp.php'>Pulsa aqui para continuar</a>";
+}
 else
 {
-	while($linea=mysqli_fetch_array($registros))
+	$linea=mysqli_fetch_array($registrosEnt);
+	if($linea['numIndicativo']!=$cla)
 	{
-	if ($cla!=$linea['cif'])
-		echo "Clave INCORRECTA <a href='index.php'> Pulsa aquí para continuar </a>";
+		echo "Clave INCORRECTA <a href='loginProp.php'>Pulsa aqui para continuar</a>";
+	}
 	else
-		{
-		$sql="UPDATE entidades SET ultimoacceso=now() WHERE numIndicativo = '$usu'";
-		mysqli_query($conexion,$sql);
+	{
 		$_SESSION['user']=$usu;
 		header("location:create-project.php");
-		}
 	}
 }
-
 ?>

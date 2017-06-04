@@ -228,11 +228,11 @@
     <!--Become VOlunteer Section-->
     <section class="become-volunteer">
     	<div class="auto-container">
-        	<div class="normal-title"><h3>Date de alta como:</h3></div>
-
-            <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormEnti('formEnti');" value="Entidad">
-            <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormColegio('formColegio');" value="Colegio">
-
+            <div style="text-align: center; margin-bottom: 50px;">
+        	   <div class="normal-title"><h3>Date de alta como:</h3></div>
+                <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormEnti('formEnti');" value="Entidad">
+                <input class="theme-btn btn-style-three" name="button" id="button" type="submit" onclick="mostrarFormColegio('formColegio');" value="Colegio">
+            </div>
             <div class="default-form" style="display: none;" id="formEnti">
                 <form method="post" action="insEnti.php">
                     <div class="row clearfix">
@@ -326,7 +326,6 @@
 							<input name="compromiso" id="compromiso" type="file" />
                         </div>
                     </div>
-
                                                 
                         <a href="listaProy.php" class="theme-btn btn-style-three">Enviar</a>
                         <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
@@ -392,8 +391,8 @@
                     <div class="row">                    
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                            <div class="field-label">Domicilio de la entidad: <span class="req">*</span></div>
-                            <input type="text" name="dom_enti" placeholder="Domicilio de la entidad" id="dom_enti" class="form-control" required>
+                            <div class="field-label">Domicilio del colegio: <span class="req">*</span></div>
+                            <input type="text" name="dom_enti" placeholder="Domicilio del colegio" id="dom_enti" class="form-control" required>
                         </div>
                         
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
