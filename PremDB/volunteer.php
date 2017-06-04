@@ -305,13 +305,13 @@
                             <input type="text" name="web" placeholder="Web" id="web" class="form-control">
                         </div> 
                                                
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12" style="display:none;">
                             <div class="field-label">Estatutos: <span class="req">*</span></div>
                             <!-- <button type="button">Subir documento</button> -->
 								<input name="estatutos" id="estatutos" type="file" />
                         </div>
                     </div>
-                    <div class="row">                        
+                    <div class="row" style="display:none;">                        
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Registros: <span class="req">*</span></div>
@@ -327,7 +327,7 @@
                         </div>
                     </div>
                                                 
-                        <a href="listaProy.php" class="theme-btn btn-style-three">Enviar</a>
+                        <input type="submit" value="Enviar" class="theme-btn btn-style-three">
                         <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
                     </div>
                 </form>
@@ -407,13 +407,13 @@
                             <input type="text" name="web" placeholder="Web" id="web" class="form-control">
                         </div> 
                                                
-                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12" style="display:none;">
                             <div class="field-label">Estatutos: <span class="req">*</span></div>
                             <!-- <button type="button">Subir documento</button> -->
 								<input name="estatutos" id="estatutos" type="file" />
                         </div>
                     </div>
-                    <div class="row">                        
+                    <div class="row" style="display:none;">                        
                                                 
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <div class="field-label">Registros: <span class="req">*</span></div>
@@ -430,7 +430,7 @@
                     </div>
 
                                                 
-                        <a href="listaProy.php" class="theme-btn btn-style-three">Enviar</a>
+                        <input type="submit" value="Enviar" class="theme-btn btn-style-three">
                         <a href="javascript:history.back()" class="theme-btn btn-style-three">Volver</a>                       
                     </div>
                 </form>
